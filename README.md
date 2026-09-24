@@ -15,6 +15,7 @@ python3 -m pokerlab --seed 7
 python3 -m unittest discover -s tests -v
 python3 -m pokerlab.cfr --iterations 100 --output strategy.json
 python3 -m pokerlab.bayes --hands 12 --opponent calling --seed 7
+python3 -m pokerlab.experiment --opponent calling --hands 12 --replicates 20 --seed 7 --output results/calling.json
 ```
 
 The included `strategy.json` was trained for 300 iterations with the same
@@ -43,6 +44,30 @@ which exclude the opponent's card until showdown.
    `tests/test_bayes.py` checks hidden-card marginalization, showdown reveal,
    repeated updates, and mixture decision value against independent profile
    evaluation.
+7. `pokerlab/experiment.py` compares the updating agent with a frozen-prior
+   mixture response and CFR, using identical hand seeds for the three arms.
+
+## Stationary-opponent experiment
+
+`python3 -m pokerlab.experiment --opponent calling --hands 12 --replicates 20
+--seed 7 --output results/calling.json` writes a deterministic JSON record.
+Each independent replicate contains one match in each seat. Within each match,
+the opponent policy is fixed and the learning agent starts from a fresh uniform
+prior. All three arms share the same dealt cards and per-seat action random
+streams for a given hand; their public histories may diverge as they choose
+different actions. The frozen-prior arm computes the same initial exact
+mixture response as the learner, but never changes it across hands. The CFR
+arm plays the loaded average policy.
+
+The output records each hand's seed, seat, reward, and learner posterior,
+seat-averaged reward per replicate, and paired learning-minus-control
+differences with 95% percentile bootstrap intervals over entire two-seat
+replicates. It also records hashes of `strategy.json` and `rules.md` to tie
+the run to its inputs. Bootstrap intervals with few replicates are unstable;
+20 replicates and 12 hands above illustrate the workflow, not a definitive
+power calculation or a claim that learning helps. The example opponent types
+are also the model's own candidates. Held-out types and policy switches are
+separate experiments to add before drawing general conclusions.
 
 ## Bayesian opponent learning and adaptive decisions
 
@@ -123,7 +148,7 @@ iterations do not make the policy an exact equilibrium.
 | Week 1 | Rules, game engine, observations, seeded traces, correctness checks | Implemented here; OpenSpiel cross-check remains |
 | Week 2 | CFR, exact values and legal best response | Implemented; independent cross-check pending |
 | Weeks 3-4 | Hidden-card likelihood and Bayesian decision agent | Implemented for a finite stationary model set |
-| Weeks 5-6 | Stationary opponent experiments | Planned |
+| Weeks 5-6 | Stationary opponent experiments | Paired, seat-balanced runner implemented; large runs and held-out opponents pending |
 | Weeks 7-8 | Policy switches, profiling and research report | Planned |
 
 The reference convention in the accompanying PDF must be matched explicitly
