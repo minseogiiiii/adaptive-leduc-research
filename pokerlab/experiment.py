@@ -13,13 +13,42 @@ import json
 import random
 import statistics
 import sys
+from dataclasses import dataclass
 from pathlib import Path
 
-from .bayes import AdaptiveAgent, BayesianOpponentModel, example_models
+from .bayes import (ActionBiasPolicy, AdaptiveAgent, BayesianOpponentModel,
+                    example_models)
 from .cfr import Policy, PolicyAgent, TabularPolicy, best_response_mixture
+from .game import Action, PlayerObservation
 from .simulate import run_hand
 
 ARMS = ("learning", "frozen_prior", "cfr")
+
+
+@dataclass(frozen=True)
+class RankSelectivePolicy:
+    """Prespecified opponent outside the four stationary candidate types.
+
+    This type changes its betting bias with its private card and public pair.
+    It is an illustrative assumption, not a fitted human behavior model.
+    """
+
+    base: Policy
+
+    def probabilities(self, observation: PlayerObservation) -> tuple[float, ...]:
+        if (observation.public_card is not None
+                and observation.own_card.rank == observation.public_card.rank):
+            factors = {Action.BET: 4.0, Action.RAISE: 4.0,
+                       Action.CALL: 2.0, Action.FOLD: 0.2}
+        elif observation.public_card is None and observation.own_card.rank == "K":
+            factors = {Action.BET: 3.0, Action.RAISE: 3.0,
+                       Action.CALL: 1.5, Action.FOLD: 0.3}
+        elif observation.own_card.rank == "J":
+            factors = {Action.BET: 0.5, Action.RAISE: 0.5,
+                       Action.CALL: 0.6, Action.FOLD: 3.5}
+        else:
+            factors = {}
+        return ActionBiasPolicy(self.base, factors).probabilities(observation)
 
 
 def _mean(values: list[float]) -> float:
@@ -111,7 +140,8 @@ def main() -> None:
     parser.add_argument("--strategy", type=Path, default=Path("strategy.json"))
     parser.add_argument("--rules", type=Path, default=Path("rules.md"))
     parser.add_argument("--opponent", choices=("baseline", "folding", "calling",
-                                                "aggressive"), default="calling")
+                                                "aggressive", "rank_selective"),
+                        default="calling")
     parser.add_argument("--hands", type=int, default=12)
     parser.add_argument("--replicates", type=int, default=2)
     parser.add_argument("--seed", type=int, default=7)
@@ -119,7 +149,9 @@ def main() -> None:
     args = parser.parse_args()
     baseline = TabularPolicy.load(args.strategy)
     models = example_models(baseline)
-    result = run_experiment(baseline, models[args.opponent], models,
+    opponent = (RankSelectivePolicy(baseline) if args.opponent == "rank_selective"
+                else models[args.opponent])
+    result = run_experiment(baseline, opponent, models,
                             hands=args.hands, replicates=args.replicates,
                             seed=args.seed)
     result["design"].update({
