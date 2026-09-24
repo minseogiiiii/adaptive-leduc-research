@@ -127,5 +127,5 @@ iterations do not make the policy an exact equilibrium.
 | Weeks 7-8 | Policy switches, profiling and research report | Planned |
 
 The reference convention in the accompanying PDF must be matched explicitly
-before any numeric comparison with OpenSpiel. This package has no Bayesian
-opponent model, empirical adaptation results, or claim of strong poker play yet.
+before any numeric comparison with OpenSpiel. This package has no controlled
+adaptation results or claim of strong poker play yet.
