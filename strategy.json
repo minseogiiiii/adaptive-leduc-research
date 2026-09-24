@@ -1,0 +1,9206 @@
+{
+  "format": "leduc-v0.1-policy",
+  "entries": [
+    {
+      "player": 0,
+      "own_rank": "J",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ]
+      ],
+      "actions": {
+        "check": 0.6707601876184425,
+        "bet": 0.3292398123815576
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "J",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ],
+        [
+          1,
+          1,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.014387831240173128,
+        "call": 0.9856121687598269
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "J",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.004708137568421847,
+        "call": 0.004708137568421847,
+        "raise": 0.9905837248631564
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "J",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "raise"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ]
+      ],
+      "actions": {
+        "check": 0.1847767472231624,
+        "bet": 0.8152232527768375
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "J",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "raise"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ],
+        [
+          1,
+          1,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.0029331568527301614,
+        "call": 0.9970668431472699
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "J",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "raise"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.008627267612843194,
+        "call": 0.008627267612843194,
+        "raise": 0.9827454647743137
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "J",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ]
+      ],
+      "actions": {
+        "check": 0.36776371115670803,
+        "bet": 0.632236288843292
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "J",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ],
+        [
+          1,
+          1,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.0036662635491047472,
+        "call": 0.9963337364508953
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "J",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.0042018734491537325,
+        "call": 0.0042018734491537325,
+        "raise": 0.9915962531016925
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "J",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "raise"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ]
+      ],
+      "actions": {
+        "check": 0.5517446357512621,
+        "bet": 0.4482553642487378
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "J",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "raise"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ],
+        [
+          1,
+          1,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.01980374822870317,
+        "call": 0.9801962517712969
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "J",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "raise"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.010726141286551786,
+        "call": 0.010726141286551786,
+        "raise": 0.9785477174268964
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "J",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "check"
+        ]
+      ],
+      "actions": {
+        "check": 0.9492978753518376,
+        "bet": 0.05070212464816241
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "J",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "check"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ],
+        [
+          1,
+          1,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.009010488032499705,
+        "call": 0.9909895119675003
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "J",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "check"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.00032083423565039464,
+        "call": 0.00032083423565039464,
+        "raise": 0.9993583315286991
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "J",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ]
+      ],
+      "actions": {
+        "check": 0.15045498183362044,
+        "bet": 0.8495450181663795
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "J",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ],
+        [
+          1,
+          1,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.9944240190257176,
+        "call": 0.005575980974282383
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "J",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.9580202503068942,
+        "call": 0.020989874846552847,
+        "raise": 0.020989874846552847
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "J",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "raise"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ]
+      ],
+      "actions": {
+        "check": 0.6357206684601888,
+        "bet": 0.3642793315398112
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "J",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "raise"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ],
+        [
+          1,
+          1,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.993435867853716,
+        "call": 0.006564132146284089
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "J",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "raise"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.9914111750231343,
+        "call": 0.002507576874582507,
+        "raise": 0.006081248102283307
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "J",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ]
+      ],
+      "actions": {
+        "check": 0.8651135346218477,
+        "bet": 0.1348864653781522
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "J",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ],
+        [
+          1,
+          1,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.9828155860285234,
+        "call": 0.017184413971476655
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "J",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.8151144900780243,
+        "call": 0.0017862355767524578,
+        "raise": 0.18309927434522316
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "J",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "raise"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ]
+      ],
+      "actions": {
+        "check": 0.017754272751495267,
+        "bet": 0.9822457272485048
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "J",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "raise"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ],
+        [
+          1,
+          1,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.9909624077463646,
+        "call": 0.009037592253635478
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "J",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "raise"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.3333333333333333,
+        "call": 0.3333333333333333,
+        "raise": 0.3333333333333333
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "J",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "check"
+        ]
+      ],
+      "actions": {
+        "check": 0.9116276078874282,
+        "bet": 0.08837239211257174
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "J",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "check"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ],
+        [
+          1,
+          1,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.9948303890339121,
+        "call": 0.005169610966087955
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "J",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "check"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.9971936293426104,
+        "call": 0.00033409174492734275,
+        "raise": 0.002472278912462337
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "J",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ]
+      ],
+      "actions": {
+        "check": 0.4060237397089976,
+        "bet": 0.5939762602910024
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "J",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ],
+        [
+          1,
+          1,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.9920248549062023,
+        "call": 0.007975145093797736
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "J",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.9844441054555506,
+        "call": 0.0077779472722247145,
+        "raise": 0.0077779472722247145
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "J",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "raise"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ]
+      ],
+      "actions": {
+        "check": 0.5934392519845351,
+        "bet": 0.40656074801546493
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "J",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "raise"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ],
+        [
+          1,
+          1,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.9941185230446881,
+        "call": 0.005881476955311972
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "J",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "raise"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.8105795585008037,
+        "call": 0.002686236951118368,
+        "raise": 0.186734204548078
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "J",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ]
+      ],
+      "actions": {
+        "check": 0.6588858439279817,
+        "bet": 0.3411141560720184
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "J",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ],
+        [
+          1,
+          1,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.993204782566344,
+        "call": 0.0067952174336559645
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "J",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.9702429177936672,
+        "call": 0.0023453176111042995,
+        "raise": 0.027411764595228472
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "J",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "raise"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ]
+      ],
+      "actions": {
+        "check": 0.4793530553945009,
+        "bet": 0.520646944605499
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "J",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "raise"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ],
+        [
+          1,
+          1,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.9829497964643317,
+        "call": 0.01705020353566841
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "J",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "raise"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.9753080079471087,
+        "call": 0.012345996026445646,
+        "raise": 0.012345996026445646
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "J",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "check"
+        ]
+      ],
+      "actions": {
+        "check": 0.9116815405837877,
+        "bet": 0.08831845941621225
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "J",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "check"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ],
+        [
+          1,
+          1,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.9948272321507375,
+        "call": 0.005172767849262477
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "J",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "check"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.9971937953601612,
+        "call": 0.000334071980933192,
+        "raise": 0.0024721326589056216
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "J",
+      "public_rank": null,
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.009474093716184235,
+        "call": 0.9905259062838156
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "J",
+      "public_rank": null,
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.9171477179509115,
+        "call": 0.06569769270003169,
+        "raise": 0.017154589349056802
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "J",
+      "public_rank": null,
+      "history": [],
+      "actions": {
+        "check": 0.9120408391242971,
+        "bet": 0.08795916087570295
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "K",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ]
+      ],
+      "actions": {
+        "check": 0.9535817687241015,
+        "bet": 0.046418231275898475
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "K",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ],
+        [
+          1,
+          1,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.012113483213513774,
+        "call": 0.9878865167864863
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "K",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.10043293309376418,
+        "call": 0.8910403854053185,
+        "raise": 0.008526681500917323
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "K",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "raise"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ]
+      ],
+      "actions": {
+        "check": 0.732427708957848,
+        "bet": 0.2675722910421519
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "K",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "raise"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ],
+        [
+          1,
+          1,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.0010519017257197391,
+        "call": 0.9989480982742802
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "K",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "raise"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.00025618888277042877,
+        "call": 0.7647520348568337,
+        "raise": 0.23499177626039588
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "K",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ]
+      ],
+      "actions": {
+        "check": 0.8962252049970829,
+        "bet": 0.10377479500291714
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "K",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ],
+        [
+          1,
+          1,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.02348929165083875,
+        "call": 0.9765107083491612
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "K",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.0018132320702714878,
+        "call": 0.9821905464223929,
+        "raise": 0.015996221507335616
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "K",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "raise"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ]
+      ],
+      "actions": {
+        "check": 0.985762530142662,
+        "bet": 0.014237469857337938
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "K",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "raise"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ],
+        [
+          1,
+          1,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.0484260520419407,
+        "call": 0.9515739479580594
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "K",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "raise"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.021508044801887716,
+        "call": 0.9002648407900586,
+        "raise": 0.07822711440805363
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "K",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "check"
+        ]
+      ],
+      "actions": {
+        "check": 0.996458533827288,
+        "bet": 0.003541466172711963
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "K",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "check"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ],
+        [
+          1,
+          1,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.45430013296717875,
+        "call": 0.5456998670328213
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "K",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "check"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.9849206580112787,
+        "call": 0.0010824945654695631,
+        "raise": 0.013996847423251699
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "K",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ]
+      ],
+      "actions": {
+        "check": 0.11932828733641296,
+        "bet": 0.880671712663587
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "K",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ],
+        [
+          1,
+          1,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.0006384745385553075,
+        "call": 0.9993615254614447
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "K",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.0031413980032881095,
+        "call": 0.0031413980032881095,
+        "raise": 0.9937172039934238
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "K",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "raise"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ]
+      ],
+      "actions": {
+        "check": 0.22622937086519085,
+        "bet": 0.7737706291348092
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "K",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "raise"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ],
+        [
+          1,
+          1,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.0003637508896101909,
+        "call": 0.9996362491103898
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "K",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "raise"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.0008294229690442351,
+        "call": 0.0008294229690442351,
+        "raise": 0.9983411540619115
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "K",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ]
+      ],
+      "actions": {
+        "check": 0.6210662014353637,
+        "bet": 0.37893379856463627
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "K",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ],
+        [
+          1,
+          1,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.006432776477218179,
+        "call": 0.9935672235227818
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "K",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.002616571760193385,
+        "call": 0.002616571760193385,
+        "raise": 0.9947668564796133
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "K",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "raise"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ]
+      ],
+      "actions": {
+        "check": 0.24288400881050598,
+        "bet": 0.7571159911894939
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "K",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "raise"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ],
+        [
+          1,
+          1,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.000910645745539995,
+        "call": 0.99908935425446
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "K",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "raise"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.0018924381769267146,
+        "call": 0.0018924381769267146,
+        "raise": 0.9962151236461466
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "K",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "check"
+        ]
+      ],
+      "actions": {
+        "check": 0.03173048657508108,
+        "bet": 0.9682695134249188
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "K",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "check"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ],
+        [
+          1,
+          1,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.001661612320593388,
+        "call": 0.9983383876794065
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "K",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "check"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.033803212132803524,
+        "call": 0.033803212132803524,
+        "raise": 0.9323935757343931
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "K",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ]
+      ],
+      "actions": {
+        "check": 0.9833666864958667,
+        "bet": 0.016633313504133364
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "K",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ],
+        [
+          1,
+          1,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.2310401358290518,
+        "call": 0.7689598641709482
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "K",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.4599634073111569,
+        "call": 0.5316946317616044,
+        "raise": 0.008341960927238804
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "K",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "raise"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ]
+      ],
+      "actions": {
+        "check": 0.57748246310274,
+        "bet": 0.42251753689726007
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "K",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "raise"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ],
+        [
+          1,
+          1,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.7438369463163335,
+        "call": 0.2561630536836665
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "K",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "raise"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.055189405623081174,
+        "call": 0.9115985465796437,
+        "raise": 0.03321204779727506
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "K",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ]
+      ],
+      "actions": {
+        "check": 0.995124807148341,
+        "bet": 0.0048751928516590475
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "K",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ],
+        [
+          1,
+          1,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.5,
+        "call": 0.5
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "K",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.24400641427830191,
+        "call": 0.7415871345945546,
+        "raise": 0.014406451127143437
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "K",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "raise"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ]
+      ],
+      "actions": {
+        "check": 0.8555233872704531,
+        "bet": 0.14447661272954695
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "K",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "raise"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ],
+        [
+          1,
+          1,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.9062270000305024,
+        "call": 0.09377299996949767
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "K",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "raise"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.0694572228725093,
+        "call": 0.8779272208744755,
+        "raise": 0.052615556253015214
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "K",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "check"
+        ]
+      ],
+      "actions": {
+        "check": 0.9896997057044177,
+        "bet": 0.010300294295582223
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "K",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "check"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ],
+        [
+          1,
+          1,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.15619830919315184,
+        "call": 0.8438016908068482
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "K",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "check"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.4973533723168035,
+        "call": 0.48855419340117284,
+        "raise": 0.014092434282023619
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "K",
+      "public_rank": null,
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.0011245729307231935,
+        "call": 0.9988754270692769
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "K",
+      "public_rank": null,
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.002145184737549078,
+        "call": 0.22001024398645708,
+        "raise": 0.7778445712759938
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "K",
+      "public_rank": null,
+      "history": [],
+      "actions": {
+        "check": 0.2589779545934542,
+        "bet": 0.7410220454065457
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "Q",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ]
+      ],
+      "actions": {
+        "check": 0.9916341915606884,
+        "bet": 0.008365808439311574
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "Q",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ],
+        [
+          1,
+          1,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.9186408912793621,
+        "call": 0.08135910872063788
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "Q",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.9767990971318637,
+        "call": 0.000564264712009095,
+        "raise": 0.022636638156127188
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "Q",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "raise"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ]
+      ],
+      "actions": {
+        "check": 0.9992425312040101,
+        "bet": 0.0007574687959899826
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "Q",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "raise"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ],
+        [
+          1,
+          1,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.45883422334330853,
+        "call": 0.5411657766566914
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "Q",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "raise"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.9979231213064438,
+        "call": 0.0002273597207479603,
+        "raise": 0.0018495189728083101
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "Q",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ]
+      ],
+      "actions": {
+        "check": 0.9543077714126281,
+        "bet": 0.045692228587372014
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "Q",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ],
+        [
+          1,
+          1,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.9853874679334863,
+        "call": 0.014612532066513728
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "Q",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.984415265272535,
+        "call": 0.00046643174275954105,
+        "raise": 0.015118302984705448
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "Q",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "raise"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ]
+      ],
+      "actions": {
+        "check": 0.9591936992336031,
+        "bet": 0.040806300766396984
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "Q",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "raise"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ],
+        [
+          1,
+          1,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.9643777272316867,
+        "call": 0.03562227276831327
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "Q",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "raise"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.9979793957115887,
+        "call": 0.0010103021442056754,
+        "raise": 0.0010103021442056754
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "Q",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "check"
+        ]
+      ],
+      "actions": {
+        "check": 0.9978512717921431,
+        "bet": 0.0021487282078569794
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "Q",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "check"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ],
+        [
+          1,
+          1,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.5,
+        "call": 0.5
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "Q",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "check"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.993970605487936,
+        "call": 0.0007177850609599893,
+        "raise": 0.005311609451103923
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "Q",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ]
+      ],
+      "actions": {
+        "check": 0.4642505351137053,
+        "bet": 0.5357494648862947
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "Q",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ],
+        [
+          1,
+          1,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.7127511831711367,
+        "call": 0.2872488168288632
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "Q",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.4234124494003677,
+        "call": 0.5084878497687965,
+        "raise": 0.06809970083083582
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "Q",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "raise"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ]
+      ],
+      "actions": {
+        "check": 0.6738410041453182,
+        "bet": 0.3261589958546818
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "Q",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "raise"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ],
+        [
+          1,
+          1,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.8985516317707517,
+        "call": 0.10144836822924834
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "Q",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "raise"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.5200089992659687,
+        "call": 0.479653847753645,
+        "raise": 0.0003371529803862064
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "Q",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ]
+      ],
+      "actions": {
+        "check": 0.9986646416891531,
+        "bet": 0.0013353583108468975
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "Q",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ],
+        [
+          1,
+          1,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.5,
+        "call": 0.5
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "Q",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.4045879988177222,
+        "call": 0.5949662865565991,
+        "raise": 0.00044571462567863157
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "Q",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "raise"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ]
+      ],
+      "actions": {
+        "check": 0.6583873846218997,
+        "bet": 0.3416126153781003
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "Q",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "raise"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ],
+        [
+          1,
+          1,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.8848031781663724,
+        "call": 0.11519682183362755
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "Q",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "raise"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.38930893792088206,
+        "call": 0.6092191695828777,
+        "raise": 0.0014718924962403492
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "Q",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "check"
+        ]
+      ],
+      "actions": {
+        "check": 0.9351705907356407,
+        "bet": 0.06482940926435933
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "Q",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "check"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ],
+        [
+          1,
+          1,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.016572171736865305,
+        "call": 0.9834278282631347
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "Q",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "check"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.009630848835833558,
+        "call": 0.8120208866531538,
+        "raise": 0.17834826451101263
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "Q",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ]
+      ],
+      "actions": {
+        "check": 0.49387781617790644,
+        "bet": 0.5061221838220936
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "Q",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ],
+        [
+          1,
+          1,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.0013448031722498616,
+        "call": 0.9986551968277501
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "Q",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.0009187626251601717,
+        "call": 0.0009187626251601717,
+        "raise": 0.9981624747496797
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "Q",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "raise"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ]
+      ],
+      "actions": {
+        "check": 0.05785777612298359,
+        "bet": 0.9421422238770164
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "Q",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "raise"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ],
+        [
+          1,
+          1,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.00036170892848713605,
+        "call": 0.9996382910715129
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "Q",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "raise"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.003926654601641008,
+        "call": 0.003926654601641008,
+        "raise": 0.992146690796718
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "Q",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ]
+      ],
+      "actions": {
+        "check": 0.2160722490263358,
+        "bet": 0.7839277509736641
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "Q",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ],
+        [
+          1,
+          1,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.0008517100645999192,
+        "call": 0.9991482899354001
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "Q",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.0020600490759676996,
+        "call": 0.0020600490759676996,
+        "raise": 0.9958799018480646
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "Q",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "raise"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ]
+      ],
+      "actions": {
+        "check": 0.07448070706178694,
+        "bet": 0.925519292938213
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "Q",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "raise"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ],
+        [
+          1,
+          1,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.0015705919775607174,
+        "call": 0.9984294080224393
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "Q",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "raise"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.01301109360092899,
+        "call": 0.01301109360092899,
+        "raise": 0.973977812798142
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "Q",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "check"
+        ]
+      ],
+      "actions": {
+        "check": 0.5733963542801,
+        "bet": 0.4266036457198999
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "Q",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "check"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ],
+        [
+          1,
+          1,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.0025184128516189393,
+        "call": 0.9974815871483811
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "Q",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "check"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.0012491232820124392,
+        "call": 0.0012491232820124392,
+        "raise": 0.9975017534359751
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "Q",
+      "public_rank": null,
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.0013612694366999577,
+        "call": 0.9986387305633
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "Q",
+      "public_rank": null,
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.2172662002556226,
+        "call": 0.5363674529408345,
+        "raise": 0.24636634680354275
+      }
+    },
+    {
+      "player": 0,
+      "own_rank": "Q",
+      "public_rank": null,
+      "history": [],
+      "actions": {
+        "check": 0.38782631059907435,
+        "bet": 0.6121736894009258
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "J",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.0016142460456593925,
+        "call": 0.0051644568872536815,
+        "raise": 0.993221297067087
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "J",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ]
+      ],
+      "actions": {
+        "check": 0.00242136906848909,
+        "bet": 0.9975786309315109
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "J",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ],
+        [
+          1,
+          0,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.001213623163834255,
+        "call": 0.9987863768361658
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "J",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "raise"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.005032037719069307,
+        "call": 0.04126270929636834,
+        "raise": 0.9537052529845624
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "J",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "raise"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ]
+      ],
+      "actions": {
+        "check": 0.0075480565786039625,
+        "bet": 0.9924519434213961
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "J",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "raise"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ],
+        [
+          1,
+          0,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.003802731521983151,
+        "call": 0.9961972684780168
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "J",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.0025452354733467783,
+        "call": 0.0032268366282278606,
+        "raise": 0.9942279278984254
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "J",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ]
+      ],
+      "actions": {
+        "check": 0.003817853210020167,
+        "bet": 0.9961821467899798
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "J",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ],
+        [
+          1,
+          0,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.0019162425377339482,
+        "call": 0.998083757462266
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "J",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "raise"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.0013113147927515628,
+        "call": 0.0013113147927515628,
+        "raise": 0.9973773704144969
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "J",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "raise"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ]
+      ],
+      "actions": {
+        "check": 0.001966972189127344,
+        "bet": 0.9980330278108726
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "J",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "raise"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ],
+        [
+          1,
+          0,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.0009854243969469544,
+        "call": 0.9990145756030531
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "J",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "check"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.000710676976116139,
+        "call": 0.2600975274089345,
+        "raise": 0.7391917956149494
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "J",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "check"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ]
+      ],
+      "actions": {
+        "check": 0.0010660154641742115,
+        "bet": 0.9989339845358257
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "J",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "check"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ],
+        [
+          1,
+          0,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.0005335765329225216,
+        "call": 0.9994664234670775
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "J",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.9155606595888649,
+        "call": 0.0030547101912440982,
+        "raise": 0.0813846302198909
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "J",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ]
+      ],
+      "actions": {
+        "check": 0.7817309678467091,
+        "bet": 0.2182690321532908
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "J",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ],
+        [
+          1,
+          0,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.9944532464257492,
+        "call": 0.005546753574250873
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "J",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "raise"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.4866369996818069,
+        "call": 0.006014913783765076,
+        "raise": 0.507348086534428
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "J",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "raise"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ]
+      ],
+      "actions": {
+        "check": 0.00754805657860396,
+        "bet": 0.9924519434213961
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "J",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "raise"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ],
+        [
+          1,
+          0,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.9961972684780168,
+        "call": 0.0038027315219831496
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "J",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.8536691165379809,
+        "call": 0.010105920564879226,
+        "raise": 0.13622496289713976
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "J",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ]
+      ],
+      "actions": {
+        "check": 0.3276968619152076,
+        "bet": 0.6723031380847924
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "J",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ],
+        [
+          1,
+          0,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.9971606162505086,
+        "call": 0.0028393837494914763
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "J",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "raise"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.8726643508665355,
+        "call": 0.0066498563694712305,
+        "raise": 0.12068579276399334
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "J",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "raise"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ]
+      ],
+      "actions": {
+        "check": 0.8416238681220517,
+        "bet": 0.15837613187794838
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "J",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "raise"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ],
+        [
+          1,
+          0,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.9937901874297473,
+        "call": 0.006209812570252632
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "J",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "check"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.9963044797241961,
+        "call": 0.0007106769761161408,
+        "raise": 0.0029848432996877916
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "J",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "check"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ]
+      ],
+      "actions": {
+        "check": 0.9841470347365017,
+        "bet": 0.015852965263498307
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "J",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "check"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ],
+        [
+          1,
+          0,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.9663780420112088,
+        "call": 0.033621957988791175
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "J",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.9951884678701232,
+        "call": 0.0021979676243746634,
+        "raise": 0.002613564505502174
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "J",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ]
+      ],
+      "actions": {
+        "check": 0.5759595984094342,
+        "bet": 0.4240404015905657
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "J",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ],
+        [
+          1,
+          0,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.9971448840023185,
+        "call": 0.0028551159976815768
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "J",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "raise"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.8979042153082991,
+        "call": 0.006017742776143278,
+        "raise": 0.09607804191555758
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "J",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "raise"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ]
+      ],
+      "actions": {
+        "check": 0.5309065240869975,
+        "bet": 0.4690934759130026
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "J",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "raise"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ],
+        [
+          1,
+          0,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.9919546348796334,
+        "call": 0.008045365120366558
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "J",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.9949095290533064,
+        "call": 0.0025452354733467774,
+        "raise": 0.0025452354733467774
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "J",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ]
+      ],
+      "actions": {
+        "check": 0.586671369689524,
+        "bet": 0.4133286303104758
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "J",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ],
+        [
+          1,
+          0,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.9953815766317079,
+        "call": 0.004618423368292139
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "J",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "raise"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.6275021493499329,
+        "call": 0.01468856487169976,
+        "raise": 0.35780928577836735
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "J",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "raise"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ]
+      ],
+      "actions": {
+        "check": 0.8137136290619721,
+        "bet": 0.186286370938028
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "J",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "raise"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ],
+        [
+          1,
+          0,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.9947205687157283,
+        "call": 0.005279431284271728
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "J",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "check"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.9513164407673897,
+        "call": 0.0007106769761161405,
+        "raise": 0.047972882256494084
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "J",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "check"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ]
+      ],
+      "actions": {
+        "check": 0.9230229279569545,
+        "bet": 0.0769770720430455
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "J",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "check"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ],
+        [
+          1,
+          0,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.9930757598601692,
+        "call": 0.006924240139830834
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "J",
+      "public_rank": null,
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.6969589260306929,
+        "call": 0.22943861090214404,
+        "raise": 0.07360246306716312
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "J",
+      "public_rank": null,
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.029510119379477548,
+        "call": 0.9704898806205224
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "J",
+      "public_rank": null,
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ]
+      ],
+      "actions": {
+        "check": 0.7817272463105173,
+        "bet": 0.21827275368948276
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "K",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.0011991874555679143,
+        "call": 0.989173573750776,
+        "raise": 0.009627238793656121
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "K",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ]
+      ],
+      "actions": {
+        "check": 0.44792022112166774,
+        "bet": 0.5520797788783322
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "K",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ],
+        [
+          1,
+          0,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.36873887263121646,
+        "call": 0.6312611273687835
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "K",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "raise"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.06589488378307977,
+        "call": 0.8346630439822138,
+        "raise": 0.09944207223470643
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "K",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "raise"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ]
+      ],
+      "actions": {
+        "check": 0.9310244547230877,
+        "bet": 0.06897554527691233
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "K",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "raise"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ],
+        [
+          1,
+          0,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.0058361908433903365,
+        "call": 0.9941638091566097
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "K",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.022456907077718555,
+        "call": 0.9499585782771048,
+        "raise": 0.02758451464517666
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "K",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ]
+      ],
+      "actions": {
+        "check": 0.9064542347726356,
+        "bet": 0.09354576522736428
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "K",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ],
+        [
+          1,
+          0,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.004496505522335317,
+        "call": 0.9955034944776647
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "K",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "raise"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.00028065547031162405,
+        "call": 0.9988084577305133,
+        "raise": 0.0009108867991749825
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "K",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "raise"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ]
+      ],
+      "actions": {
+        "check": 0.41864941966239,
+        "bet": 0.5813505803376099
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "K",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "raise"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ],
+        [
+          1,
+          0,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.10156888903560747,
+        "call": 0.8984311109643925
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "K",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "check"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.5129968596165306,
+        "call": 0.06853861507753235,
+        "raise": 0.418464525305937
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "K",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "check"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ]
+      ],
+      "actions": {
+        "check": 0.08846297403872463,
+        "bet": 0.9115370259612754
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "K",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "check"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ],
+        [
+          1,
+          0,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.0485240706187632,
+        "call": 0.9514759293812368
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "K",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.0011991874555679146,
+        "call": 0.00336134635762214,
+        "raise": 0.9954394661868099
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "K",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ]
+      ],
+      "actions": {
+        "check": 0.0017987811833518725,
+        "bet": 0.9982012188166481
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "K",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ],
+        [
+          1,
+          0,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.0009010113138733186,
+        "call": 0.9990989886861267
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "K",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "raise"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.0005367392610172951,
+        "call": 0.003336735187253792,
+        "raise": 0.996126525551729
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "K",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "raise"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ]
+      ],
+      "actions": {
+        "check": 0.0008051088915259428,
+        "bet": 0.999194891108474
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "K",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "raise"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ],
+        [
+          1,
+          0,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.000402878807072753,
+        "call": 0.9995971211929272
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "K",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.0005608387332478995,
+        "call": 0.3635853782969781,
+        "raise": 0.635853782969774
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "K",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ]
+      ],
+      "actions": {
+        "check": 0.0008412580998718534,
+        "bet": 0.9991587419001282
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "K",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ],
+        [
+          1,
+          0,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.00042098320546743624,
+        "call": 0.9995790167945325
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "K",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "raise"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.00028065547031162416,
+        "call": 0.00028065547031162416,
+        "raise": 0.9994386890593767
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "K",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "raise"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ]
+      ],
+      "actions": {
+        "check": 0.00042098320546743624,
+        "bet": 0.9995790167945325
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "K",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "raise"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ],
+        [
+          1,
+          0,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.0002105802534838379,
+        "call": 0.9997894197465161
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "K",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "check"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.05897531602581641,
+        "call": 0.16835925666223606,
+        "raise": 0.7726654273119475
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "K",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "check"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ]
+      ],
+      "actions": {
+        "check": 0.08846297403872462,
+        "bet": 0.9115370259612754
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "K",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "check"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ],
+        [
+          1,
+          0,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.0485240706187632,
+        "call": 0.9514759293812368
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "K",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.5045139436092108,
+        "call": 0.48101639444509836,
+        "raise": 0.014469661945690873
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "K",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ]
+      ],
+      "actions": {
+        "check": 0.7892474685707432,
+        "bet": 0.21075253142925676
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "K",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ],
+        [
+          1,
+          0,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.9498345528917445,
+        "call": 0.05016544710825558
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "K",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "raise"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.4804864988192307,
+        "call": 0.362523751879862,
+        "raise": 0.15698974930090723
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "K",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "raise"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ]
+      ],
+      "actions": {
+        "check": 0.7885943318071093,
+        "bet": 0.2114056681928908
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "K",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "raise"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ],
+        [
+          1,
+          0,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.5354008031971432,
+        "call": 0.4645991968028568
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "K",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.5099178412734687,
+        "call": 0.45497848123142903,
+        "raise": 0.0351036774951023
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "K",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ]
+      ],
+      "actions": {
+        "check": 0.6337765404854285,
+        "bet": 0.36622345951457147
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "K",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ],
+        [
+          1,
+          0,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.7548558395900645,
+        "call": 0.24514416040993553
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "K",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "raise"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.2838192691976442,
+        "call": 0.6992408526533705,
+        "raise": 0.016939878148985222
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "K",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "raise"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ]
+      ],
+      "actions": {
+        "check": 0.557886477885669,
+        "bet": 0.44211352211433086
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "K",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "raise"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ],
+        [
+          1,
+          0,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.1944905352646178,
+        "call": 0.8055094647353822
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "K",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "check"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.07276659992144886,
+        "call": 0.5087688747726141,
+        "raise": 0.418464525305937
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "K",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "check"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ]
+      ],
+      "actions": {
+        "check": 0.08846297403872463,
+        "bet": 0.9115370259612754
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "K",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "check"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ],
+        [
+          1,
+          0,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.0485240706187632,
+        "call": 0.9514759293812368
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "K",
+      "public_rank": null,
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.0011111111111111113,
+        "call": 0.3088511046798508,
+        "raise": 0.6900377842090382
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "K",
+      "public_rank": null,
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.0008412580998718545,
+        "call": 0.9991587419001282
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "K",
+      "public_rank": null,
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ]
+      ],
+      "actions": {
+        "check": 0.0094201369826041,
+        "bet": 0.9905798630173959
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "Q",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.9903702931541797,
+        "call": 0.0006792478224804177,
+        "raise": 0.008950459023339939
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "Q",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ]
+      ],
+      "actions": {
+        "check": 0.939042710203596,
+        "bet": 0.06095728979640401
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "Q",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ],
+        [
+          1,
+          0,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.9916427408672234,
+        "call": 0.008357259132776695
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "Q",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "raise"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.9803700491018421,
+        "call": 0.001364296320537745,
+        "raise": 0.018265654577620177
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "Q",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "raise"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ]
+      ],
+      "actions": {
+        "check": 0.9517349461685679,
+        "bet": 0.04826505383143211
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "Q",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "raise"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ],
+        [
+          1,
+          0,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.5892879749820784,
+        "call": 0.41071202501792153
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "Q",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.9818076043160201,
+        "call": 0.0006543163935144165,
+        "raise": 0.017538079290465428
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "Q",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ]
+      ],
+      "actions": {
+        "check": 0.7045147538719767,
+        "bet": 0.2954852461280231
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "Q",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ],
+        [
+          1,
+          0,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.9296814438563159,
+        "call": 0.07031855614368412
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "Q",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "raise"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.999345040780654,
+        "call": 0.0003274796096729343,
+        "raise": 0.0003274796096729343
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "Q",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "raise"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ]
+      ],
+      "actions": {
+        "check": 0.9908440299529447,
+        "bet": 0.00915597004705518
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "Q",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "raise"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ],
+        [
+          1,
+          0,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.9731749114520425,
+        "call": 0.026825088547957388
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "Q",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "check"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.9808603551963679,
+        "call": 0.003680700923775389,
+        "raise": 0.015458943879856636
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "Q",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "check"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ]
+      ],
+      "actions": {
+        "check": 0.9944789486143369,
+        "bet": 0.005521051385663085
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "Q",
+      "public_rank": "J",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "check"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ],
+        [
+          1,
+          0,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.5,
+        "call": 0.5
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "Q",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.524142369644737,
+        "call": 0.47299345237902285,
+        "raise": 0.0028641779762401546
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "Q",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ]
+      ],
+      "actions": {
+        "check": 0.7892131152443225,
+        "bet": 0.21078688475567753
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "Q",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ],
+        [
+          1,
+          0,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.8040597580336116,
+        "call": 0.19594024196638832
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "Q",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "raise"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.4741171708424086,
+        "call": 0.49972800249388344,
+        "raise": 0.026154826663707893
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "Q",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "raise"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ]
+      ],
+      "actions": {
+        "check": 0.5424563461421406,
+        "bet": 0.4575436538578595
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "Q",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "raise"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ],
+        [
+          1,
+          0,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.9126270522578672,
+        "call": 0.0873729477421328
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "Q",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.5322180550882158,
+        "call": 0.3799849987765974,
+        "raise": 0.08779694613518678
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "Q",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ]
+      ],
+      "actions": {
+        "check": 0.671564778396106,
+        "bet": 0.32843522160389416
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "Q",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ],
+        [
+          1,
+          0,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.6955619690961826,
+        "call": 0.3044380309038174
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "Q",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "raise"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.7036535413155035,
+        "call": 0.2782158315377004,
+        "raise": 0.018130627146795943
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "Q",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "raise"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ]
+      ],
+      "actions": {
+        "check": 0.7462483216115543,
+        "bet": 0.2537516783884458
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "Q",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "raise"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ],
+        [
+          1,
+          0,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.814756224706209,
+        "call": 0.18524377529379096
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "Q",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "check"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.14424649256280075,
+        "call": 0.7578082168311983,
+        "raise": 0.09794529060600098
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "Q",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "check"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ]
+      ],
+      "actions": {
+        "check": 0.8591646777102386,
+        "bet": 0.14083532228976142
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "Q",
+      "public_rank": "K",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "check"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ],
+        [
+          1,
+          0,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.01960108904463543,
+        "call": 0.9803989109553645
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "Q",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.0006792478224804177,
+        "call": 0.0033437651729093113,
+        "raise": 0.9959769870046102
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "Q",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ]
+      ],
+      "actions": {
+        "check": 0.0010188717337206268,
+        "bet": 0.9989811282662794
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "Q",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ],
+        [
+          1,
+          0,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.0005099554460497503,
+        "call": 0.9994900445539502
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "Q",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "raise"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.0009561877814681184,
+        "call": 0.007840739808038575,
+        "raise": 0.9912030724104933
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "Q",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "raise"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ]
+      ],
+      "actions": {
+        "check": 0.001434281672202178,
+        "bet": 0.9985657183277978
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "Q",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ],
+        [
+          0,
+          1,
+          "raise"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ],
+        [
+          1,
+          0,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.0007181708954539477,
+        "call": 0.9992818291045461
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "Q",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.000654316393514415,
+        "call": 0.3635768803278628,
+        "raise": 0.6357688032786228
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "Q",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ]
+      ],
+      "actions": {
+        "check": 0.0009814745902716252,
+        "bet": 0.9990185254097285
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "Q",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ],
+        [
+          1,
+          0,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.0004912194145094017,
+        "call": 0.9995087805854906
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "Q",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "raise"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.0003274796096729344,
+        "call": 0.0003274796096729344,
+        "raise": 0.999345040780654
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "Q",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "raise"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ]
+      ],
+      "actions": {
+        "check": 0.0004912194145094017,
+        "bet": 0.9995087805854906
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "Q",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "raise"
+        ],
+        [
+          0,
+          1,
+          "call"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ],
+        [
+          1,
+          0,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.0002457304148051886,
+        "call": 0.9997542695851949
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "Q",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "check"
+        ],
+        [
+          1,
+          0,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.00368070092377539,
+        "call": 0.01793245472003494,
+        "raise": 0.9783868443561897
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "Q",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "check"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ]
+      ],
+      "actions": {
+        "check": 0.005521051385663085,
+        "bet": 0.9944789486143369
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "Q",
+      "public_rank": "Q",
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "check"
+        ],
+        [
+          1,
+          0,
+          "check"
+        ],
+        [
+          1,
+          1,
+          "bet"
+        ],
+        [
+          1,
+          0,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.002775851310556083,
+        "call": 0.997224148689444
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "Q",
+      "public_rank": null,
+      "history": [
+        [
+          0,
+          0,
+          "bet"
+        ]
+      ],
+      "actions": {
+        "fold": 0.06739392648204379,
+        "call": 0.545265451154315,
+        "raise": 0.38734062236364125
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "Q",
+      "public_rank": null,
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ],
+        [
+          0,
+          1,
+          "bet"
+        ],
+        [
+          0,
+          0,
+          "raise"
+        ]
+      ],
+      "actions": {
+        "fold": 0.0009814745902716263,
+        "call": 0.9990185254097285
+      }
+    },
+    {
+      "player": 1,
+      "own_rank": "Q",
+      "public_rank": null,
+      "history": [
+        [
+          0,
+          0,
+          "check"
+        ]
+      ],
+      "actions": {
+        "check": 0.1509374347605805,
+        "bet": 0.8490625652394196
+      }
+    }
+  ]
+}
