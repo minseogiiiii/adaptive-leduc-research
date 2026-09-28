@@ -64,6 +64,8 @@ which exclude the opponent's card until showdown.
 11. `FOLLOWUP_PROTOCOL.md` fixes the held-out family analysis before its
     outcomes. `FOLLOWUP.md` records the larger run; `pokerlab/followup.py`
     validates and reproduces its joint-replicate bootstrap summary.
+12. `pokerlab/open_spiel_check.py` exhaustively compares the hand engine with
+    OpenSpiel 2.0.2. `results/open-spiel-crosscheck.json` records the audit.
 
 ## Evaluator cross-check
 
@@ -74,9 +76,41 @@ simulator. It reports the Monte Carlo standard error and exits with an error if
 the means differ by more than four estimated standard errors. A larger sample
 can resolve an occasional noisy failure; a passing check does not establish
 mathematical correctness. The two paths use different chance/action evaluation
-methods but share `pokerlab/game.py`. Comparison with a separately implemented
-game remains outstanding, and must first reconcile its betting convention
-with `rules.md`.
+methods but share `pokerlab/game.py`.
+
+## External Leduc rules audit
+
+With OpenSpiel 2.0.2 installed in a compatible Python environment (verified
+here using Python 3.12), run:
+
+```bash
+python3 -m pip install open-spiel==2.0.2
+python3 -m pokerlab.open_spiel_check --output results/open-spiel-crosscheck.json
+python3 -m unittest discover -s tests -v
+```
+
+This optional audit loads
+`leduc_poker(players=2,action_mapping=false,suit_isomorphism=false,starting_player=0)`.
+OpenSpiel's ante is 1, the round increments are 2 and 4, and its two raises
+per round count the opening bet. Its `call` action means check when no bet is
+outstanding, and `raise` means the opening bet in that case. The audit checks
+every ordered pair of physical private cards and every legal continuation,
+including public chance probabilities, legal actions, actor, betting history,
+pot, contributions and net terminal returns. It traversed 30 private deals,
+3,780 decision nodes, 150 public chance nodes and 5,520 terminal nodes with
+no mismatch. The inspected upstream source is
+[`leduc_poker.cc`](https://github.com/google-deepmind/open_spiel/blob/48401890ee9857e611678302371378175a8e4c6b/open_spiel/games/leduc_poker/leduc_poker.cc)
+and its [header](https://github.com/google-deepmind/open_spiel/blob/48401890ee9857e611678302371378175a8e4c6b/open_spiel/games/leduc_poker/leduc_poker.h);
+the executable comparison uses the pinned 2.0.2 distribution.
+
+This establishes agreement of the **hand transitions and payoffs** under
+those parameters. OpenSpiel with `suit_isomorphism=false` exposes the physical
+copy in its information-state string, whereas our CFR `info_key` merges the
+two copies of a rank. Thus OpenSpiel's unmodified CFR policy and exploitability
+numbers cannot be compared directly to ours. The project also still needs an
+independent check of its Bayesian likelihood and information-set response.
+The earlier `REPORT.md` and `FOLLOWUP.md` are historical snapshots written
+before this external audit and retain their original provenance text.
 
 ## Stationary-opponent experiment
 
@@ -269,12 +303,13 @@ iterations do not make the policy an exact equilibrium.
 
 | Stage | Intended output | Status |
 | --- | --- | --- |
-| Week 1 | Rules, game engine, observations, seeded traces, correctness checks | Implemented here; OpenSpiel cross-check remains |
-| Week 2 | CFR, exact values and legal best response | Implemented; simulation cross-check added, external rules cross-check pending |
+| Week 1 | Rules, game engine, observations, seeded traces, correctness checks | Implemented; exhaustive OpenSpiel 2.0.2 hand-rule audit passed |
+| Week 2 | CFR, exact values and legal best response | Implemented; rollout check and external hand-rule audit passed; information-set response remains independently unverified |
 | Weeks 3-4 | Hidden-card likelihood and Bayesian decision agent | Implemented for a finite stationary model set |
-| Weeks 5-6 | Stationary opponent experiments | Paired, seat-balanced runner and a prespecified three-type held-out follow-up implemented; external/generalization study pending |
-| Weeks 7-8 | Policy switches, profiling and research report | Switch experiment, reproducible CPU profiler, pilot and follow-up reports implemented; external cross-check pending |
+| Weeks 5-6 | Stationary opponent experiments | Paired, seat-balanced runner and a prespecified three-type held-out follow-up implemented; broader generalization study pending |
+| Weeks 7-8 | Policy switches, profiling and research report | Switch experiment, reproducible CPU profiler, pilot and follow-up reports implemented; external hand-rule audit passed |
 
 The reference convention in the accompanying PDF must be matched explicitly
-before any numeric comparison with OpenSpiel. The small controlled pilot does
-not establish a general adaptation benefit or strong poker play.
+before any numeric comparison with that PDF; the OpenSpiel audit above checks
+the specified OpenSpiel variant. The small controlled pilot does not establish
+a general adaptation benefit or strong poker play.
