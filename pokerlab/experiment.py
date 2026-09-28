@@ -51,6 +51,47 @@ class RankSelectivePolicy:
         return ActionBiasPolicy(self.base, factors).probabilities(observation)
 
 
+@dataclass(frozen=True)
+class RoundPolarizedPolicy:
+    """Held-out policy that is passive before the board, aggressive after it."""
+
+    base: Policy
+
+    def probabilities(self, observation: PlayerObservation) -> tuple[float, ...]:
+        factors = ({Action.CHECK: 2.0, Action.CALL: 2.5,
+                    Action.BET: 0.35, Action.RAISE: 0.35, Action.FOLD: 0.6}
+                   if observation.round_index == 0 else
+                   {Action.CHECK: 0.5, Action.CALL: 0.65,
+                    Action.BET: 3.5, Action.RAISE: 3.5, Action.FOLD: 0.65})
+        return ActionBiasPolicy(self.base, factors).probabilities(observation)
+
+
+@dataclass(frozen=True)
+class PressureReactivePolicy:
+    """Held-out policy that bluffs first and backs off after opposing pressure."""
+
+    base: Policy
+
+    def probabilities(self, observation: PlayerObservation) -> tuple[float, ...]:
+        pressured = any(event.round_index == observation.round_index
+                        and event.player != observation.player
+                        and event.action in (Action.BET, Action.RAISE)
+                        for event in observation.actions)
+        factors = ({Action.FOLD: 3.0, Action.CALL: 0.7, Action.RAISE: 0.4}
+                   if pressured else
+                   {Action.BET: 3.0, Action.RAISE: 3.0, Action.CHECK: 0.45})
+        return ActionBiasPolicy(self.base, factors).probabilities(observation)
+
+
+HELD_OUT_POLICIES = {
+    "rank_selective": RankSelectivePolicy,
+    "round_polarized": RoundPolarizedPolicy,
+    "pressure_reactive": PressureReactivePolicy,
+}
+OPPONENT_CHOICES = ("baseline", "folding", "calling", "aggressive",
+                    *HELD_OUT_POLICIES)
+
+
 def _mean(values: list[float]) -> float:
     return statistics.fmean(values)
 
@@ -191,11 +232,9 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Paired Leduc opponent experiment")
     parser.add_argument("--strategy", type=Path, default=Path("strategy.json"))
     parser.add_argument("--rules", type=Path, default=Path("rules.md"))
-    parser.add_argument("--opponent", choices=("baseline", "folding", "calling",
-                                                "aggressive", "rank_selective"),
+    parser.add_argument("--opponent", choices=OPPONENT_CHOICES,
                         default="calling")
-    parser.add_argument("--switch-to", choices=("baseline", "folding", "calling",
-                                                "aggressive", "rank_selective"))
+    parser.add_argument("--switch-to", choices=OPPONENT_CHOICES)
     parser.add_argument("--switch-after", type=int)
     parser.add_argument("--hands", type=int, default=12)
     parser.add_argument("--replicates", type=int, default=2)
@@ -212,7 +251,7 @@ def main() -> None:
     models = example_models(baseline)
 
     def selected_policy(name: str) -> Policy:
-        return RankSelectivePolicy(baseline) if name == "rank_selective" else models[name]
+        return HELD_OUT_POLICIES[name](baseline) if name in HELD_OUT_POLICIES else models[name]
 
     opponent = selected_policy(args.opponent)
     switch_to = selected_policy(args.switch_to) if args.switch_to else None
