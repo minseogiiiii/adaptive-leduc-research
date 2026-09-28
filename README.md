@@ -17,6 +17,7 @@ python3 -m pokerlab.cfr --iterations 100 --output strategy.json
 python3 -m pokerlab.bayes --hands 12 --opponent calling --seed 7
 python3 -m pokerlab.experiment --opponent calling --hands 12 --replicates 20 --seed 7 --output results/calling.json
 python3 -m pokerlab.experiment --opponent calling --switch-to aggressive --switch-after 6 --hands 12 --replicates 20 --seed 7 --output results/switch.json
+python3 -m pokerlab.profile --opponent calling --switch-to aggressive --switch-after 2 --hands 4 --replicates 2 --seed 13 --output results/profile-switch-example.json
 python3 -m pokerlab.validate --player0 baseline --player1 calling --hands 20000 --seed 7
 ```
 
@@ -52,6 +53,9 @@ which exclude the opponent's card until showdown.
 8. `pokerlab/validate.py` compares the exact profile evaluator with independent
    seeded hand rollouts. Its tests include a known one-chip fold payoff and an
    asymmetric stochastic profile.
+9. `pokerlab/profile.py` measures where the paired experiment spends CPU time
+   and hashes its deterministic output. `tests/test_profile.py` compares that
+   hash with a separately run, unprofiled switch experiment.
 
 ## Evaluator cross-check
 
@@ -115,6 +119,30 @@ Phase means and intervals use the same replicate unit. This change measures
 a shift in relative payoff under a changed opponent, not a causal estimate of
 learning speed. The sample command is illustrative; assess uncertainty with
 many independent replicates and prespecified phase lengths and opponents.
+
+## CPU profiling
+
+`python3 -m pokerlab.profile --opponent calling --switch-to aggressive
+--switch-after 2 --hands 4 --replicates 2 --seed 13 --top 15 --output
+results/profile-switch-example.json` runs the full paired experiment under Python's
+`cProfile`. It records the workload and input SHA-256 hashes, Python/platform
+details, total calls, elapsed seconds, and the functions with the largest
+**cumulative** time. Nested cumulative times overlap and must not be added.
+Strategy loading and JSON serialization happen outside the timed region. The
+`result_sha256` hashes the entire deterministic `run_experiment` output (all
+hands and posteriors), before profile metadata is added. It can be compared
+with an unprofiled run using the same inputs; the test suite checks this for
+a switched opponent. Timing depends on hardware, Python and profiler overhead.
+
+The small example diagnoses implementation cost, not the effectiveness of
+learning or a statistically stable speedup. For comparable measurements,
+hold the input hashes, opponent schedule, Python version, machine and system
+load fixed, run multiple independent timings, and inspect the same call sites.
+On the example workload the nested exact mixture best response dominates
+cumulative time. This identifies a candidate for future optimization, while
+the present profiler does not alter its information-set semantics. The
+committed `results/profile-switch-example.json` records one such diagnostic
+run, including its exact input hashes and the full experiment-result digest.
 
 ## Bayesian opponent learning and adaptive decisions
 
@@ -195,7 +223,7 @@ iterations do not make the policy an exact equilibrium.
 | Week 2 | CFR, exact values and legal best response | Implemented; simulation cross-check added, external rules cross-check pending |
 | Weeks 3-4 | Hidden-card likelihood and Bayesian decision agent | Implemented for a finite stationary model set |
 | Weeks 5-6 | Stationary opponent experiments | Paired, seat-balanced runner and one held-out behavioral opponent implemented; large runs pending |
-| Weeks 7-8 | Policy switches, profiling and research report | Switch experiment implemented; profiling and report pending |
+| Weeks 7-8 | Policy switches, profiling and research report | Switch experiment and reproducible CPU profiler implemented; report pending |
 
 The reference convention in the accompanying PDF must be matched explicitly
 before any numeric comparison with OpenSpiel. This package has no controlled
