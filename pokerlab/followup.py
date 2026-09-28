@@ -135,7 +135,9 @@ def render_followup(paths: tuple[Path, Path, Path, Path], *, strategy: Path,
                    ("game.py", "cfr.py", "bayes.py", "experiment.py",
                     "report.py", "followup.py")),
                  *(path for path, _ in records)):
-        lines.append(f"| `{path.as_posix()}` | `{_sha(path)}` |")
+        display = (path.relative_to(Path(__file__).resolve().parent.parent)
+                   if path.is_absolute() else path)
+        lines.append(f"| `{display.as_posix()}` | `{_sha(path)}` |")
     return "\n".join(lines) + "\n"
 
 
