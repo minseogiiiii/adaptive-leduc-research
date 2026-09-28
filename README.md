@@ -19,6 +19,7 @@ python3 -m pokerlab.experiment --opponent calling --hands 12 --replicates 20 --s
 python3 -m pokerlab.experiment --opponent calling --switch-to aggressive --switch-after 6 --hands 12 --replicates 20 --seed 7 --output results/switch.json
 python3 -m pokerlab.profile --opponent calling --switch-to aggressive --switch-after 2 --hands 4 --replicates 2 --seed 13 --output results/profile-switch-example.json
 python3 -m pokerlab.report --output REPORT.md
+python3 -m pokerlab.followup --output FOLLOWUP.md
 python3 -m pokerlab.validate --player0 baseline --player1 calling --hands 20000 --seed 7
 ```
 
@@ -60,6 +61,9 @@ which exclude the opponent's card until showdown.
 10. `REPORT.md` is a descriptive pilot with three prespecified opponent
     conditions. `pokerlab/report.py` reconstructs its means, paired contrasts
     and bootstrap intervals from saved hand rows and checks input hashes.
+11. `FOLLOWUP_PROTOCOL.md` fixes the held-out family analysis before its
+    outcomes. `FOLLOWUP.md` records the larger run; `pokerlab/followup.py`
+    validates and reproduces its joint-replicate bootstrap summary.
 
 ## Evaluator cross-check
 
@@ -165,6 +169,31 @@ and the switch violates the learner's stationary-type assumption. The
 report includes reproduction commands, JSON hashes and remaining external
 validation and power-analysis work.
 
+The pilot report preserves hashes of the implementation used to generate its
+original outcomes. Later additions to `pokerlab/experiment.py` do not change
+its saved hand rows or statistics, but regenerating the pilot Markdown under
+the expanded code changes the provenance hash printed for that file. Use the
+original Git revision when reproducing the historical report byte for byte.
+
+## Held-out opponent follow-up
+
+`FOLLOWUP_PROTOCOL.md` fixes the three constructed held-out policies, the
+calling-to-aggressive switch stress condition, seed, sample size, primary
+family contrast, bootstrap unit and stopping rule. The first policy depends
+on private rank and public pair, `round_polarized` changes bias across betting
+rounds, and `pressure_reactive` backs off after public opposing pressure.
+They all receive only legal `PlayerObservation` information and assign
+positive probability to every legal action. The learner's four candidate
+types remain the same.
+
+`FOLLOWUP.md` is generated from four full raw JSON records with
+`python3 -m pokerlab.followup --output FOLLOWUP.md`. The generator checks the
+complete hand grid, provenance, phase labels, posteriors, reward summaries,
+intervals and shared seed schedule. The family interval jointly resamples
+two-seat replicate indices across the three held-out conditions. The separate
+switch condition probes the stationary-type assumption. These constructed
+opponents and the finite number of replicates limit generalization.
+
 ## Bayesian opponent learning and adaptive decisions
 
 The *example* candidate types are a smoothed CFR baseline and three fixed
@@ -243,8 +272,8 @@ iterations do not make the policy an exact equilibrium.
 | Week 1 | Rules, game engine, observations, seeded traces, correctness checks | Implemented here; OpenSpiel cross-check remains |
 | Week 2 | CFR, exact values and legal best response | Implemented; simulation cross-check added, external rules cross-check pending |
 | Weeks 3-4 | Hidden-card likelihood and Bayesian decision agent | Implemented for a finite stationary model set |
-| Weeks 5-6 | Stationary opponent experiments | Paired, seat-balanced runner and one held-out behavioral opponent implemented; larger confirmatory runs pending |
-| Weeks 7-8 | Policy switches, profiling and research report | Switch experiment, reproducible CPU profiler and validated pilot report implemented; confirmatory research pending |
+| Weeks 5-6 | Stationary opponent experiments | Paired, seat-balanced runner and a prespecified three-type held-out follow-up implemented; external/generalization study pending |
+| Weeks 7-8 | Policy switches, profiling and research report | Switch experiment, reproducible CPU profiler, pilot and follow-up reports implemented; external cross-check pending |
 
 The reference convention in the accompanying PDF must be matched explicitly
 before any numeric comparison with OpenSpiel. The small controlled pilot does
