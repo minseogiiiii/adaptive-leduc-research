@@ -4,7 +4,8 @@ from unittest.mock import patch
 
 from pokerlab.bayes import ActionBiasPolicy
 from pokerlab.cfr import UniformPolicy
-from pokerlab.experiment import RankSelectivePolicy, run_experiment
+from pokerlab.experiment import (PressureReactivePolicy, RankSelectivePolicy,
+                                 RoundPolarizedPolicy, run_experiment)
 from pokerlab.game import Action, Card, new_hand
 from pokerlab.simulate import run_hand
 
@@ -65,6 +66,31 @@ class ExperimentTest(unittest.TestCase):
         self.assertGreater(first[strong.legal_actions().index(Action.FOLD)],
                            second[weak.legal_actions().index(Action.FOLD)])
         self.assertTrue(all(p > 0 for p in first + second))
+
+    def test_round_polarized_opponent_changes_with_betting_round(self):
+        model = RoundPolarizedPolicy(UniformPolicy())
+        state = new_hand(Card("J", 0), Card("Q", 0))
+        pre = model.probabilities(state.observe(0))
+        state = state.apply(Action.CHECK).apply(Action.CHECK)
+        state = state.deal_public(Card("K", 0))
+        post = model.probabilities(state.observe(0))
+        self.assertGreater(post[state.legal_actions().index(Action.BET)],
+                           pre[new_hand(Card("J", 0), Card("Q", 0)).legal_actions().index(Action.BET)])
+        self.assertAlmostEqual(sum(pre), 1)
+        self.assertAlmostEqual(sum(post), 1)
+        self.assertTrue(all(p > 0 for p in pre + post))
+
+    def test_pressure_reactive_opponent_uses_current_public_history(self):
+        model = PressureReactivePolicy(UniformPolicy())
+        state = new_hand(Card("J", 0), Card("Q", 0))
+        unpressured = model.probabilities(state.observe(0))
+        state = state.apply(Action.BET)
+        pressured = model.probabilities(state.observe(1))
+        self.assertGreater(pressured[state.legal_actions().index(Action.FOLD)],
+                           pressured[state.legal_actions().index(Action.RAISE)])
+        self.assertGreater(unpressured[1], unpressured[0])
+        self.assertAlmostEqual(sum(pressured), 1)
+        self.assertTrue(all(p > 0 for p in pressured))
 
     def test_switch_uses_correct_policy_without_resetting_beliefs(self):
         baseline = UniformPolicy()
