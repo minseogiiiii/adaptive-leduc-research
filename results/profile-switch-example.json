@@ -1,0 +1,199 @@
+{
+  "mean_reward": {
+    "cfr": 0.0,
+    "frozen_prior": -0.5,
+    "learning": -0.5
+  },
+  "paired_contrasts": {
+    "learning_minus_cfr": {
+      "bootstrap_95_percent": [
+        -0.75,
+        -0.25
+      ],
+      "mean": -0.5
+    },
+    "learning_minus_frozen_prior": {
+      "bootstrap_95_percent": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0
+    }
+  },
+  "profile": {
+    "elapsed_seconds": 23.635588176000056,
+    "primitive_function_calls": 42432840,
+    "top_by_cumulative_seconds": [
+      {
+        "calls": 1,
+        "cumulative_seconds": 23.635388274,
+        "file": "pokerlab/experiment.py",
+        "function": "run_experiment",
+        "line": 83,
+        "primitive_calls": 1,
+        "self_seconds": 0.000685536
+      },
+      {
+        "calls": 18,
+        "cumulative_seconds": 23.540449188,
+        "file": "pokerlab/cfr.py",
+        "function": "best_response_mixture",
+        "line": 228,
+        "primitive_calls": 18,
+        "self_seconds": 0.00606671
+      },
+      {
+        "calls": 12888,
+        "cumulative_seconds": 23.361289339000002,
+        "file": "pokerlab/cfr.py",
+        "function": "solve",
+        "line": 248,
+        "primitive_calls": 18,
+        "self_seconds": 1.1725485150000001
+      },
+      {
+        "calls": 48,
+        "cumulative_seconds": 20.953581306,
+        "file": "pokerlab/simulate.py",
+        "function": "run_hand",
+        "line": 20,
+        "primitive_calls": 48,
+        "self_seconds": 0.0008755010000000001
+      },
+      {
+        "calls": 31,
+        "cumulative_seconds": 20.938505427000003,
+        "file": "pokerlab/bayes.py",
+        "function": "choose",
+        "line": 176,
+        "primitive_calls": 31,
+        "self_seconds": 0.000962494
+      },
+      {
+        "calls": 1884970,
+        "cumulative_seconds": 19.221815419000002,
+        "file": "~",
+        "function": "<built-in method builtins.sum>",
+        "line": 0,
+        "primitive_calls": 279280,
+        "self_seconds": 0.466675587
+      },
+      {
+        "calls": 1080,
+        "cumulative_seconds": 19.152497416000003,
+        "file": "pokerlab/cfr.py",
+        "function": "<genexpr>",
+        "line": 260,
+        "primitive_calls": 1080,
+        "self_seconds": 0.004867869
+      },
+      {
+        "calls": 726551,
+        "cumulative_seconds": 11.067760809000001,
+        "file": "pokerlab/game.py",
+        "function": "apply",
+        "line": 113,
+        "primitive_calls": 726551,
+        "self_seconds": 1.4239778790000002
+      },
+      {
+        "calls": 1029239,
+        "cumulative_seconds": 7.692373030000001,
+        "file": "dataclasses.py",
+        "function": "replace",
+        "line": 1540,
+        "primitive_calls": 1029239,
+        "self_seconds": 3.9131238520000005
+      },
+      {
+        "calls": 363339,
+        "cumulative_seconds": 6.546490086,
+        "file": "pokerlab/bayes.py",
+        "function": "probabilities",
+        "line": 43,
+        "primitive_calls": 363339,
+        "self_seconds": 1.347752037
+      },
+      {
+        "calls": 423560,
+        "cumulative_seconds": 3.7223398480000003,
+        "file": "pokerlab/game.py",
+        "function": "_settle",
+        "line": 170,
+        "primitive_calls": 423560,
+        "self_seconds": 0.6391799650000001
+      },
+      {
+        "calls": 363435,
+        "cumulative_seconds": 3.6901536110000004,
+        "file": "pokerlab/cfr.py",
+        "function": "probabilities",
+        "line": 60,
+        "primitive_calls": 363435,
+        "self_seconds": 0.728055595
+      },
+      {
+        "calls": 1090209,
+        "cumulative_seconds": 3.035550746,
+        "file": "pokerlab/cfr.py",
+        "function": "_validate",
+        "line": 47,
+        "primitive_calls": 1090209,
+        "self_seconds": 1.27194323
+      },
+      {
+        "calls": 259378,
+        "cumulative_seconds": 2.673609619,
+        "file": "pokerlab/game.py",
+        "function": "_close_round",
+        "line": 150,
+        "primitive_calls": 259378,
+        "self_seconds": 0.366204829
+      },
+      {
+        "calls": 518955,
+        "cumulative_seconds": 2.285828613,
+        "file": "pokerlab/cfr.py",
+        "function": "info_key",
+        "line": 25,
+        "primitive_calls": 518955,
+        "self_seconds": 0.679505527
+      }
+    ],
+    "total_function_calls": 44051400
+  },
+  "result_sha256": "8f7cb47aba1286728f4503b868005dcb96ddc1a723177320545186f5e1dbc873",
+  "runtime": {
+    "implementation": "CPython",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+    "python": "3.12.14"
+  },
+  "workload": {
+    "bootstrap_resamples": 2000,
+    "candidate_types": [
+      "baseline",
+      "folding",
+      "calling",
+      "aggressive"
+    ],
+    "hands_per_seat": 4,
+    "initial_prior": [
+      0.25,
+      0.25,
+      0.25,
+      0.25
+    ],
+    "opponent": "calling",
+    "replicates": 2,
+    "rules_sha256": "d16565525a7fb70955804aa41fc6face224eb619266d4b395dcc35a062c0c644",
+    "seat_order": [
+      0,
+      1
+    ],
+    "seed": 13,
+    "strategy_sha256": "fefb21881d3a4abe5ae13c27ceb420d896e7e74797cb1b87763c90628a25219a",
+    "switch_after": 2,
+    "switch_to": "aggressive",
+    "unit": "net chips per hand, averaged across seats"
+  }
+}
