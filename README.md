@@ -18,6 +18,7 @@ python3 -m pokerlab.bayes --hands 12 --opponent calling --seed 7
 python3 -m pokerlab.experiment --opponent calling --hands 12 --replicates 20 --seed 7 --output results/calling.json
 python3 -m pokerlab.experiment --opponent calling --switch-to aggressive --switch-after 6 --hands 12 --replicates 20 --seed 7 --output results/switch.json
 python3 -m pokerlab.profile --opponent calling --switch-to aggressive --switch-after 2 --hands 4 --replicates 2 --seed 13 --output results/profile-switch-example.json
+python3 -m pokerlab.report --output REPORT.md
 python3 -m pokerlab.validate --player0 baseline --player1 calling --hands 20000 --seed 7
 ```
 
@@ -56,6 +57,9 @@ which exclude the opponent's card until showdown.
 9. `pokerlab/profile.py` measures where the paired experiment spends CPU time
    and hashes its deterministic output. `tests/test_profile.py` compares that
    hash with a separately run, unprofiled switch experiment.
+10. `REPORT.md` is a descriptive pilot with three prespecified opponent
+    conditions. `pokerlab/report.py` reconstructs its means, paired contrasts
+    and bootstrap intervals from saved hand rows and checks input hashes.
 
 ## Evaluator cross-check
 
@@ -144,6 +148,23 @@ the present profiler does not alter its information-set semantics. The
 committed `results/profile-switch-example.json` records one such diagnostic
 run, including its exact input hashes and the full experiment-result digest.
 
+## Research pilot report
+
+`REPORT.md` compares a candidate calling type, one held-out rank-selective
+policy, and a calling-to-aggressive switch. Each condition has ten independent
+two-seat replicates with twelve hands per seat, using seed 7. Its tables are
+generated from the committed full records in `results/` using
+`python3 -m pokerlab.report --output REPORT.md`. The builder checks coverage of
+every replicate/seat/hand, input hashes, phase assignment, posterior validity,
+and point estimates and bootstrap intervals against raw hand rewards. It
+rejects a different workload instead of silently mixing protocols.
+
+This is a **pilot**, not evidence of robust improvement: intervals from ten
+replicates are imprecise, the held-out behavior is only one constructed rule,
+and the switch violates the learner's stationary-type assumption. The
+report includes reproduction commands, JSON hashes and remaining external
+validation and power-analysis work.
+
 ## Bayesian opponent learning and adaptive decisions
 
 The *example* candidate types are a smoothed CFR baseline and three fixed
@@ -222,9 +243,9 @@ iterations do not make the policy an exact equilibrium.
 | Week 1 | Rules, game engine, observations, seeded traces, correctness checks | Implemented here; OpenSpiel cross-check remains |
 | Week 2 | CFR, exact values and legal best response | Implemented; simulation cross-check added, external rules cross-check pending |
 | Weeks 3-4 | Hidden-card likelihood and Bayesian decision agent | Implemented for a finite stationary model set |
-| Weeks 5-6 | Stationary opponent experiments | Paired, seat-balanced runner and one held-out behavioral opponent implemented; large runs pending |
-| Weeks 7-8 | Policy switches, profiling and research report | Switch experiment and reproducible CPU profiler implemented; report pending |
+| Weeks 5-6 | Stationary opponent experiments | Paired, seat-balanced runner and one held-out behavioral opponent implemented; larger confirmatory runs pending |
+| Weeks 7-8 | Policy switches, profiling and research report | Switch experiment, reproducible CPU profiler and validated pilot report implemented; confirmatory research pending |
 
 The reference convention in the accompanying PDF must be matched explicitly
-before any numeric comparison with OpenSpiel. This package has no controlled
-adaptation results or claim of strong poker play yet.
+before any numeric comparison with OpenSpiel. The small controlled pilot does
+not establish a general adaptation benefit or strong poker play.
