@@ -1,0 +1,5943 @@
+{
+  "design": {
+    "bootstrap_resamples": 2000,
+    "candidate_types": [
+      "baseline",
+      "folding",
+      "calling",
+      "aggressive"
+    ],
+    "hands_per_seat": 12,
+    "initial_prior": [
+      0.25,
+      0.25,
+      0.25,
+      0.25
+    ],
+    "opponent": "rank_selective",
+    "replicates": 10,
+    "rules_sha256": "d16565525a7fb70955804aa41fc6face224eb619266d4b395dcc35a062c0c644",
+    "seat_order": [
+      0,
+      1
+    ],
+    "seed": 7,
+    "strategy_sha256": "fefb21881d3a4abe5ae13c27ceb420d896e7e74797cb1b87763c90628a25219a",
+    "switch_after": null,
+    "switch_to": null,
+    "unit": "net chips per hand, averaged across seats"
+  },
+  "hands": [
+    {
+      "hand": 0,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.27168366928120774,
+        "baseline": 0.2641853947340937,
+        "calling": 0.07567228861407496,
+        "folding": 0.3884586473706235
+      },
+      "posterior_before": {
+        "aggressive": 0.25,
+        "baseline": 0.25,
+        "calling": 0.25,
+        "folding": 0.25
+      },
+      "replicate": 0,
+      "rewards": {
+        "cfr": -5.0,
+        "frozen_prior": 5.0,
+        "learning": 5.0
+      },
+      "seat": 0,
+      "seed": 7283207964119141687
+    },
+    {
+      "hand": 1,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.3676693071401864,
+        "baseline": 0.2555342404808902,
+        "calling": 0.07237611848086974,
+        "folding": 0.3044203338980537
+      },
+      "posterior_before": {
+        "aggressive": 0.27168366928120774,
+        "baseline": 0.2641853947340937,
+        "calling": 0.07567228861407496,
+        "folding": 0.3884586473706235
+      },
+      "replicate": 0,
+      "rewards": {
+        "cfr": -9.0,
+        "frozen_prior": -7.0,
+        "learning": -9.0
+      },
+      "seat": 0,
+      "seed": 890727360438182992
+    },
+    {
+      "hand": 2,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.291913041209042,
+        "baseline": 0.27727153103851915,
+        "calling": 0.08275223464959891,
+        "folding": 0.34806319310284
+      },
+      "posterior_before": {
+        "aggressive": 0.3676693071401864,
+        "baseline": 0.2555342404808902,
+        "calling": 0.07237611848086974,
+        "folding": 0.3044203338980537
+      },
+      "replicate": 0,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": -1.0,
+        "learning": -1.0
+      },
+      "seat": 0,
+      "seed": 1736392818365009963
+    },
+    {
+      "hand": 3,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.5185460877481505,
+        "baseline": 0.29565794359853154,
+        "calling": 0.07005577389556832,
+        "folding": 0.11574019475774973
+      },
+      "posterior_before": {
+        "aggressive": 0.291913041209042,
+        "baseline": 0.27727153103851915,
+        "calling": 0.08275223464959891,
+        "folding": 0.34806319310284
+      },
+      "replicate": 0,
+      "rewards": {
+        "cfr": 9.0,
+        "frozen_prior": 9.0,
+        "learning": 9.0
+      },
+      "seat": 0,
+      "seed": 3960482443532127989
+    },
+    {
+      "hand": 4,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.42043352455896416,
+        "baseline": 0.34762406672619917,
+        "calling": 0.07890294631335319,
+        "folding": 0.15303946240148347
+      },
+      "posterior_before": {
+        "aggressive": 0.5185460877481505,
+        "baseline": 0.29565794359853154,
+        "calling": 0.07005577389556832,
+        "folding": 0.11574019475774973
+      },
+      "replicate": 0,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 0,
+      "seed": 1585446675937841368
+    },
+    {
+      "hand": 5,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.3860452875089678,
+        "baseline": 0.3660975154629196,
+        "calling": 0.08431689236499848,
+        "folding": 0.16354030466311406
+      },
+      "posterior_before": {
+        "aggressive": 0.42043352455896416,
+        "baseline": 0.34762406672619917,
+        "calling": 0.07890294631335319,
+        "folding": 0.15303946240148347
+      },
+      "replicate": 0,
+      "rewards": {
+        "cfr": -5.0,
+        "frozen_prior": -3.0,
+        "learning": -3.0
+      },
+      "seat": 0,
+      "seed": 7713914763314685786
+    },
+    {
+      "hand": 6,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.5737608690868171,
+        "baseline": 0.27398918401159156,
+        "calling": 0.051792897440142406,
+        "folding": 0.10045704946144882
+      },
+      "posterior_before": {
+        "aggressive": 0.3860452875089678,
+        "baseline": 0.3660975154629196,
+        "calling": 0.08431689236499848,
+        "folding": 0.16354030466311406
+      },
+      "replicate": 0,
+      "rewards": {
+        "cfr": -3.0,
+        "frozen_prior": -3.0,
+        "learning": -3.0
+      },
+      "seat": 0,
+      "seed": 4439448776366754703
+    },
+    {
+      "hand": 7,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.4466083731604959,
+        "baseline": 0.34744468101985654,
+        "calling": 0.06208519018012076,
+        "folding": 0.14386175563952683
+      },
+      "posterior_before": {
+        "aggressive": 0.5737608690868171,
+        "baseline": 0.27398918401159156,
+        "calling": 0.051792897440142406,
+        "folding": 0.10045704946144882
+      },
+      "replicate": 0,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 0,
+      "seed": 1090396360377453094
+    },
+    {
+      "hand": 8,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.3397640651172977,
+        "baseline": 0.4037823170095041,
+        "calling": 0.0773110354934846,
+        "folding": 0.17914258237971356
+      },
+      "posterior_before": {
+        "aggressive": 0.4466083731604959,
+        "baseline": 0.34744468101985654,
+        "calling": 0.06208519018012076,
+        "folding": 0.14386175563952683
+      },
+      "replicate": 0,
+      "rewards": {
+        "cfr": 3.0,
+        "frozen_prior": 3.0,
+        "learning": 3.0
+      },
+      "seat": 0,
+      "seed": 1141153371300629929
+    },
+    {
+      "hand": 9,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.25746554967347457,
+        "baseline": 0.41474028680779007,
+        "calling": 0.0380659704674418,
+        "folding": 0.28972819305129366
+      },
+      "posterior_before": {
+        "aggressive": 0.3397640651172977,
+        "baseline": 0.4037823170095041,
+        "calling": 0.0773110354934846,
+        "folding": 0.17914258237971356
+      },
+      "replicate": 0,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 0,
+      "seed": 914761360679426580
+    },
+    {
+      "hand": 10,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.18035265004154086,
+        "baseline": 0.4438034466957436,
+        "calling": 0.04364587449754533,
+        "folding": 0.33219802876517013
+      },
+      "posterior_before": {
+        "aggressive": 0.25746554967347457,
+        "baseline": 0.41474028680779007,
+        "calling": 0.0380659704674418,
+        "folding": 0.28972819305129366
+      },
+      "replicate": 0,
+      "rewards": {
+        "cfr": 9.0,
+        "frozen_prior": 3.0,
+        "learning": 3.0
+      },
+      "seat": 0,
+      "seed": 4078239883182463692
+    },
+    {
+      "hand": 11,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.1946779061732312,
+        "baseline": 0.4338383132174054,
+        "calling": 0.024518343104112283,
+        "folding": 0.34696543750525105
+      },
+      "posterior_before": {
+        "aggressive": 0.18035265004154086,
+        "baseline": 0.4438034466957436,
+        "calling": 0.04364587449754533,
+        "folding": 0.33219802876517013
+      },
+      "replicate": 0,
+      "rewards": {
+        "cfr": -9.0,
+        "frozen_prior": 0.0,
+        "learning": 5.0
+      },
+      "seat": 0,
+      "seed": 2456641775679608523
+    },
+    {
+      "hand": 0,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.20085395912919068,
+        "baseline": 0.26904305258573424,
+        "calling": 0.19956336188477714,
+        "folding": 0.33053962640029794
+      },
+      "posterior_before": {
+        "aggressive": 0.25,
+        "baseline": 0.25,
+        "calling": 0.25,
+        "folding": 0.25
+      },
+      "replicate": 0,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 1,
+      "seed": 7731750658069747094
+    },
+    {
+      "hand": 1,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.14710587798384392,
+        "baseline": 0.1525266378802032,
+        "calling": 0.021251708945830027,
+        "folding": 0.6791157751901228
+      },
+      "posterior_before": {
+        "aggressive": 0.20085395912919068,
+        "baseline": 0.26904305258573424,
+        "calling": 0.19956336188477714,
+        "folding": 0.33053962640029794
+      },
+      "replicate": 0,
+      "rewards": {
+        "cfr": -7.0,
+        "frozen_prior": 3.0,
+        "learning": 3.0
+      },
+      "seat": 1,
+      "seed": 1901042282212365707
+    },
+    {
+      "hand": 2,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.35205576245469683,
+        "baseline": 0.1808856733870125,
+        "calling": 0.012125831239039793,
+        "folding": 0.4549327329192509
+      },
+      "posterior_before": {
+        "aggressive": 0.14710587798384392,
+        "baseline": 0.1525266378802032,
+        "calling": 0.021251708945830027,
+        "folding": 0.6791157751901228
+      },
+      "replicate": 0,
+      "rewards": {
+        "cfr": -5.0,
+        "frozen_prior": 0.0,
+        "learning": 0.0
+      },
+      "seat": 1,
+      "seed": 3465608723044488519
+    },
+    {
+      "hand": 3,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.2598065007083314,
+        "baseline": 0.17880683352570773,
+        "calling": 0.008890997552901713,
+        "folding": 0.5524956682130592
+      },
+      "posterior_before": {
+        "aggressive": 0.35205576245469683,
+        "baseline": 0.1808856733870125,
+        "calling": 0.012125831239039793,
+        "folding": 0.4549327329192509
+      },
+      "replicate": 0,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 1,
+      "seed": 1797276903956378115
+    },
+    {
+      "hand": 4,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.4081471675578043,
+        "baseline": 0.14519554016697225,
+        "calling": 0.003020490084282375,
+        "folding": 0.443636802190941
+      },
+      "posterior_before": {
+        "aggressive": 0.2598065007083314,
+        "baseline": 0.17880683352570773,
+        "calling": 0.008890997552901713,
+        "folding": 0.5524956682130592
+      },
+      "replicate": 0,
+      "rewards": {
+        "cfr": -5.0,
+        "frozen_prior": 9.0,
+        "learning": 9.0
+      },
+      "seat": 1,
+      "seed": 9157231070389319135
+    },
+    {
+      "hand": 5,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.25915473309127957,
+        "baseline": 0.13528000301581564,
+        "calling": 0.001935209900675422,
+        "folding": 0.6036300539922294
+      },
+      "posterior_before": {
+        "aggressive": 0.4081471675578043,
+        "baseline": 0.14519554016697225,
+        "calling": 0.003020490084282375,
+        "folding": 0.443636802190941
+      },
+      "replicate": 0,
+      "rewards": {
+        "cfr": 0.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 1,
+      "seed": 8588838448975835887
+    },
+    {
+      "hand": 6,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.3126829226173311,
+        "baseline": 0.1380376822432724,
+        "calling": 0.0017017362013030488,
+        "folding": 0.5475776589380934
+      },
+      "posterior_before": {
+        "aggressive": 0.25915473309127957,
+        "baseline": 0.13528000301581564,
+        "calling": 0.001935209900675422,
+        "folding": 0.6036300539922294
+      },
+      "replicate": 0,
+      "rewards": {
+        "cfr": 3.0,
+        "frozen_prior": 5.0,
+        "learning": 5.0
+      },
+      "seat": 1,
+      "seed": 6670017245504332848
+    },
+    {
+      "hand": 7,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.18498082626742401,
+        "baseline": 0.11982796403241247,
+        "calling": 0.001015834819588339,
+        "folding": 0.6941753748805751
+      },
+      "posterior_before": {
+        "aggressive": 0.3126829226173311,
+        "baseline": 0.1380376822432724,
+        "calling": 0.0017017362013030488,
+        "folding": 0.5475776589380934
+      },
+      "replicate": 0,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 1,
+      "seed": 4582661622865954733
+    },
+    {
+      "hand": 8,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.10002303799364723,
+        "baseline": 0.0950756878328798,
+        "calling": 0.0005542487546934457,
+        "folding": 0.8043470254187794
+      },
+      "posterior_before": {
+        "aggressive": 0.18498082626742401,
+        "baseline": 0.11982796403241247,
+        "calling": 0.001015834819588339,
+        "folding": 0.6941753748805751
+      },
+      "replicate": 0,
+      "rewards": {
+        "cfr": 0.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 1,
+      "seed": 3316111241534796839
+    },
+    {
+      "hand": 9,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.20041246897729478,
+        "baseline": 0.09249407755206414,
+        "calling": 0.00023889733097718358,
+        "folding": 0.7068545561396639
+      },
+      "posterior_before": {
+        "aggressive": 0.10002303799364723,
+        "baseline": 0.0950756878328798,
+        "calling": 0.0005542487546934457,
+        "folding": 0.8043470254187794
+      },
+      "replicate": 0,
+      "rewards": {
+        "cfr": 9.0,
+        "frozen_prior": 7.0,
+        "learning": 9.0
+      },
+      "seat": 1,
+      "seed": 1509958490544479227
+    },
+    {
+      "hand": 10,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.24734455187786245,
+        "baseline": 0.09654072871827732,
+        "calling": 0.0002148859650574193,
+        "folding": 0.6558998334388028
+      },
+      "posterior_before": {
+        "aggressive": 0.20041246897729478,
+        "baseline": 0.09249407755206414,
+        "calling": 0.00023889733097718358,
+        "folding": 0.7068545561396639
+      },
+      "replicate": 0,
+      "rewards": {
+        "cfr": 5.0,
+        "frozen_prior": 5.0,
+        "learning": 5.0
+      },
+      "seat": 1,
+      "seed": 5538618668647018159
+    },
+    {
+      "hand": 11,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.391032027206249,
+        "baseline": 0.07889017950203474,
+        "calling": 7.34646107684417e-05,
+        "folding": 0.5300043286809478
+      },
+      "posterior_before": {
+        "aggressive": 0.24734455187786245,
+        "baseline": 0.09654072871827732,
+        "calling": 0.0002148859650574193,
+        "folding": 0.6558998334388028
+      },
+      "replicate": 0,
+      "rewards": {
+        "cfr": -1.0,
+        "frozen_prior": 9.0,
+        "learning": 9.0
+      },
+      "seat": 1,
+      "seed": 9133284679170082593
+    },
+    {
+      "hand": 0,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.15490233917280533,
+        "baseline": 0.2479401461346974,
+        "calling": 0.4074374318989787,
+        "folding": 0.1897200827935186
+      },
+      "posterior_before": {
+        "aggressive": 0.25,
+        "baseline": 0.25,
+        "calling": 0.25,
+        "folding": 0.25
+      },
+      "replicate": 1,
+      "rewards": {
+        "cfr": -1.0,
+        "frozen_prior": -3.0,
+        "learning": -3.0
+      },
+      "seat": 0,
+      "seed": 6336008107541988039
+    },
+    {
+      "hand": 1,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.21871418404481746,
+        "baseline": 0.2446584628725212,
+        "calling": 0.3661380209530386,
+        "folding": 0.17048933212962275
+      },
+      "posterior_before": {
+        "aggressive": 0.15490233917280533,
+        "baseline": 0.2479401461346974,
+        "calling": 0.4074374318989787,
+        "folding": 0.1897200827935186
+      },
+      "replicate": 1,
+      "rewards": {
+        "cfr": -1.0,
+        "frozen_prior": 9.0,
+        "learning": -3.0
+      },
+      "seat": 0,
+      "seed": 8279529517580348704
+    },
+    {
+      "hand": 2,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.5425670357448505,
+        "baseline": 0.2166571881695699,
+        "calling": 0.13564058719917665,
+        "folding": 0.10513518888640289
+      },
+      "posterior_before": {
+        "aggressive": 0.21871418404481746,
+        "baseline": 0.2446584628725212,
+        "calling": 0.3661380209530386,
+        "folding": 0.17048933212962275
+      },
+      "replicate": 1,
+      "rewards": {
+        "cfr": -5.0,
+        "frozen_prior": 0.0,
+        "learning": 0.0
+      },
+      "seat": 0,
+      "seed": 1350317716114554168
+    },
+    {
+      "hand": 3,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.7170999109613547,
+        "baseline": 0.1673330849638,
+        "calling": 0.050461045281793244,
+        "folding": 0.065105958793052
+      },
+      "posterior_before": {
+        "aggressive": 0.5425670357448505,
+        "baseline": 0.2166571881695699,
+        "calling": 0.13564058719917665,
+        "folding": 0.10513518888640289
+      },
+      "replicate": 1,
+      "rewards": {
+        "cfr": 5.0,
+        "frozen_prior": 5.0,
+        "learning": 5.0
+      },
+      "seat": 0,
+      "seed": 3043013691408259304
+    },
+    {
+      "hand": 4,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.5235252509196432,
+        "baseline": 0.2722459227291562,
+        "calling": 0.12104176520145876,
+        "folding": 0.08318706114974182
+      },
+      "posterior_before": {
+        "aggressive": 0.7170999109613547,
+        "baseline": 0.1673330849638,
+        "calling": 0.050461045281793244,
+        "folding": 0.065105958793052
+      },
+      "replicate": 1,
+      "rewards": {
+        "cfr": -3.0,
+        "frozen_prior": -7.0,
+        "learning": -7.0
+      },
+      "seat": 0,
+      "seed": 6309815957650144511
+    },
+    {
+      "hand": 5,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.43258760129202006,
+        "baseline": 0.32249942304157386,
+        "calling": 0.06588099067011816,
+        "folding": 0.1790319849962878
+      },
+      "posterior_before": {
+        "aggressive": 0.5235252509196432,
+        "baseline": 0.2722459227291562,
+        "calling": 0.12104176520145876,
+        "folding": 0.08318706114974182
+      },
+      "replicate": 1,
+      "rewards": {
+        "cfr": 0.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 0,
+      "seed": 7778961656703135618
+    },
+    {
+      "hand": 6,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.32620557668192807,
+        "baseline": 0.3714987021812258,
+        "calling": 0.08131680867313457,
+        "folding": 0.2209789124637115
+      },
+      "posterior_before": {
+        "aggressive": 0.43258760129202006,
+        "baseline": 0.32249942304157386,
+        "calling": 0.06588099067011816,
+        "folding": 0.1790319849962878
+      },
+      "replicate": 1,
+      "rewards": {
+        "cfr": 9.0,
+        "frozen_prior": 3.0,
+        "learning": 3.0
+      },
+      "seat": 0,
+      "seed": 1431845093225017808
+    },
+    {
+      "hand": 7,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.4636387729212731,
+        "baseline": 0.3197134291400207,
+        "calling": 0.029028638221703335,
+        "folding": 0.1876191597170029
+      },
+      "posterior_before": {
+        "aggressive": 0.32620557668192807,
+        "baseline": 0.3714987021812258,
+        "calling": 0.08131680867313457,
+        "folding": 0.2209789124637115
+      },
+      "replicate": 1,
+      "rewards": {
+        "cfr": 5.0,
+        "frozen_prior": 5.0,
+        "learning": 5.0
+      },
+      "seat": 0,
+      "seed": 6274150083463332300
+    },
+    {
+      "hand": 8,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.44119296076558184,
+        "baseline": 0.29583869346468633,
+        "calling": 0.007693940520689786,
+        "folding": 0.255274405249042
+      },
+      "posterior_before": {
+        "aggressive": 0.4636387729212731,
+        "baseline": 0.3197134291400207,
+        "calling": 0.029028638221703335,
+        "folding": 0.1876191597170029
+      },
+      "replicate": 1,
+      "rewards": {
+        "cfr": -1.0,
+        "frozen_prior": 5.0,
+        "learning": 5.0
+      },
+      "seat": 0,
+      "seed": 6459651135660548239
+    },
+    {
+      "hand": 9,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.26480018021228735,
+        "baseline": 0.38456956497082745,
+        "calling": 0.009830332940386745,
+        "folding": 0.34079992187649844
+      },
+      "posterior_before": {
+        "aggressive": 0.44119296076558184,
+        "baseline": 0.29583869346468633,
+        "calling": 0.007693940520689786,
+        "folding": 0.255274405249042
+      },
+      "replicate": 1,
+      "rewards": {
+        "cfr": -1.0,
+        "frozen_prior": -3.0,
+        "learning": 3.0
+      },
+      "seat": 0,
+      "seed": 9162032806839754701
+    },
+    {
+      "hand": 10,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.17736130610760312,
+        "baseline": 0.6202647351504962,
+        "calling": 0.04090820875545807,
+        "folding": 0.1614657499864426
+      },
+      "posterior_before": {
+        "aggressive": 0.26480018021228735,
+        "baseline": 0.38456956497082745,
+        "calling": 0.009830332940386745,
+        "folding": 0.34079992187649844
+      },
+      "replicate": 1,
+      "rewards": {
+        "cfr": 7.0,
+        "frozen_prior": 7.0,
+        "learning": 7.0
+      },
+      "seat": 0,
+      "seed": 1268452488991334250
+    },
+    {
+      "hand": 11,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.20259929528904305,
+        "baseline": 0.6323136471819051,
+        "calling": 0.021807602043065023,
+        "folding": 0.14327945548598686
+      },
+      "posterior_before": {
+        "aggressive": 0.17736130610760312,
+        "baseline": 0.6202647351504962,
+        "calling": 0.04090820875545807,
+        "folding": 0.1614657499864426
+      },
+      "replicate": 1,
+      "rewards": {
+        "cfr": -1.0,
+        "frozen_prior": -5.0,
+        "learning": -5.0
+      },
+      "seat": 0,
+      "seed": 1726541358694932734
+    },
+    {
+      "hand": 0,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.3006279205047927,
+        "baseline": 0.25424261655236846,
+        "calling": 0.21910306642299868,
+        "folding": 0.22602639651984013
+      },
+      "posterior_before": {
+        "aggressive": 0.25,
+        "baseline": 0.25,
+        "calling": 0.25,
+        "folding": 0.25
+      },
+      "replicate": 1,
+      "rewards": {
+        "cfr": 3.0,
+        "frozen_prior": 5.0,
+        "learning": 5.0
+      },
+      "seat": 1,
+      "seed": 4979500703817309910
+    },
+    {
+      "hand": 1,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.2360290812617958,
+        "baseline": 0.2751591301588541,
+        "calling": 0.171430461284926,
+        "folding": 0.31738132729442403
+      },
+      "posterior_before": {
+        "aggressive": 0.3006279205047927,
+        "baseline": 0.25424261655236846,
+        "calling": 0.21910306642299868,
+        "folding": 0.22602639651984013
+      },
+      "replicate": 1,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 1,
+      "seed": 1199037988655718682
+    },
+    {
+      "hand": 2,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.1743452397144402,
+        "baseline": 0.2801740327218033,
+        "calling": 0.12619318646284977,
+        "folding": 0.41928754110090666
+      },
+      "posterior_before": {
+        "aggressive": 0.2360290812617958,
+        "baseline": 0.2751591301588541,
+        "calling": 0.171430461284926,
+        "folding": 0.31738132729442403
+      },
+      "replicate": 1,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 1,
+      "seed": 5711247999117884214
+    },
+    {
+      "hand": 3,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.3358911692077822,
+        "baseline": 0.29643868321351086,
+        "calling": 0.2693438327403647,
+        "folding": 0.09832631483834217
+      },
+      "posterior_before": {
+        "aggressive": 0.1743452397144402,
+        "baseline": 0.2801740327218033,
+        "calling": 0.12619318646284977,
+        "folding": 0.41928754110090666
+      },
+      "replicate": 1,
+      "rewards": {
+        "cfr": -7.0,
+        "frozen_prior": -13.0,
+        "learning": -13.0
+      },
+      "seat": 1,
+      "seed": 8220621215424424357
+    },
+    {
+      "hand": 4,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.2825469829859634,
+        "baseline": 0.3437370448161155,
+        "calling": 0.22578883298870506,
+        "folding": 0.147927139209216
+      },
+      "posterior_before": {
+        "aggressive": 0.3358911692077822,
+        "baseline": 0.29643868321351086,
+        "calling": 0.2693438327403647,
+        "folding": 0.09832631483834217
+      },
+      "replicate": 1,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 1,
+      "seed": 6401117268241863454
+    },
+    {
+      "hand": 5,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.22244692753823078,
+        "baseline": 0.3715528415071629,
+        "calling": 0.2552043371870407,
+        "folding": 0.15079589376756558
+      },
+      "posterior_before": {
+        "aggressive": 0.2825469829859634,
+        "baseline": 0.3437370448161155,
+        "calling": 0.22578883298870506,
+        "folding": 0.147927139209216
+      },
+      "replicate": 1,
+      "rewards": {
+        "cfr": -3.0,
+        "frozen_prior": -5.0,
+        "learning": -5.0
+      },
+      "seat": 1,
+      "seed": 6557155473621100946
+    },
+    {
+      "hand": 6,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.2412250311821078,
+        "baseline": 0.37236619491704925,
+        "calling": 0.24288950475411764,
+        "folding": 0.14351926914672533
+      },
+      "posterior_before": {
+        "aggressive": 0.22244692753823078,
+        "baseline": 0.3715528415071629,
+        "calling": 0.2552043371870407,
+        "folding": 0.15079589376756558
+      },
+      "replicate": 1,
+      "rewards": {
+        "cfr": -3.0,
+        "frozen_prior": -3.0,
+        "learning": -3.0
+      },
+      "seat": 1,
+      "seed": 9107028356925881720
+    },
+    {
+      "hand": 7,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.4295430679843955,
+        "baseline": 0.3151060726108361,
+        "calling": 0.16657867144955457,
+        "folding": 0.08877218795521384
+      },
+      "posterior_before": {
+        "aggressive": 0.2412250311821078,
+        "baseline": 0.37236619491704925,
+        "calling": 0.24288950475411764,
+        "folding": 0.14351926914672533
+      },
+      "replicate": 1,
+      "rewards": {
+        "cfr": 0.0,
+        "frozen_prior": 0.0,
+        "learning": 0.0
+      },
+      "seat": 1,
+      "seed": 4025222987624456960
+    },
+    {
+      "hand": 8,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.319833239084971,
+        "baseline": 0.3731662115091733,
+        "calling": 0.22620004092229512,
+        "folding": 0.08080050848356063
+      },
+      "posterior_before": {
+        "aggressive": 0.4295430679843955,
+        "baseline": 0.3151060726108361,
+        "calling": 0.16657867144955457,
+        "folding": 0.08877218795521384
+      },
+      "replicate": 1,
+      "rewards": {
+        "cfr": 0.0,
+        "frozen_prior": 0.0,
+        "learning": 0.0
+      },
+      "seat": 1,
+      "seed": 5302183279635131073
+    },
+    {
+      "hand": 9,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.3647074415171066,
+        "baseline": 0.4079289230621842,
+        "calling": 0.09074645733403983,
+        "folding": 0.1366171780866694
+      },
+      "posterior_before": {
+        "aggressive": 0.319833239084971,
+        "baseline": 0.3731662115091733,
+        "calling": 0.22620004092229512,
+        "folding": 0.08080050848356063
+      },
+      "replicate": 1,
+      "rewards": {
+        "cfr": 3.0,
+        "frozen_prior": 3.0,
+        "learning": 3.0
+      },
+      "seat": 1,
+      "seed": 7339916659716763523
+    },
+    {
+      "hand": 10,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.33738289096436486,
+        "baseline": 0.42725268446581033,
+        "calling": 0.039171840526170086,
+        "folding": 0.19619258404365475
+      },
+      "posterior_before": {
+        "aggressive": 0.3647074415171066,
+        "baseline": 0.4079289230621842,
+        "calling": 0.09074645733403983,
+        "folding": 0.1366171780866694
+      },
+      "replicate": 1,
+      "rewards": {
+        "cfr": -1.0,
+        "frozen_prior": 5.0,
+        "learning": 5.0
+      },
+      "seat": 1,
+      "seed": 9158932120814846640
+    },
+    {
+      "hand": 11,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.4033027278837569,
+        "baseline": 0.40522038904182306,
+        "calling": 0.03473030810066966,
+        "folding": 0.15674657497375047
+      },
+      "posterior_before": {
+        "aggressive": 0.33738289096436486,
+        "baseline": 0.42725268446581033,
+        "calling": 0.039171840526170086,
+        "folding": 0.19619258404365475
+      },
+      "replicate": 1,
+      "rewards": {
+        "cfr": 3.0,
+        "frozen_prior": 0.0,
+        "learning": 0.0
+      },
+      "seat": 1,
+      "seed": 3068916285533387239
+    },
+    {
+      "hand": 0,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.1945715632571352,
+        "baseline": 0.2637342989427426,
+        "calling": 0.12642504073265426,
+        "folding": 0.415269097067468
+      },
+      "posterior_before": {
+        "aggressive": 0.25,
+        "baseline": 0.25,
+        "calling": 0.25,
+        "folding": 0.25
+      },
+      "replicate": 2,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 0,
+      "seed": 7409028826178384386
+    },
+    {
+      "hand": 1,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.30685516500697413,
+        "baseline": 0.25184648555769823,
+        "calling": 0.05007778855293372,
+        "folding": 0.39122056088239404
+      },
+      "posterior_before": {
+        "aggressive": 0.1945715632571352,
+        "baseline": 0.2637342989427426,
+        "calling": 0.12642504073265426,
+        "folding": 0.415269097067468
+      },
+      "replicate": 2,
+      "rewards": {
+        "cfr": 0.0,
+        "frozen_prior": 5.0,
+        "learning": 5.0
+      },
+      "seat": 0,
+      "seed": 5125227353335142417
+    },
+    {
+      "hand": 2,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.367749809176347,
+        "baseline": 0.3490814566964258,
+        "calling": 0.08257597052956801,
+        "folding": 0.20059276359765918
+      },
+      "posterior_before": {
+        "aggressive": 0.30685516500697413,
+        "baseline": 0.25184648555769823,
+        "calling": 0.05007778855293372,
+        "folding": 0.39122056088239404
+      },
+      "replicate": 2,
+      "rewards": {
+        "cfr": -1.0,
+        "frozen_prior": -9.0,
+        "learning": -9.0
+      },
+      "seat": 0,
+      "seed": 2525841537240494425
+    },
+    {
+      "hand": 3,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.49337807787653515,
+        "baseline": 0.29080939059066785,
+        "calling": 0.02732676384111358,
+        "folding": 0.18848576769168343
+      },
+      "posterior_before": {
+        "aggressive": 0.367749809176347,
+        "baseline": 0.3490814566964258,
+        "calling": 0.08257597052956801,
+        "folding": 0.20059276359765918
+      },
+      "replicate": 2,
+      "rewards": {
+        "cfr": -1.0,
+        "frozen_prior": 5.0,
+        "learning": 5.0
+      },
+      "seat": 0,
+      "seed": 7941722669324194521
+    },
+    {
+      "hand": 4,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.5168033769185677,
+        "baseline": 0.3113434552275036,
+        "calling": 0.020565063007124566,
+        "folding": 0.15128810484680408
+      },
+      "posterior_before": {
+        "aggressive": 0.49337807787653515,
+        "baseline": 0.29080939059066785,
+        "calling": 0.02732676384111358,
+        "folding": 0.18848576769168343
+      },
+      "replicate": 2,
+      "rewards": {
+        "cfr": 0.0,
+        "frozen_prior": 0.0,
+        "learning": 0.0
+      },
+      "seat": 0,
+      "seed": 7017903211715130885
+    },
+    {
+      "hand": 5,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.43436634143961633,
+        "baseline": 0.3576272644015339,
+        "calling": 0.024891392199400442,
+        "folding": 0.18311500195944938
+      },
+      "posterior_before": {
+        "aggressive": 0.5168033769185677,
+        "baseline": 0.3113434552275036,
+        "calling": 0.020565063007124566,
+        "folding": 0.15128810484680408
+      },
+      "replicate": 2,
+      "rewards": {
+        "cfr": -1.0,
+        "frozen_prior": -1.0,
+        "learning": -1.0
+      },
+      "seat": 0,
+      "seed": 4256614131218374493
+    },
+    {
+      "hand": 6,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.3036220745622819,
+        "baseline": 0.45156120380045045,
+        "calling": 0.05897813645616027,
+        "folding": 0.18583858518110732
+      },
+      "posterior_before": {
+        "aggressive": 0.43436634143961633,
+        "baseline": 0.3576272644015339,
+        "calling": 0.024891392199400442,
+        "folding": 0.18311500195944938
+      },
+      "replicate": 2,
+      "rewards": {
+        "cfr": -3.0,
+        "frozen_prior": -3.0,
+        "learning": -7.0
+      },
+      "seat": 0,
+      "seed": 1530797443831218365
+    },
+    {
+      "hand": 7,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.20626414458521009,
+        "baseline": 0.4997621162663676,
+        "calling": 0.061702578849277254,
+        "folding": 0.23227116029914513
+      },
+      "posterior_before": {
+        "aggressive": 0.3036220745622819,
+        "baseline": 0.45156120380045045,
+        "calling": 0.05897813645616027,
+        "folding": 0.18583858518110732
+      },
+      "replicate": 2,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 0,
+      "seed": 2790962645545294576
+    },
+    {
+      "hand": 8,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.14530813037472548,
+        "baseline": 0.47721793003392854,
+        "calling": 0.02824380631379744,
+        "folding": 0.34923013327754865
+      },
+      "posterior_before": {
+        "aggressive": 0.20626414458521009,
+        "baseline": 0.4997621162663676,
+        "calling": 0.061702578849277254,
+        "folding": 0.23227116029914513
+      },
+      "replicate": 2,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 0,
+      "seed": 222524240882821610
+    },
+    {
+      "hand": 9,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.16455084014735624,
+        "baseline": 0.5863910078655196,
+        "calling": 0.04693319306137394,
+        "folding": 0.20212495892575033
+      },
+      "posterior_before": {
+        "aggressive": 0.14530813037472548,
+        "baseline": 0.47721793003392854,
+        "calling": 0.02824380631379744,
+        "folding": 0.34923013327754865
+      },
+      "replicate": 2,
+      "rewards": {
+        "cfr": 5.0,
+        "frozen_prior": 3.0,
+        "learning": 9.0
+      },
+      "seat": 0,
+      "seed": 3363632360838974559
+    },
+    {
+      "hand": 10,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.38247803609306885,
+        "baseline": 0.4976967516328274,
+        "calling": 0.01742402096557608,
+        "folding": 0.10240119130852775
+      },
+      "posterior_before": {
+        "aggressive": 0.16455084014735624,
+        "baseline": 0.5863910078655196,
+        "calling": 0.04693319306137394,
+        "folding": 0.20212495892575033
+      },
+      "replicate": 2,
+      "rewards": {
+        "cfr": -1.0,
+        "frozen_prior": -9.0,
+        "learning": -9.0
+      },
+      "seat": 0,
+      "seed": 5200704002102353093
+    },
+    {
+      "hand": 11,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.2971948291539991,
+        "baseline": 0.5241876687500798,
+        "calling": 0.008797046087379294,
+        "folding": 0.16982045600854184
+      },
+      "posterior_before": {
+        "aggressive": 0.38247803609306885,
+        "baseline": 0.4976967516328274,
+        "calling": 0.01742402096557608,
+        "folding": 0.10240119130852775
+      },
+      "replicate": 2,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 0,
+      "seed": 2687255131821197145
+    },
+    {
+      "hand": 0,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.5086939795294535,
+        "baseline": 0.211463943849342,
+        "calling": 0.11761945129398577,
+        "folding": 0.16222262532721873
+      },
+      "posterior_before": {
+        "aggressive": 0.25,
+        "baseline": 0.25,
+        "calling": 0.25,
+        "folding": 0.25
+      },
+      "replicate": 2,
+      "rewards": {
+        "cfr": 11.0,
+        "frozen_prior": 9.0,
+        "learning": 9.0
+      },
+      "seat": 1,
+      "seed": 5877348101999279377
+    },
+    {
+      "hand": 1,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.42126467695785846,
+        "baseline": 0.24139826827434405,
+        "calling": 0.09706908397671289,
+        "folding": 0.24026797079108453
+      },
+      "posterior_before": {
+        "aggressive": 0.5086939795294535,
+        "baseline": 0.211463943849342,
+        "calling": 0.11761945129398577,
+        "folding": 0.16222262532721873
+      },
+      "replicate": 2,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 1,
+      "seed": 2314909749398616512
+    },
+    {
+      "hand": 2,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.3407010799505652,
+        "baseline": 0.26151343216572775,
+        "calling": 0.07800093546545787,
+        "folding": 0.3197845524182492
+      },
+      "posterior_before": {
+        "aggressive": 0.42126467695785846,
+        "baseline": 0.24139826827434405,
+        "calling": 0.09706908397671289,
+        "folding": 0.24026797079108453
+      },
+      "replicate": 2,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 1,
+      "seed": 8423589877497625189
+    },
+    {
+      "hand": 3,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.26415122477992337,
+        "baseline": 0.3224792522009518,
+        "calling": 0.11028979594558753,
+        "folding": 0.3030797270735372
+      },
+      "posterior_before": {
+        "aggressive": 0.3407010799505652,
+        "baseline": 0.26151343216572775,
+        "calling": 0.07800093546545787,
+        "folding": 0.3197845524182492
+      },
+      "replicate": 2,
+      "rewards": {
+        "cfr": 0.0,
+        "frozen_prior": 0.0,
+        "learning": 0.0
+      },
+      "seat": 1,
+      "seed": 7343088558111125923
+    },
+    {
+      "hand": 4,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.14716198555422058,
+        "baseline": 0.38169857935282836,
+        "calling": 0.1606246560381603,
+        "folding": 0.31051477905479075
+      },
+      "posterior_before": {
+        "aggressive": 0.26415122477992337,
+        "baseline": 0.3224792522009518,
+        "calling": 0.11028979594558753,
+        "folding": 0.3030797270735372
+      },
+      "replicate": 2,
+      "rewards": {
+        "cfr": 0.0,
+        "frozen_prior": 0.0,
+        "learning": 0.0
+      },
+      "seat": 1,
+      "seed": 7270231112342010372
+    },
+    {
+      "hand": 5,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.14732902864283795,
+        "baseline": 0.3837910282975023,
+        "calling": 0.08630457762067074,
+        "folding": 0.382575365438989
+      },
+      "posterior_before": {
+        "aggressive": 0.14716198555422058,
+        "baseline": 0.38169857935282836,
+        "calling": 0.1606246560381603,
+        "folding": 0.31051477905479075
+      },
+      "replicate": 2,
+      "rewards": {
+        "cfr": -3.0,
+        "frozen_prior": 7.0,
+        "learning": 5.0
+      },
+      "seat": 1,
+      "seed": 8882528225872406572
+    },
+    {
+      "hand": 6,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.10184397731588589,
+        "baseline": 0.3657136913628051,
+        "calling": 0.05945442623641627,
+        "folding": 0.4729879050848927
+      },
+      "posterior_before": {
+        "aggressive": 0.14732902864283795,
+        "baseline": 0.3837910282975023,
+        "calling": 0.08630457762067074,
+        "folding": 0.382575365438989
+      },
+      "replicate": 2,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 1,
+      "seed": 7386862741276904715
+    },
+    {
+      "hand": 7,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.0389637819281155,
+        "baseline": 0.5349931120101892,
+        "calling": 0.22894721908266855,
+        "folding": 0.19709588697902677
+      },
+      "posterior_before": {
+        "aggressive": 0.10184397731588589,
+        "baseline": 0.3657136913628051,
+        "calling": 0.05945442623641627,
+        "folding": 0.4729879050848927
+      },
+      "replicate": 2,
+      "rewards": {
+        "cfr": -1.0,
+        "frozen_prior": -3.0,
+        "learning": -7.0
+      },
+      "seat": 1,
+      "seed": 3516125473068251432
+    },
+    {
+      "hand": 8,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.02980212939337599,
+        "baseline": 0.5481201496702965,
+        "calling": 0.1739890750998815,
+        "folding": 0.248088645836446
+      },
+      "posterior_before": {
+        "aggressive": 0.0389637819281155,
+        "baseline": 0.5349931120101892,
+        "calling": 0.22894721908266855,
+        "folding": 0.19709588697902677
+      },
+      "replicate": 2,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 1,
+      "seed": 8128131123591086346
+    },
+    {
+      "hand": 9,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.021249791046511333,
+        "baseline": 0.5387440798871486,
+        "calling": 0.12363250882368146,
+        "folding": 0.31637362024265864
+      },
+      "posterior_before": {
+        "aggressive": 0.02980212939337599,
+        "baseline": 0.5481201496702965,
+        "calling": 0.1739890750998815,
+        "folding": 0.248088645836446
+      },
+      "replicate": 2,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 1,
+      "seed": 2027819370134942629
+    },
+    {
+      "hand": 10,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.040806080740663414,
+        "baseline": 0.5807181673980261,
+        "calling": 0.11462199413897624,
+        "folding": 0.2638537577223343
+      },
+      "posterior_before": {
+        "aggressive": 0.021249791046511333,
+        "baseline": 0.5387440798871486,
+        "calling": 0.12363250882368146,
+        "folding": 0.31637362024265864
+      },
+      "replicate": 2,
+      "rewards": {
+        "cfr": -1.0,
+        "frozen_prior": -7.0,
+        "learning": -5.0
+      },
+      "seat": 1,
+      "seed": 1888570237800257629
+    },
+    {
+      "hand": 11,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.02592507756969824,
+        "baseline": 0.5413754556639304,
+        "calling": 0.07348038863549518,
+        "folding": 0.35921907813087617
+      },
+      "posterior_before": {
+        "aggressive": 0.040806080740663414,
+        "baseline": 0.5807181673980261,
+        "calling": 0.11462199413897624,
+        "folding": 0.2638537577223343
+      },
+      "replicate": 2,
+      "rewards": {
+        "cfr": 0.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 1,
+      "seed": 1297093442195110394
+    },
+    {
+      "hand": 0,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.2525053867988615,
+        "baseline": 0.2920401171874484,
+        "calling": 0.347424286188046,
+        "folding": 0.10803020982564412
+      },
+      "posterior_before": {
+        "aggressive": 0.25,
+        "baseline": 0.25,
+        "calling": 0.25,
+        "folding": 0.25
+      },
+      "replicate": 3,
+      "rewards": {
+        "cfr": -3.0,
+        "frozen_prior": -9.0,
+        "learning": -9.0
+      },
+      "seat": 0,
+      "seed": 3836049958278283063
+    },
+    {
+      "hand": 1,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.4345076480199084,
+        "baseline": 0.3042877738127944,
+        "calling": 0.15015677141565284,
+        "folding": 0.11104780675164436
+      },
+      "posterior_before": {
+        "aggressive": 0.2525053867988615,
+        "baseline": 0.2920401171874484,
+        "calling": 0.347424286188046,
+        "folding": 0.10803020982564412
+      },
+      "replicate": 3,
+      "rewards": {
+        "cfr": 5.0,
+        "frozen_prior": 5.0,
+        "learning": 5.0
+      },
+      "seat": 0,
+      "seed": 6940206775428947996
+    },
+    {
+      "hand": 2,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.25420962825613364,
+        "baseline": 0.30837357621410627,
+        "calling": 0.4008800347132928,
+        "folding": 0.03653676081646726
+      },
+      "posterior_before": {
+        "aggressive": 0.4345076480199084,
+        "baseline": 0.3042877738127944,
+        "calling": 0.15015677141565284,
+        "folding": 0.11104780675164436
+      },
+      "replicate": 3,
+      "rewards": {
+        "cfr": -1.0,
+        "frozen_prior": 0.0,
+        "learning": 0.0
+      },
+      "seat": 0,
+      "seed": 8746550756401336488
+    },
+    {
+      "hand": 3,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.07235645445146606,
+        "baseline": 0.21136059209246272,
+        "calling": 0.7089267175176045,
+        "folding": 0.007356235938466639
+      },
+      "posterior_before": {
+        "aggressive": 0.25420962825613364,
+        "baseline": 0.30837357621410627,
+        "calling": 0.4008800347132928,
+        "folding": 0.03653676081646726
+      },
+      "replicate": 3,
+      "rewards": {
+        "cfr": 9.0,
+        "frozen_prior": 7.0,
+        "learning": 7.0
+      },
+      "seat": 0,
+      "seed": 2127896686397396651
+    },
+    {
+      "hand": 4,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.0870170914488028,
+        "baseline": 0.3394392104465982,
+        "calling": 0.55576291872572,
+        "folding": 0.01778077937887896
+      },
+      "posterior_before": {
+        "aggressive": 0.07235645445146606,
+        "baseline": 0.21136059209246272,
+        "calling": 0.7089267175176045,
+        "folding": 0.007356235938466639
+      },
+      "replicate": 3,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 0,
+      "seed": 9003266459913416230
+    },
+    {
+      "hand": 5,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.12921202819066133,
+        "baseline": 0.34599925690732936,
+        "calling": 0.5085194186111863,
+        "folding": 0.01626929629082296
+      },
+      "posterior_before": {
+        "aggressive": 0.0870170914488028,
+        "baseline": 0.3394392104465982,
+        "calling": 0.55576291872572,
+        "folding": 0.01778077937887896
+      },
+      "replicate": 3,
+      "rewards": {
+        "cfr": -1.0,
+        "frozen_prior": -9.0,
+        "learning": -3.0
+      },
+      "seat": 0,
+      "seed": 8861725518971213271
+    },
+    {
+      "hand": 6,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.12327855559944303,
+        "baseline": 0.35533815854042833,
+        "calling": 0.5052195633602552,
+        "folding": 0.016163722499873447
+      },
+      "posterior_before": {
+        "aggressive": 0.12921202819066133,
+        "baseline": 0.34599925690732936,
+        "calling": 0.5085194186111863,
+        "folding": 0.01626929629082296
+      },
+      "replicate": 3,
+      "rewards": {
+        "cfr": -1.0,
+        "frozen_prior": 1.0,
+        "learning": 0.0
+      },
+      "seat": 0,
+      "seed": 5752659948297033355
+    },
+    {
+      "hand": 7,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.12846590453550383,
+        "baseline": 0.49448474246864893,
+        "calling": 0.34319538448836967,
+        "folding": 0.0338539685074775
+      },
+      "posterior_before": {
+        "aggressive": 0.12327855559944303,
+        "baseline": 0.35533815854042833,
+        "calling": 0.5052195633602552,
+        "folding": 0.016163722499873447
+      },
+      "replicate": 3,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 0,
+      "seed": 2658498556599241118
+    },
+    {
+      "hand": 8,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.26568862855057807,
+        "baseline": 0.5316574408613134,
+        "calling": 0.1740713462391633,
+        "folding": 0.028582584348945297
+      },
+      "posterior_before": {
+        "aggressive": 0.12846590453550383,
+        "baseline": 0.49448474246864893,
+        "calling": 0.34319538448836967,
+        "folding": 0.0338539685074775
+      },
+      "replicate": 3,
+      "rewards": {
+        "cfr": -9.0,
+        "frozen_prior": -9.0,
+        "learning": -9.0
+      },
+      "seat": 0,
+      "seed": 8829016395800320922
+    },
+    {
+      "hand": 9,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.23907372623953696,
+        "baseline": 0.5487023355965787,
+        "calling": 0.1822915870082413,
+        "folding": 0.02993235115564303
+      },
+      "posterior_before": {
+        "aggressive": 0.26568862855057807,
+        "baseline": 0.5316574408613134,
+        "calling": 0.1740713462391633,
+        "folding": 0.028582584348945297
+      },
+      "replicate": 3,
+      "rewards": {
+        "cfr": -5.0,
+        "frozen_prior": -3.0,
+        "learning": -3.0
+      },
+      "seat": 0,
+      "seed": 3785548672593926643
+    },
+    {
+      "hand": 10,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.4113078288768909,
+        "baseline": 0.49075625874018736,
+        "calling": 0.07691348906536077,
+        "folding": 0.021022423317561052
+      },
+      "posterior_before": {
+        "aggressive": 0.23907372623953696,
+        "baseline": 0.5487023355965787,
+        "calling": 0.1822915870082413,
+        "folding": 0.02993235115564303
+      },
+      "replicate": 3,
+      "rewards": {
+        "cfr": -9.0,
+        "frozen_prior": -9.0,
+        "learning": -9.0
+      },
+      "seat": 0,
+      "seed": 6673155101688586360
+    },
+    {
+      "hand": 11,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.5486029131735557,
+        "baseline": 0.40645384334096474,
+        "calling": 0.025304675395168584,
+        "folding": 0.019638568090311007
+      },
+      "posterior_before": {
+        "aggressive": 0.4113078288768909,
+        "baseline": 0.49075625874018736,
+        "calling": 0.07691348906536077,
+        "folding": 0.021022423317561052
+      },
+      "replicate": 3,
+      "rewards": {
+        "cfr": -1.0,
+        "frozen_prior": 5.0,
+        "learning": 5.0
+      },
+      "seat": 0,
+      "seed": 5498784122382986789
+    },
+    {
+      "hand": 0,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.17795812827418386,
+        "baseline": 0.26112941675416274,
+        "calling": 0.1795668375408944,
+        "folding": 0.38134561743075895
+      },
+      "posterior_before": {
+        "aggressive": 0.25,
+        "baseline": 0.25,
+        "calling": 0.25,
+        "folding": 0.25
+      },
+      "replicate": 3,
+      "rewards": {
+        "cfr": 0.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 1,
+      "seed": 1678848302478712466
+    },
+    {
+      "hand": 1,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.12721290139148386,
+        "baseline": 0.2573170137199434,
+        "calling": 0.12792128034787353,
+        "folding": 0.48754880454069915
+      },
+      "posterior_before": {
+        "aggressive": 0.17795812827418386,
+        "baseline": 0.26112941675416274,
+        "calling": 0.1795668375408944,
+        "folding": 0.38134561743075895
+      },
+      "replicate": 3,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 1,
+      "seed": 6561436171770217542
+    },
+    {
+      "hand": 2,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.07578356751485733,
+        "baseline": 0.22493154173738825,
+        "calling": 0.07689444919608227,
+        "folding": 0.6223904415516721
+      },
+      "posterior_before": {
+        "aggressive": 0.12721290139148386,
+        "baseline": 0.2573170137199434,
+        "calling": 0.12792128034787353,
+        "folding": 0.48754880454069915
+      },
+      "replicate": 3,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 1,
+      "seed": 4109800912608672022
+    },
+    {
+      "hand": 3,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.06820123997214078,
+        "baseline": 0.24049706238059376,
+        "calling": 0.08328917072804105,
+        "folding": 0.6080125269192244
+      },
+      "posterior_before": {
+        "aggressive": 0.07578356751485733,
+        "baseline": 0.22493154173738825,
+        "calling": 0.07689444919608227,
+        "folding": 0.6223904415516721
+      },
+      "replicate": 3,
+      "rewards": {
+        "cfr": -1.0,
+        "frozen_prior": -3.0,
+        "learning": -5.0
+      },
+      "seat": 1,
+      "seed": 3599808799646802314
+    },
+    {
+      "hand": 4,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.1468614787357742,
+        "baseline": 0.23584554805157676,
+        "calling": 0.037528960070761466,
+        "folding": 0.5797640131418875
+      },
+      "posterior_before": {
+        "aggressive": 0.06820123997214078,
+        "baseline": 0.24049706238059376,
+        "calling": 0.08328917072804105,
+        "folding": 0.6080125269192244
+      },
+      "replicate": 3,
+      "rewards": {
+        "cfr": 0.0,
+        "frozen_prior": 9.0,
+        "learning": 9.0
+      },
+      "seat": 1,
+      "seed": 4415923083280067218
+    },
+    {
+      "hand": 5,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.09497791270876588,
+        "baseline": 0.2102527971415856,
+        "calling": 0.02418714395582222,
+        "folding": 0.6705821461938263
+      },
+      "posterior_before": {
+        "aggressive": 0.1468614787357742,
+        "baseline": 0.23584554805157676,
+        "calling": 0.037528960070761466,
+        "folding": 0.5797640131418875
+      },
+      "replicate": 3,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 1,
+      "seed": 7391322017632240791
+    },
+    {
+      "hand": 6,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.07864378894774811,
+        "baseline": 0.3148280377776181,
+        "calling": 0.07383957781798278,
+        "folding": 0.532688595456651
+      },
+      "posterior_before": {
+        "aggressive": 0.09497791270876588,
+        "baseline": 0.2102527971415856,
+        "calling": 0.02418714395582222,
+        "folding": 0.6705821461938263
+      },
+      "replicate": 3,
+      "rewards": {
+        "cfr": -3.0,
+        "frozen_prior": -7.0,
+        "learning": -3.0
+      },
+      "seat": 1,
+      "seed": 3687835878267001189
+    },
+    {
+      "hand": 7,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.05110325034058803,
+        "baseline": 0.28200504151288136,
+        "calling": 0.04781637341637529,
+        "folding": 0.6190753347301553
+      },
+      "posterior_before": {
+        "aggressive": 0.07864378894774811,
+        "baseline": 0.3148280377776181,
+        "calling": 0.07383957781798278,
+        "folding": 0.532688595456651
+      },
+      "replicate": 3,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 1,
+      "seed": 9090220536709249208
+    },
+    {
+      "hand": 8,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.03417931076342531,
+        "baseline": 0.2526463537279075,
+        "calling": 0.03177545853741575,
+        "folding": 0.6813988769712513
+      },
+      "posterior_before": {
+        "aggressive": 0.05110325034058803,
+        "baseline": 0.28200504151288136,
+        "calling": 0.04781637341637529,
+        "folding": 0.6190753347301553
+      },
+      "replicate": 3,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 1,
+      "seed": 8711291595683002683
+    },
+    {
+      "hand": 9,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.05554843481392232,
+        "baseline": 0.2986254402243802,
+        "calling": 0.03495371601245466,
+        "folding": 0.6108724089492429
+      },
+      "posterior_before": {
+        "aggressive": 0.03417931076342531,
+        "baseline": 0.2526463537279075,
+        "calling": 0.03177545853741575,
+        "folding": 0.6813988769712513
+      },
+      "replicate": 3,
+      "rewards": {
+        "cfr": -3.0,
+        "frozen_prior": -13.0,
+        "learning": -13.0
+      },
+      "seat": 1,
+      "seed": 3572118683379122258
+    },
+    {
+      "hand": 10,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.03714172456786614,
+        "baseline": 0.2674597453896515,
+        "calling": 0.02322116513589967,
+        "folding": 0.6721773649065828
+      },
+      "posterior_before": {
+        "aggressive": 0.05554843481392232,
+        "baseline": 0.2986254402243802,
+        "calling": 0.03495371601245466,
+        "folding": 0.6108724089492429
+      },
+      "replicate": 3,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 1,
+      "seed": 6350862140615568392
+    },
+    {
+      "hand": 11,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.022770254222476725,
+        "baseline": 0.2260287152238028,
+        "calling": 0.014187084523102097,
+        "folding": 0.7370139460306184
+      },
+      "posterior_before": {
+        "aggressive": 0.03714172456786614,
+        "baseline": 0.2674597453896515,
+        "calling": 0.02322116513589967,
+        "folding": 0.6721773649065828
+      },
+      "replicate": 3,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 1,
+      "seed": 6447499695184941036
+    },
+    {
+      "hand": 0,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.28516026667976957,
+        "baseline": 0.2914572296995396,
+        "calling": 0.2048732981251002,
+        "folding": 0.21850920549559072
+      },
+      "posterior_before": {
+        "aggressive": 0.25,
+        "baseline": 0.25,
+        "calling": 0.25,
+        "folding": 0.25
+      },
+      "replicate": 4,
+      "rewards": {
+        "cfr": 0.0,
+        "frozen_prior": 0.0,
+        "learning": 0.0
+      },
+      "seat": 0,
+      "seed": 1485666276295100165
+    },
+    {
+      "hand": 1,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.2563968326312468,
+        "baseline": 0.3005692205618014,
+        "calling": 0.21438256207450104,
+        "folding": 0.2286513847324508
+      },
+      "posterior_before": {
+        "aggressive": 0.28516026667976957,
+        "baseline": 0.2914572296995396,
+        "calling": 0.2048732981251002,
+        "folding": 0.21850920549559072
+      },
+      "replicate": 4,
+      "rewards": {
+        "cfr": -5.0,
+        "frozen_prior": -3.0,
+        "learning": -3.0
+      },
+      "seat": 0,
+      "seed": 1884466762342217728
+    },
+    {
+      "hand": 2,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.1964456949755346,
+        "baseline": 0.3147273049465248,
+        "calling": 0.23654165881235542,
+        "folding": 0.25228534126558516
+      },
+      "posterior_before": {
+        "aggressive": 0.2563968326312468,
+        "baseline": 0.3005692205618014,
+        "calling": 0.21438256207450104,
+        "folding": 0.2286513847324508
+      },
+      "replicate": 4,
+      "rewards": {
+        "cfr": -1.0,
+        "frozen_prior": -1.0,
+        "learning": -1.0
+      },
+      "seat": 0,
+      "seed": 8671445195282354556
+    },
+    {
+      "hand": 3,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.2838427374423729,
+        "baseline": 0.30783034405750614,
+        "calling": 0.20956220001587375,
+        "folding": 0.19876471848424718
+      },
+      "posterior_before": {
+        "aggressive": 0.1964456949755346,
+        "baseline": 0.3147273049465248,
+        "calling": 0.23654165881235542,
+        "folding": 0.25228534126558516
+      },
+      "replicate": 4,
+      "rewards": {
+        "cfr": -3.0,
+        "frozen_prior": -3.0,
+        "learning": -5.0
+      },
+      "seat": 0,
+      "seed": 6230156883271570909
+    },
+    {
+      "hand": 4,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.29300335396113286,
+        "baseline": 0.30647376005565197,
+        "calling": 0.20555700185444586,
+        "folding": 0.19496588412876925
+      },
+      "posterior_before": {
+        "aggressive": 0.2838427374423729,
+        "baseline": 0.30783034405750614,
+        "calling": 0.20956220001587375,
+        "folding": 0.19876471848424718
+      },
+      "replicate": 4,
+      "rewards": {
+        "cfr": -7.0,
+        "frozen_prior": -7.0,
+        "learning": -7.0
+      },
+      "seat": 0,
+      "seed": 8903381946089984019
+    },
+    {
+      "hand": 5,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.1295637148108874,
+        "baseline": 0.3449471717424564,
+        "calling": 0.34911066933625956,
+        "folding": 0.17637844411039674
+      },
+      "posterior_before": {
+        "aggressive": 0.29300335396113286,
+        "baseline": 0.30647376005565197,
+        "calling": 0.20555700185444586,
+        "folding": 0.19496588412876925
+      },
+      "replicate": 4,
+      "rewards": {
+        "cfr": 5.0,
+        "frozen_prior": 3.0,
+        "learning": 3.0
+      },
+      "seat": 0,
+      "seed": 35202191222818923
+    },
+    {
+      "hand": 6,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.10793334155585622,
+        "baseline": 0.3895041287354045,
+        "calling": 0.18896835698538442,
+        "folding": 0.31359417272335477
+      },
+      "posterior_before": {
+        "aggressive": 0.1295637148108874,
+        "baseline": 0.3449471717424564,
+        "calling": 0.34911066933625956,
+        "folding": 0.17637844411039674
+      },
+      "replicate": 4,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 0,
+      "seed": 6345807233387434425
+    },
+    {
+      "hand": 7,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.16391793416251488,
+        "baseline": 0.4004281945487049,
+        "calling": 0.1759664921617685,
+        "folding": 0.25968737912701173
+      },
+      "posterior_before": {
+        "aggressive": 0.10793334155585622,
+        "baseline": 0.3895041287354045,
+        "calling": 0.18896835698538442,
+        "folding": 0.31359417272335477
+      },
+      "replicate": 4,
+      "rewards": {
+        "cfr": -3.0,
+        "frozen_prior": -3.0,
+        "learning": -5.0
+      },
+      "seat": 0,
+      "seed": 2211831507995862073
+    },
+    {
+      "hand": 8,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.07846911968189466,
+        "baseline": 0.42718752218877754,
+        "calling": 0.27677274812523156,
+        "folding": 0.21757061000409636
+      },
+      "posterior_before": {
+        "aggressive": 0.16391793416251488,
+        "baseline": 0.4004281945487049,
+        "calling": 0.1759664921617685,
+        "folding": 0.25968737912701173
+      },
+      "replicate": 4,
+      "rewards": {
+        "cfr": -7.0,
+        "frozen_prior": -7.0,
+        "learning": -7.0
+      },
+      "seat": 0,
+      "seed": 7167219356188223369
+    },
+    {
+      "hand": 9,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.041899788639475695,
+        "baseline": 0.3998520476783057,
+        "calling": 0.41190465166176665,
+        "folding": 0.14634351202045207
+      },
+      "posterior_before": {
+        "aggressive": 0.07846911968189466,
+        "baseline": 0.42718752218877754,
+        "calling": 0.27677274812523156,
+        "folding": 0.21757061000409636
+      },
+      "replicate": 4,
+      "rewards": {
+        "cfr": -1.0,
+        "frozen_prior": -3.0,
+        "learning": -3.0
+      },
+      "seat": 0,
+      "seed": 3676793966273574034
+    },
+    {
+      "hand": 10,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.01142481303923987,
+        "baseline": 0.262541626424823,
+        "calling": 0.6978074480149471,
+        "folding": 0.02822611252098995
+      },
+      "posterior_before": {
+        "aggressive": 0.041899788639475695,
+        "baseline": 0.3998520476783057,
+        "calling": 0.41190465166176665,
+        "folding": 0.14634351202045207
+      },
+      "replicate": 4,
+      "rewards": {
+        "cfr": 7.0,
+        "frozen_prior": 7.0,
+        "learning": 7.0
+      },
+      "seat": 0,
+      "seed": 8004504767633267071
+    },
+    {
+      "hand": 11,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.012968883671043792,
+        "baseline": 0.4039605083058589,
+        "calling": 0.5146865597956259,
+        "folding": 0.06838404822747138
+      },
+      "posterior_before": {
+        "aggressive": 0.01142481303923987,
+        "baseline": 0.262541626424823,
+        "calling": 0.6978074480149471,
+        "folding": 0.02822611252098995
+      },
+      "replicate": 4,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 0,
+      "seed": 1600252327122426105
+    },
+    {
+      "hand": 0,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.19366617991341126,
+        "baseline": 0.2669642831103938,
+        "calling": 0.19299991646340398,
+        "folding": 0.3463696205127909
+      },
+      "posterior_before": {
+        "aggressive": 0.25,
+        "baseline": 0.25,
+        "calling": 0.25,
+        "folding": 0.25
+      },
+      "replicate": 4,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 1,
+      "seed": 8543803960586513406
+    },
+    {
+      "hand": 1,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.15514244926659626,
+        "baseline": 0.2859499117097617,
+        "calling": 0.03886877747634245,
+        "folding": 0.5200388615472996
+      },
+      "posterior_before": {
+        "aggressive": 0.19366617991341126,
+        "baseline": 0.2669642831103938,
+        "calling": 0.19299991646340398,
+        "folding": 0.3463696205127909
+      },
+      "replicate": 4,
+      "rewards": {
+        "cfr": -1.0,
+        "frozen_prior": 5.0,
+        "learning": 5.0
+      },
+      "seat": 1,
+      "seed": 1566483630432274925
+    },
+    {
+      "hand": 2,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.12965247468802937,
+        "baseline": 0.2553757358057334,
+        "calling": 0.01600487515944241,
+        "folding": 0.5989669143467948
+      },
+      "posterior_before": {
+        "aggressive": 0.15514244926659626,
+        "baseline": 0.2859499117097617,
+        "calling": 0.03886877747634245,
+        "folding": 0.5200388615472996
+      },
+      "replicate": 4,
+      "rewards": {
+        "cfr": 5.0,
+        "frozen_prior": 5.0,
+        "learning": 5.0
+      },
+      "seat": 1,
+      "seed": 2930376959912077250
+    },
+    {
+      "hand": 3,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.06450680073830999,
+        "baseline": 0.09835096135365054,
+        "calling": 0.0011578182792306758,
+        "folding": 0.8359844196288088
+      },
+      "posterior_before": {
+        "aggressive": 0.12965247468802937,
+        "baseline": 0.2553757358057334,
+        "calling": 0.01600487515944241,
+        "folding": 0.5989669143467948
+      },
+      "replicate": 4,
+      "rewards": {
+        "cfr": -1.0,
+        "frozen_prior": 3.0,
+        "learning": 3.0
+      },
+      "seat": 1,
+      "seed": 508186616977004084
+    },
+    {
+      "hand": 4,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.03223053642617106,
+        "baseline": 0.07210719626413449,
+        "calling": 0.0005837282838387122,
+        "folding": 0.8950785390258558
+      },
+      "posterior_before": {
+        "aggressive": 0.06450680073830999,
+        "baseline": 0.09835096135365054,
+        "calling": 0.0011578182792306758,
+        "folding": 0.8359844196288088
+      },
+      "replicate": 4,
+      "rewards": {
+        "cfr": 0.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 1,
+      "seed": 8584263993515074313
+    },
+    {
+      "hand": 5,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.04683958882107668,
+        "baseline": 0.08314239571222483,
+        "calling": 0.0006291914774233719,
+        "folding": 0.8693888239892752
+      },
+      "posterior_before": {
+        "aggressive": 0.03223053642617106,
+        "baseline": 0.07210719626413449,
+        "calling": 0.0005837282838387122,
+        "folding": 0.8950785390258558
+      },
+      "replicate": 4,
+      "rewards": {
+        "cfr": 0.0,
+        "frozen_prior": 0.0,
+        "learning": 0.0
+      },
+      "seat": 1,
+      "seed": 8750340891592709270
+    },
+    {
+      "hand": 6,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.06073125136003536,
+        "baseline": 0.09116764298511369,
+        "calling": 0.0005945674504438913,
+        "folding": 0.847506538204407
+      },
+      "posterior_before": {
+        "aggressive": 0.04683958882107668,
+        "baseline": 0.08314239571222483,
+        "calling": 0.0006291914774233719,
+        "folding": 0.8693888239892752
+      },
+      "replicate": 4,
+      "rewards": {
+        "cfr": 5.0,
+        "frozen_prior": 5.0,
+        "learning": 5.0
+      },
+      "seat": 1,
+      "seed": 2876076605903752850
+    },
+    {
+      "hand": 7,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.03848236457497622,
+        "baseline": 0.07738051786653963,
+        "calling": 0.0003743269234077154,
+        "folding": 0.8837627906350763
+      },
+      "posterior_before": {
+        "aggressive": 0.06073125136003536,
+        "baseline": 0.09116764298511369,
+        "calling": 0.0005945674504438913,
+        "folding": 0.847506538204407
+      },
+      "replicate": 4,
+      "rewards": {
+        "cfr": -1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 1,
+      "seed": 394699051159267454
+    },
+    {
+      "hand": 8,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.08298153233803648,
+        "baseline": 0.08101605369000921,
+        "calling": 0.00017364114460115032,
+        "folding": 0.8358287728273531
+      },
+      "posterior_before": {
+        "aggressive": 0.03848236457497622,
+        "baseline": 0.07738051786653963,
+        "calling": 0.0003743269234077154,
+        "folding": 0.8837627906350763
+      },
+      "replicate": 4,
+      "rewards": {
+        "cfr": 7.0,
+        "frozen_prior": 7.0,
+        "learning": 9.0
+      },
+      "seat": 1,
+      "seed": 1895809807174145093
+    },
+    {
+      "hand": 9,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.04911013030448296,
+        "baseline": 0.06609370478140818,
+        "calling": 0.00010241076517498165,
+        "folding": 0.8846937541489338
+      },
+      "posterior_before": {
+        "aggressive": 0.08298153233803648,
+        "baseline": 0.08101605369000921,
+        "calling": 0.00017364114460115032,
+        "folding": 0.8358287728273531
+      },
+      "replicate": 4,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 1,
+      "seed": 2568722533889214731
+    },
+    {
+      "hand": 10,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.03973682307241023,
+        "baseline": 0.08505714700816415,
+        "calling": 0.00015112073971297837,
+        "folding": 0.8750549091797127
+      },
+      "posterior_before": {
+        "aggressive": 0.04911013030448296,
+        "baseline": 0.06609370478140818,
+        "calling": 0.00010241076517498165,
+        "folding": 0.8846937541489338
+      },
+      "replicate": 4,
+      "rewards": {
+        "cfr": 9.0,
+        "frozen_prior": 3.0,
+        "learning": 9.0
+      },
+      "seat": 1,
+      "seed": 3593526108683406201
+    },
+    {
+      "hand": 11,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.023073803206696566,
+        "baseline": 0.06808261501240133,
+        "calling": 8.744871802778409e-05,
+        "folding": 0.9087561330628743
+      },
+      "posterior_before": {
+        "aggressive": 0.03973682307241023,
+        "baseline": 0.08505714700816415,
+        "calling": 0.00015112073971297837,
+        "folding": 0.8750549091797127
+      },
+      "replicate": 4,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 1,
+      "seed": 516393135904317180
+    },
+    {
+      "hand": 0,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.1945715632571352,
+        "baseline": 0.2637342989427426,
+        "calling": 0.12642504073265426,
+        "folding": 0.415269097067468
+      },
+      "posterior_before": {
+        "aggressive": 0.25,
+        "baseline": 0.25,
+        "calling": 0.25,
+        "folding": 0.25
+      },
+      "replicate": 5,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 0,
+      "seed": 3925094390111420170
+    },
+    {
+      "hand": 1,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.11198083283211073,
+        "baseline": 0.21760158909022412,
+        "calling": 0.047927620276031875,
+        "folding": 0.6224899578016333
+      },
+      "posterior_before": {
+        "aggressive": 0.1945715632571352,
+        "baseline": 0.2637342989427426,
+        "calling": 0.12642504073265426,
+        "folding": 0.415269097067468
+      },
+      "replicate": 5,
+      "rewards": {
+        "cfr": -1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 0,
+      "seed": 6013441309159767821
+    },
+    {
+      "hand": 2,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.16114586314862997,
+        "baseline": 0.1944427633714685,
+        "calling": 0.017012512521118902,
+        "folding": 0.6273988609587826
+      },
+      "posterior_before": {
+        "aggressive": 0.11198083283211073,
+        "baseline": 0.21760158909022412,
+        "calling": 0.047927620276031875,
+        "folding": 0.6224899578016333
+      },
+      "replicate": 5,
+      "rewards": {
+        "cfr": -1.0,
+        "frozen_prior": 5.0,
+        "learning": 5.0
+      },
+      "seat": 0,
+      "seed": 1123490069975272315
+    },
+    {
+      "hand": 3,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.11893646372224301,
+        "baseline": 0.1961316594832884,
+        "calling": 0.01808225709480404,
+        "folding": 0.6668496196996645
+      },
+      "posterior_before": {
+        "aggressive": 0.16114586314862997,
+        "baseline": 0.1944427633714685,
+        "calling": 0.017012512521118902,
+        "folding": 0.6273988609587826
+      },
+      "replicate": 5,
+      "rewards": {
+        "cfr": -1.0,
+        "frozen_prior": -1.0,
+        "learning": -1.0
+      },
+      "seat": 0,
+      "seed": 2412156427040460981
+    },
+    {
+      "hand": 4,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.07801393397146317,
+        "baseline": 0.25539810628024356,
+        "calling": 0.033857689301626824,
+        "folding": 0.6327302704466665
+      },
+      "posterior_before": {
+        "aggressive": 0.11893646372224301,
+        "baseline": 0.1961316594832884,
+        "calling": 0.01808225709480404,
+        "folding": 0.6668496196996645
+      },
+      "replicate": 5,
+      "rewards": {
+        "cfr": -1.0,
+        "frozen_prior": -3.0,
+        "learning": -7.0
+      },
+      "seat": 0,
+      "seed": 2800886967873941078
+    },
+    {
+      "hand": 5,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.049492879154968784,
+        "baseline": 0.2506616261536264,
+        "calling": 0.035546923660835866,
+        "folding": 0.664298571030569
+      },
+      "posterior_before": {
+        "aggressive": 0.07801393397146317,
+        "baseline": 0.25539810628024356,
+        "calling": 0.033857689301626824,
+        "folding": 0.6327302704466665
+      },
+      "replicate": 5,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 0,
+      "seed": 2763368110409281350
+    },
+    {
+      "hand": 6,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.04122156554579963,
+        "baseline": 0.3224610329211395,
+        "calling": 0.07625519940593922,
+        "folding": 0.5600622021271217
+      },
+      "posterior_before": {
+        "aggressive": 0.049492879154968784,
+        "baseline": 0.2506616261536264,
+        "calling": 0.035546923660835866,
+        "folding": 0.664298571030569
+      },
+      "replicate": 5,
+      "rewards": {
+        "cfr": -7.0,
+        "frozen_prior": -7.0,
+        "learning": -3.0
+      },
+      "seat": 0,
+      "seed": 2611302114837588511
+    },
+    {
+      "hand": 7,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.021168528601708987,
+        "baseline": 0.1319365087588588,
+        "calling": 0.0060540720777223535,
+        "folding": 0.8408408905617099
+      },
+      "posterior_before": {
+        "aggressive": 0.04122156554579963,
+        "baseline": 0.3224610329211395,
+        "calling": 0.07625519940593922,
+        "folding": 0.5600622021271217
+      },
+      "replicate": 5,
+      "rewards": {
+        "cfr": 5.0,
+        "frozen_prior": 0.0,
+        "learning": 3.0
+      },
+      "seat": 0,
+      "seed": 2219818721514767406
+    },
+    {
+      "hand": 8,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.014896064344113018,
+        "baseline": 0.12688372305184561,
+        "calling": 0.006135031207967124,
+        "folding": 0.8520851813960743
+      },
+      "posterior_before": {
+        "aggressive": 0.021168528601708987,
+        "baseline": 0.1319365087588588,
+        "calling": 0.0060540720777223535,
+        "folding": 0.8408408905617099
+      },
+      "replicate": 5,
+      "rewards": {
+        "cfr": -1.0,
+        "frozen_prior": -1.0,
+        "learning": -1.0
+      },
+      "seat": 0,
+      "seed": 1139183976791224287
+    },
+    {
+      "hand": 9,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.03896754044318018,
+        "baseline": 0.1450850967630928,
+        "calling": 0.0034547265259445166,
+        "folding": 0.8124926362677826
+      },
+      "posterior_before": {
+        "aggressive": 0.014896064344113018,
+        "baseline": 0.12688372305184561,
+        "calling": 0.006135031207967124,
+        "folding": 0.8520851813960743
+      },
+      "replicate": 5,
+      "rewards": {
+        "cfr": 9.0,
+        "frozen_prior": 3.0,
+        "learning": 9.0
+      },
+      "seat": 0,
+      "seed": 8900314430415401025
+    },
+    {
+      "hand": 10,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.02414738052563098,
+        "baseline": 0.13908793987373005,
+        "calling": 0.0035428671828682656,
+        "folding": 0.8332218124177708
+      },
+      "posterior_before": {
+        "aggressive": 0.03896754044318018,
+        "baseline": 0.1450850967630928,
+        "calling": 0.0034547265259445166,
+        "folding": 0.8124926362677826
+      },
+      "replicate": 5,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 0,
+      "seed": 1048191461099540831
+    },
+    {
+      "hand": 11,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.03539993279108903,
+        "baseline": 0.0927881778883767,
+        "calling": 0.0008461541060099644,
+        "folding": 0.8709657352145243
+      },
+      "posterior_before": {
+        "aggressive": 0.02414738052563098,
+        "baseline": 0.13908793987373005,
+        "calling": 0.0035428671828682656,
+        "folding": 0.8332218124177708
+      },
+      "replicate": 5,
+      "rewards": {
+        "cfr": -1.0,
+        "frozen_prior": 3.0,
+        "learning": 9.0
+      },
+      "seat": 0,
+      "seed": 3528975307348202233
+    },
+    {
+      "hand": 0,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.3383227330739404,
+        "baseline": 0.24605739576721383,
+        "calling": 0.22899404149110816,
+        "folding": 0.18662582966773755
+      },
+      "posterior_before": {
+        "aggressive": 0.25,
+        "baseline": 0.25,
+        "calling": 0.25,
+        "folding": 0.25
+      },
+      "replicate": 5,
+      "rewards": {
+        "cfr": -3.0,
+        "frozen_prior": -13.0,
+        "learning": -13.0
+      },
+      "seat": 1,
+      "seed": 778432110278216080
+    },
+    {
+      "hand": 1,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.33382390219076824,
+        "baseline": 0.27488088657851234,
+        "calling": 0.10543293554392381,
+        "folding": 0.2858622756867956
+      },
+      "posterior_before": {
+        "aggressive": 0.3383227330739404,
+        "baseline": 0.24605739576721383,
+        "calling": 0.22899404149110816,
+        "folding": 0.18662582966773755
+      },
+      "replicate": 5,
+      "rewards": {
+        "cfr": -1.0,
+        "frozen_prior": 5.0,
+        "learning": 5.0
+      },
+      "seat": 1,
+      "seed": 1803082047895562074
+    },
+    {
+      "hand": 2,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.5922734321816694,
+        "baseline": 0.20273516979062997,
+        "calling": 0.043251748827793285,
+        "folding": 0.16173964919990738
+      },
+      "posterior_before": {
+        "aggressive": 0.33382390219076824,
+        "baseline": 0.27488088657851234,
+        "calling": 0.10543293554392381,
+        "folding": 0.2858622756867956
+      },
+      "replicate": 5,
+      "rewards": {
+        "cfr": 9.0,
+        "frozen_prior": 9.0,
+        "learning": 9.0
+      },
+      "seat": 1,
+      "seed": 8341173575909739346
+    },
+    {
+      "hand": 3,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.49187591891917226,
+        "baseline": 0.2320928597103344,
+        "calling": 0.03579647946352436,
+        "folding": 0.24023474190696897
+      },
+      "posterior_before": {
+        "aggressive": 0.5922734321816694,
+        "baseline": 0.20273516979062997,
+        "calling": 0.043251748827793285,
+        "folding": 0.16173964919990738
+      },
+      "replicate": 5,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 1,
+      "seed": 514032417226194752
+    },
+    {
+      "hand": 4,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.4590625858828986,
+        "baseline": 0.25734771023006275,
+        "calling": 0.04020989851189563,
+        "folding": 0.2433798053751431
+      },
+      "posterior_before": {
+        "aggressive": 0.49187591891917226,
+        "baseline": 0.2320928597103344,
+        "calling": 0.03579647946352436,
+        "folding": 0.24023474190696897
+      },
+      "replicate": 5,
+      "rewards": {
+        "cfr": -9.0,
+        "frozen_prior": -3.0,
+        "learning": -5.0
+      },
+      "seat": 1,
+      "seed": 1168948767401496814
+    },
+    {
+      "hand": 5,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.5163848477078198,
+        "baseline": 0.24481664198771935,
+        "calling": 0.03296504792364935,
+        "folding": 0.20583346238081152
+      },
+      "posterior_before": {
+        "aggressive": 0.4590625858828986,
+        "baseline": 0.25734771023006275,
+        "calling": 0.04020989851189563,
+        "folding": 0.2433798053751431
+      },
+      "replicate": 5,
+      "rewards": {
+        "cfr": 5.0,
+        "frozen_prior": 5.0,
+        "learning": 5.0
+      },
+      "seat": 1,
+      "seed": 6006511365927778826
+    },
+    {
+      "hand": 6,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.5349250912106297,
+        "baseline": 0.30729573615673655,
+        "calling": 0.07112177838268187,
+        "folding": 0.08665739424995188
+      },
+      "posterior_before": {
+        "aggressive": 0.5163848477078198,
+        "baseline": 0.24481664198771935,
+        "calling": 0.03296504792364935,
+        "folding": 0.20583346238081152
+      },
+      "replicate": 5,
+      "rewards": {
+        "cfr": -1.0,
+        "frozen_prior": -9.0,
+        "learning": -9.0
+      },
+      "seat": 1,
+      "seed": 3678339887190049727
+    },
+    {
+      "hand": 7,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.30387152062742734,
+        "baseline": 0.3427696843547334,
+        "calling": 0.32624458836618303,
+        "folding": 0.027114206651656213
+      },
+      "posterior_before": {
+        "aggressive": 0.5349250912106297,
+        "baseline": 0.30729573615673655,
+        "calling": 0.07112177838268187,
+        "folding": 0.08665739424995188
+      },
+      "replicate": 5,
+      "rewards": {
+        "cfr": -1.0,
+        "frozen_prior": 0.0,
+        "learning": 0.0
+      },
+      "seat": 1,
+      "seed": 5113170749390508461
+    },
+    {
+      "hand": 8,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.2642390608948029,
+        "baseline": 0.4108741303818719,
+        "calling": 0.2827181364077355,
+        "folding": 0.04216867231558962
+      },
+      "posterior_before": {
+        "aggressive": 0.30387152062742734,
+        "baseline": 0.3427696843547334,
+        "calling": 0.32624458836618303,
+        "folding": 0.027114206651656213
+      },
+      "replicate": 5,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 1,
+      "seed": 4568443183633414094
+    },
+    {
+      "hand": 9,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.13524358801938433,
+        "baseline": 0.4467907982633277,
+        "calling": 0.37827462000767176,
+        "folding": 0.039690993709616255
+      },
+      "posterior_before": {
+        "aggressive": 0.2642390608948029,
+        "baseline": 0.4108741303818719,
+        "calling": 0.2827181364077355,
+        "folding": 0.04216867231558962
+      },
+      "replicate": 5,
+      "rewards": {
+        "cfr": -1.0,
+        "frozen_prior": 9.0,
+        "learning": 9.0
+      },
+      "seat": 1,
+      "seed": 3737098735322788562
+    },
+    {
+      "hand": 10,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.0630825612706899,
+        "baseline": 0.4497059163223042,
+        "calling": 0.4409447750085245,
+        "folding": 0.04626674739848144
+      },
+      "posterior_before": {
+        "aggressive": 0.13524358801938433,
+        "baseline": 0.4467907982633277,
+        "calling": 0.37827462000767176,
+        "folding": 0.039690993709616255
+      },
+      "replicate": 5,
+      "rewards": {
+        "cfr": -1.0,
+        "frozen_prior": -3.0,
+        "learning": -1.0
+      },
+      "seat": 1,
+      "seed": 8255438681419692497
+    },
+    {
+      "hand": 11,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.05234342178914261,
+        "baseline": 0.5143760844372057,
+        "calling": 0.3646198662143407,
+        "folding": 0.06866062755931086
+      },
+      "posterior_before": {
+        "aggressive": 0.0630825612706899,
+        "baseline": 0.4497059163223042,
+        "calling": 0.4409447750085245,
+        "folding": 0.04626674739848144
+      },
+      "replicate": 5,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 1,
+      "seed": 7685597136420552212
+    },
+    {
+      "hand": 0,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.3275998489326505,
+        "baseline": 0.20017725493522523,
+        "calling": 0.4223179292832735,
+        "folding": 0.04990496684885072
+      },
+      "posterior_before": {
+        "aggressive": 0.25,
+        "baseline": 0.25,
+        "calling": 0.25,
+        "folding": 0.25
+      },
+      "replicate": 6,
+      "rewards": {
+        "cfr": 7.0,
+        "frozen_prior": 11.0,
+        "learning": 11.0
+      },
+      "seat": 0,
+      "seed": 7237845232377830864
+    },
+    {
+      "hand": 1,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.0463894493863111,
+        "baseline": 0.16591682045364003,
+        "calling": 0.743780219248234,
+        "folding": 0.04391351091181493
+      },
+      "posterior_before": {
+        "aggressive": 0.3275998489326505,
+        "baseline": 0.20017725493522523,
+        "calling": 0.4223179292832735,
+        "folding": 0.04990496684885072
+      },
+      "replicate": 6,
+      "rewards": {
+        "cfr": -3.0,
+        "frozen_prior": -3.0,
+        "learning": -3.0
+      },
+      "seat": 0,
+      "seed": 5828798474051561139
+    },
+    {
+      "hand": 2,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.05515574945529261,
+        "baseline": 0.2634345272644588,
+        "calling": 0.5764705614181006,
+        "folding": 0.10493916186214798
+      },
+      "posterior_before": {
+        "aggressive": 0.0463894493863111,
+        "baseline": 0.16591682045364003,
+        "calling": 0.743780219248234,
+        "folding": 0.04391351091181493
+      },
+      "replicate": 6,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 0,
+      "seed": 7901453976889622649
+    },
+    {
+      "hand": 3,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.04604357251670465,
+        "baseline": 0.2543447543024437,
+        "calling": 0.6621324667897004,
+        "folding": 0.03747920639115119
+      },
+      "posterior_before": {
+        "aggressive": 0.05515574945529261,
+        "baseline": 0.2634345272644588,
+        "calling": 0.5764705614181006,
+        "folding": 0.10493916186214798
+      },
+      "replicate": 6,
+      "rewards": {
+        "cfr": 9.0,
+        "frozen_prior": 7.0,
+        "learning": 9.0
+      },
+      "seat": 0,
+      "seed": 3923434268519828205
+    },
+    {
+      "hand": 4,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.11844236330234571,
+        "baseline": 0.39616494821970594,
+        "calling": 0.42780012286628444,
+        "folding": 0.05759256561166385
+      },
+      "posterior_before": {
+        "aggressive": 0.04604357251670465,
+        "baseline": 0.2543447543024437,
+        "calling": 0.6621324667897004,
+        "folding": 0.03747920639115119
+      },
+      "replicate": 6,
+      "rewards": {
+        "cfr": 9.0,
+        "frozen_prior": 5.0,
+        "learning": 5.0
+      },
+      "seat": 0,
+      "seed": 5585306505456027341
+    },
+    {
+      "hand": 5,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.0410156202205383,
+        "baseline": 0.3491939883217405,
+        "calling": 0.568988083586717,
+        "folding": 0.0408023078710042
+      },
+      "posterior_before": {
+        "aggressive": 0.11844236330234571,
+        "baseline": 0.39616494821970594,
+        "calling": 0.42780012286628444,
+        "folding": 0.05759256561166385
+      },
+      "replicate": 6,
+      "rewards": {
+        "cfr": 3.0,
+        "frozen_prior": 3.0,
+        "learning": 3.0
+      },
+      "seat": 0,
+      "seed": 2256956960378193902
+    },
+    {
+      "hand": 6,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.010574396573246637,
+        "baseline": 0.2726647001369411,
+        "calling": 0.6903895858896922,
+        "folding": 0.026371317400119974
+      },
+      "posterior_before": {
+        "aggressive": 0.0410156202205383,
+        "baseline": 0.3491939883217405,
+        "calling": 0.568988083586717,
+        "folding": 0.0408023078710042
+      },
+      "replicate": 6,
+      "rewards": {
+        "cfr": 0.0,
+        "frozen_prior": 1.0,
+        "learning": 0.0
+      },
+      "seat": 0,
+      "seed": 6754889420820091439
+    },
+    {
+      "hand": 7,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.00212541885206814,
+        "baseline": 0.1319712798888768,
+        "calling": 0.8621539072070663,
+        "folding": 0.003749394051988811
+      },
+      "posterior_before": {
+        "aggressive": 0.010574396573246637,
+        "baseline": 0.2726647001369411,
+        "calling": 0.6903895858896922,
+        "folding": 0.026371317400119974
+      },
+      "replicate": 6,
+      "rewards": {
+        "cfr": 5.0,
+        "frozen_prior": 7.0,
+        "learning": 7.0
+      },
+      "seat": 0,
+      "seed": 4669015448666916228
+    },
+    {
+      "hand": 8,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.0008642976178188941,
+        "baseline": 0.10894975883271929,
+        "calling": 0.8875148657616843,
+        "folding": 0.0026710777877775624
+      },
+      "posterior_before": {
+        "aggressive": 0.00212541885206814,
+        "baseline": 0.1319712798888768,
+        "calling": 0.8621539072070663,
+        "folding": 0.003749394051988811
+      },
+      "replicate": 6,
+      "rewards": {
+        "cfr": 3.0,
+        "frozen_prior": 3.0,
+        "learning": 3.0
+      },
+      "seat": 0,
+      "seed": 2531900533501941026
+    },
+    {
+      "hand": 9,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.0006406217949473228,
+        "baseline": 0.09339777574812799,
+        "calling": 0.9051145710731759,
+        "folding": 0.0008470313837487738
+      },
+      "posterior_before": {
+        "aggressive": 0.0008642976178188941,
+        "baseline": 0.10894975883271929,
+        "calling": 0.8875148657616843,
+        "folding": 0.0026710777877775624
+      },
+      "replicate": 6,
+      "rewards": {
+        "cfr": 9.0,
+        "frozen_prior": 7.0,
+        "learning": 9.0
+      },
+      "seat": 0,
+      "seed": 8628203231504303071
+    },
+    {
+      "hand": 10,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.00022357618359338733,
+        "baseline": 0.059215834789791,
+        "calling": 0.9401236005105956,
+        "folding": 0.00043698851602006514
+      },
+      "posterior_before": {
+        "aggressive": 0.0006406217949473228,
+        "baseline": 0.09339777574812799,
+        "calling": 0.9051145710731759,
+        "folding": 0.0008470313837487738
+      },
+      "replicate": 6,
+      "rewards": {
+        "cfr": 3.0,
+        "frozen_prior": 3.0,
+        "learning": 3.0
+      },
+      "seat": 0,
+      "seed": 1736308033204998018
+    },
+    {
+      "hand": 11,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 5.9419777802837553e-05,
+        "baseline": 0.0400582371248637,
+        "calling": 0.9596447402762471,
+        "folding": 0.00023760282108639983
+      },
+      "posterior_before": {
+        "aggressive": 0.00022357618359338733,
+        "baseline": 0.059215834789791,
+        "calling": 0.9401236005105956,
+        "folding": 0.00043698851602006514
+      },
+      "replicate": 6,
+      "rewards": {
+        "cfr": 0.0,
+        "frozen_prior": -3.0,
+        "learning": 0.0
+      },
+      "seat": 0,
+      "seed": 3003040744613945178
+    },
+    {
+      "hand": 0,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.19366617991341126,
+        "baseline": 0.2669642831103938,
+        "calling": 0.19299991646340398,
+        "folding": 0.3463696205127909
+      },
+      "posterior_before": {
+        "aggressive": 0.25,
+        "baseline": 0.25,
+        "calling": 0.25,
+        "folding": 0.25
+      },
+      "replicate": 6,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 1,
+      "seed": 4126761171784767509
+    },
+    {
+      "hand": 1,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.060221455261882606,
+        "baseline": 0.3005418341931101,
+        "calling": 0.38180573395337525,
+        "folding": 0.257430976591632
+      },
+      "posterior_before": {
+        "aggressive": 0.19366617991341126,
+        "baseline": 0.2669642831103938,
+        "calling": 0.19299991646340398,
+        "folding": 0.3463696205127909
+      },
+      "replicate": 6,
+      "rewards": {
+        "cfr": -1.0,
+        "frozen_prior": -3.0,
+        "learning": -3.0
+      },
+      "seat": 1,
+      "seed": 7448975118987866491
+    },
+    {
+      "hand": 2,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.04757598502383201,
+        "baseline": 0.3180408169632,
+        "calling": 0.2996949354201455,
+        "folding": 0.33468826259282247
+      },
+      "posterior_before": {
+        "aggressive": 0.060221455261882606,
+        "baseline": 0.3005418341931101,
+        "calling": 0.38180573395337525,
+        "folding": 0.257430976591632
+      },
+      "replicate": 6,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 1,
+      "seed": 7771179368592724173
+    },
+    {
+      "hand": 3,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.02763790991735357,
+        "baseline": 0.3324771845852589,
+        "calling": 0.2510068781186138,
+        "folding": 0.3888780273787738
+      },
+      "posterior_before": {
+        "aggressive": 0.04757598502383201,
+        "baseline": 0.3180408169632,
+        "calling": 0.2996949354201455,
+        "folding": 0.33468826259282247
+      },
+      "replicate": 6,
+      "rewards": {
+        "cfr": -5.0,
+        "frozen_prior": -5.0,
+        "learning": -5.0
+      },
+      "seat": 1,
+      "seed": 6578381870870581910
+    },
+    {
+      "hand": 4,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.04226941026397787,
+        "baseline": 0.3698180315848317,
+        "calling": 0.25983617557528,
+        "folding": 0.32807638257591054
+      },
+      "posterior_before": {
+        "aggressive": 0.02763790991735357,
+        "baseline": 0.3324771845852589,
+        "calling": 0.2510068781186138,
+        "folding": 0.3888780273787738
+      },
+      "replicate": 6,
+      "rewards": {
+        "cfr": -1.0,
+        "frozen_prior": -13.0,
+        "learning": -13.0
+      },
+      "seat": 1,
+      "seed": 1700679636084253778
+    },
+    {
+      "hand": 5,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.03136069178254357,
+        "baseline": 0.3767090371529522,
+        "calling": 0.276763564698275,
+        "folding": 0.31516670636622923
+      },
+      "posterior_before": {
+        "aggressive": 0.04226941026397787,
+        "baseline": 0.3698180315848317,
+        "calling": 0.25983617557528,
+        "folding": 0.32807638257591054
+      },
+      "replicate": 6,
+      "rewards": {
+        "cfr": -1.0,
+        "frozen_prior": -5.0,
+        "learning": -5.0
+      },
+      "seat": 1,
+      "seed": 6750632429890756737
+    },
+    {
+      "hand": 6,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.0019312409918782756,
+        "baseline": 0.2589774536912618,
+        "calling": 0.49552140143284423,
+        "folding": 0.24356990388401578
+      },
+      "posterior_before": {
+        "aggressive": 0.03136069178254357,
+        "baseline": 0.3767090371529522,
+        "calling": 0.276763564698275,
+        "folding": 0.31516670636622923
+      },
+      "replicate": 6,
+      "rewards": {
+        "cfr": -5.0,
+        "frozen_prior": -11.0,
+        "learning": -11.0
+      },
+      "seat": 1,
+      "seed": 6234624709355165013
+    },
+    {
+      "hand": 7,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.001384686791335695,
+        "baseline": 0.2554675146880607,
+        "calling": 0.4982410643253201,
+        "folding": 0.2449067341952835
+      },
+      "posterior_before": {
+        "aggressive": 0.0019312409918782756,
+        "baseline": 0.2589774536912618,
+        "calling": 0.49552140143284423,
+        "folding": 0.24356990388401578
+      },
+      "replicate": 6,
+      "rewards": {
+        "cfr": 0.0,
+        "frozen_prior": 0.0,
+        "learning": 0.0
+      },
+      "seat": 1,
+      "seed": 8460982260061322425
+    },
+    {
+      "hand": 8,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.0016252788697988202,
+        "baseline": 0.26646132939488715,
+        "calling": 0.4907089922329192,
+        "folding": 0.24120439950239494
+      },
+      "posterior_before": {
+        "aggressive": 0.001384686791335695,
+        "baseline": 0.2554675146880607,
+        "calling": 0.4982410643253201,
+        "folding": 0.2449067341952835
+      },
+      "replicate": 6,
+      "rewards": {
+        "cfr": -1.0,
+        "frozen_prior": -13.0,
+        "learning": -3.0
+      },
+      "seat": 1,
+      "seed": 7089905762027242823
+    },
+    {
+      "hand": 9,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.004091811313064622,
+        "baseline": 0.3134851797520929,
+        "calling": 0.4575283233949547,
+        "folding": 0.22489468553988778
+      },
+      "posterior_before": {
+        "aggressive": 0.0016252788697988202,
+        "baseline": 0.26646132939488715,
+        "calling": 0.4907089922329192,
+        "folding": 0.24120439950239494
+      },
+      "replicate": 6,
+      "rewards": {
+        "cfr": -1.0,
+        "frozen_prior": -13.0,
+        "learning": -3.0
+      },
+      "seat": 1,
+      "seed": 5450166308479545168
+    },
+    {
+      "hand": 10,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.0032768697445824647,
+        "baseline": 0.3362807280389849,
+        "calling": 0.3640507909281106,
+        "folding": 0.29639161128832203
+      },
+      "posterior_before": {
+        "aggressive": 0.004091811313064622,
+        "baseline": 0.3134851797520929,
+        "calling": 0.4575283233949547,
+        "folding": 0.22489468553988778
+      },
+      "replicate": 6,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 1,
+      "seed": 2081714212777057431
+    },
+    {
+      "hand": 11,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.005852987651039629,
+        "baseline": 0.37114548252262397,
+        "calling": 0.3434125351757396,
+        "folding": 0.27958899465059667
+      },
+      "posterior_before": {
+        "aggressive": 0.0032768697445824647,
+        "baseline": 0.3362807280389849,
+        "calling": 0.3640507909281106,
+        "folding": 0.29639161128832203
+      },
+      "replicate": 6,
+      "rewards": {
+        "cfr": -1.0,
+        "frozen_prior": -9.0,
+        "learning": -3.0
+      },
+      "seat": 1,
+      "seed": 4216074423810271568
+    },
+    {
+      "hand": 0,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.12100163238929736,
+        "baseline": 0.2696577029515947,
+        "calling": 0.3975687774020007,
+        "folding": 0.21177188725710724
+      },
+      "posterior_before": {
+        "aggressive": 0.25,
+        "baseline": 0.25,
+        "calling": 0.25,
+        "folding": 0.25
+      },
+      "replicate": 7,
+      "rewards": {
+        "cfr": -9.0,
+        "frozen_prior": -7.0,
+        "learning": -7.0
+      },
+      "seat": 0,
+      "seed": 1550656655150208497
+    },
+    {
+      "hand": 1,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.14327839083761515,
+        "baseline": 0.32635338164144806,
+        "calling": 0.33821906376750965,
+        "folding": 0.1921491637534272
+      },
+      "posterior_before": {
+        "aggressive": 0.12100163238929736,
+        "baseline": 0.2696577029515947,
+        "calling": 0.3975687774020007,
+        "folding": 0.21177188725710724
+      },
+      "replicate": 7,
+      "rewards": {
+        "cfr": 0.0,
+        "frozen_prior": 0.0,
+        "learning": 0.0
+      },
+      "seat": 0,
+      "seed": 5016047208982381863
+    },
+    {
+      "hand": 2,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.1312189722233881,
+        "baseline": 0.3243130420124945,
+        "calling": 0.4545280690449349,
+        "folding": 0.08993991671918249
+      },
+      "posterior_before": {
+        "aggressive": 0.14327839083761515,
+        "baseline": 0.32635338164144806,
+        "calling": 0.33821906376750965,
+        "folding": 0.1921491637534272
+      },
+      "replicate": 7,
+      "rewards": {
+        "cfr": 5.0,
+        "frozen_prior": 3.0,
+        "learning": 9.0
+      },
+      "seat": 0,
+      "seed": 3349032058418389055
+    },
+    {
+      "hand": 3,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.12401330228239178,
+        "baseline": 0.41545433992108666,
+        "calling": 0.2791168674803951,
+        "folding": 0.1814154903161264
+      },
+      "posterior_before": {
+        "aggressive": 0.1312189722233881,
+        "baseline": 0.3243130420124945,
+        "calling": 0.4545280690449349,
+        "folding": 0.08993991671918249
+      },
+      "replicate": 7,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 0,
+      "seed": 7488415712368931668
+    },
+    {
+      "hand": 4,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.05428566035321339,
+        "baseline": 0.4052861422658345,
+        "calling": 0.4014430802272969,
+        "folding": 0.13898511715365522
+      },
+      "posterior_before": {
+        "aggressive": 0.12401330228239178,
+        "baseline": 0.41545433992108666,
+        "calling": 0.2791168674803951,
+        "folding": 0.1814154903161264
+      },
+      "replicate": 7,
+      "rewards": {
+        "cfr": -3.0,
+        "frozen_prior": -7.0,
+        "learning": -7.0
+      },
+      "seat": 0,
+      "seed": 9123981810266702412
+    },
+    {
+      "hand": 5,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.04005121939228731,
+        "baseline": 0.40468961508141593,
+        "calling": 0.41245988054207244,
+        "folding": 0.14279928498422428
+      },
+      "posterior_before": {
+        "aggressive": 0.05428566035321339,
+        "baseline": 0.4052861422658345,
+        "calling": 0.4014430802272969,
+        "folding": 0.13898511715365522
+      },
+      "replicate": 7,
+      "rewards": {
+        "cfr": -1.0,
+        "frozen_prior": -5.0,
+        "learning": -3.0
+      },
+      "seat": 0,
+      "seed": 6032980133786062542
+    },
+    {
+      "hand": 6,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.062117794076515555,
+        "baseline": 0.42487783525103795,
+        "calling": 0.39224013845520445,
+        "folding": 0.12076423221724213
+      },
+      "posterior_before": {
+        "aggressive": 0.04005121939228731,
+        "baseline": 0.40468961508141593,
+        "calling": 0.41245988054207244,
+        "folding": 0.14279928498422428
+      },
+      "replicate": 7,
+      "rewards": {
+        "cfr": -3.0,
+        "frozen_prior": -3.0,
+        "learning": -5.0
+      },
+      "seat": 0,
+      "seed": 5147790876149743299
+    },
+    {
+      "hand": 7,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.021440925824541508,
+        "baseline": 0.3732846035283054,
+        "calling": 0.519995506164878,
+        "folding": 0.08527896448227512
+      },
+      "posterior_before": {
+        "aggressive": 0.062117794076515555,
+        "baseline": 0.42487783525103795,
+        "calling": 0.39224013845520445,
+        "folding": 0.12076423221724213
+      },
+      "replicate": 7,
+      "rewards": {
+        "cfr": 3.0,
+        "frozen_prior": 3.0,
+        "learning": 3.0
+      },
+      "seat": 0,
+      "seed": 3382100488709094797
+    },
+    {
+      "hand": 8,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.01458702362474687,
+        "baseline": 0.36305261378701853,
+        "calling": 0.5346741147284967,
+        "folding": 0.0876862478597379
+      },
+      "posterior_before": {
+        "aggressive": 0.021440925824541508,
+        "baseline": 0.3732846035283054,
+        "calling": 0.519995506164878,
+        "folding": 0.08527896448227512
+      },
+      "replicate": 7,
+      "rewards": {
+        "cfr": 0.0,
+        "frozen_prior": 1.0,
+        "learning": 0.0
+      },
+      "seat": 0,
+      "seed": 4960761525830269690
+    },
+    {
+      "hand": 9,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.014009174548362804,
+        "baseline": 0.4726097464507983,
+        "calling": 0.33364817463037644,
+        "folding": 0.17973290437046255
+      },
+      "posterior_before": {
+        "aggressive": 0.01458702362474687,
+        "baseline": 0.36305261378701853,
+        "calling": 0.5346741147284967,
+        "folding": 0.0876862478597379
+      },
+      "replicate": 7,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 0,
+      "seed": 310490491302424518
+    },
+    {
+      "hand": 10,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.008085168669009041,
+        "baseline": 0.3446218969926001,
+        "calling": 0.6069957205454238,
+        "folding": 0.040297213792967024
+      },
+      "posterior_before": {
+        "aggressive": 0.014009174548362804,
+        "baseline": 0.4726097464507983,
+        "calling": 0.33364817463037644,
+        "folding": 0.17973290437046255
+      },
+      "replicate": 7,
+      "rewards": {
+        "cfr": -7.0,
+        "frozen_prior": -7.0,
+        "learning": -7.0
+      },
+      "seat": 0,
+      "seed": 1633752858579607726
+    },
+    {
+      "hand": 11,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.03488436363898829,
+        "baseline": 0.5307878749900861,
+        "calling": 0.3911071232664954,
+        "folding": 0.04322063810443039
+      },
+      "posterior_before": {
+        "aggressive": 0.008085168669009041,
+        "baseline": 0.3446218969926001,
+        "calling": 0.6069957205454238,
+        "folding": 0.040297213792967024
+      },
+      "replicate": 7,
+      "rewards": {
+        "cfr": -5.0,
+        "frozen_prior": 0.0,
+        "learning": 0.0
+      },
+      "seat": 0,
+      "seed": 4806334029919389710
+    },
+    {
+      "hand": 0,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.45295249660739983,
+        "baseline": 0.215255789081314,
+        "calling": 0.1744532075487901,
+        "folding": 0.15733850676249606
+      },
+      "posterior_before": {
+        "aggressive": 0.25,
+        "baseline": 0.25,
+        "calling": 0.25,
+        "folding": 0.25
+      },
+      "replicate": 7,
+      "rewards": {
+        "cfr": 0.0,
+        "frozen_prior": 0.0,
+        "learning": 0.0
+      },
+      "seat": 1,
+      "seed": 4102703307715366098
+    },
+    {
+      "hand": 1,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.37591645993985484,
+        "baseline": 0.2462594470196774,
+        "calling": 0.14428493172229176,
+        "folding": 0.23353916131817598
+      },
+      "posterior_before": {
+        "aggressive": 0.45295249660739983,
+        "baseline": 0.215255789081314,
+        "calling": 0.1744532075487901,
+        "folding": 0.15733850676249606
+      },
+      "replicate": 7,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 1,
+      "seed": 4878259752419601590
+    },
+    {
+      "hand": 2,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.48101794944364445,
+        "baseline": 0.22917544482717722,
+        "calling": 0.12496371282161373,
+        "folding": 0.16484289290756457
+      },
+      "posterior_before": {
+        "aggressive": 0.37591645993985484,
+        "baseline": 0.2462594470196774,
+        "calling": 0.14428493172229176,
+        "folding": 0.23353916131817598
+      },
+      "replicate": 7,
+      "rewards": {
+        "cfr": -1.0,
+        "frozen_prior": -13.0,
+        "learning": -13.0
+      },
+      "seat": 1,
+      "seed": 2244554765908234756
+    },
+    {
+      "hand": 3,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.5380726762941711,
+        "baseline": 0.21772890863957756,
+        "calling": 0.10176672059061956,
+        "folding": 0.14243169447563178
+      },
+      "posterior_before": {
+        "aggressive": 0.48101794944364445,
+        "baseline": 0.22917544482717722,
+        "calling": 0.12496371282161373,
+        "folding": 0.16484289290756457
+      },
+      "replicate": 7,
+      "rewards": {
+        "cfr": 3.0,
+        "frozen_prior": 5.0,
+        "learning": 5.0
+      },
+      "seat": 1,
+      "seed": 212992180391411811
+    },
+    {
+      "hand": 4,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.45051098131045747,
+        "baseline": 0.25129272372661693,
+        "calling": 0.08491287728180649,
+        "folding": 0.2132834176811192
+      },
+      "posterior_before": {
+        "aggressive": 0.5380726762941711,
+        "baseline": 0.21772890863957756,
+        "calling": 0.10176672059061956,
+        "folding": 0.14243169447563178
+      },
+      "replicate": 7,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 1,
+      "seed": 7706317881508994097
+    },
+    {
+      "hand": 5,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.1639812126384949,
+        "baseline": 0.38825556147446993,
+        "calling": 0.21311683239146362,
+        "folding": 0.23464639349557156
+      },
+      "posterior_before": {
+        "aggressive": 0.45051098131045747,
+        "baseline": 0.25129272372661693,
+        "calling": 0.08491287728180649,
+        "folding": 0.2132834176811192
+      },
+      "replicate": 7,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 3.0,
+        "learning": 3.0
+      },
+      "seat": 1,
+      "seed": 797004347095703656
+    },
+    {
+      "hand": 6,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.19753631171806252,
+        "baseline": 0.39722711749220163,
+        "calling": 0.18690150684759257,
+        "folding": 0.2183350639421433
+      },
+      "posterior_before": {
+        "aggressive": 0.1639812126384949,
+        "baseline": 0.38825556147446993,
+        "calling": 0.21311683239146362,
+        "folding": 0.23464639349557156
+      },
+      "replicate": 7,
+      "rewards": {
+        "cfr": -1.0,
+        "frozen_prior": 5.0,
+        "learning": 5.0
+      },
+      "seat": 1,
+      "seed": 4831115473071684188
+    },
+    {
+      "hand": 7,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.05902679799597386,
+        "baseline": 0.42972981280577904,
+        "calling": 0.3553063361969899,
+        "folding": 0.15593705300125707
+      },
+      "posterior_before": {
+        "aggressive": 0.19753631171806252,
+        "baseline": 0.39722711749220163,
+        "calling": 0.18690150684759257,
+        "folding": 0.2183350639421433
+      },
+      "replicate": 7,
+      "rewards": {
+        "cfr": -1.0,
+        "frozen_prior": -3.0,
+        "learning": -3.0
+      },
+      "seat": 1,
+      "seed": 3341553327520722793
+    },
+    {
+      "hand": 8,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.0459576121983876,
+        "baseline": 0.46121464684262414,
+        "calling": 0.27568587709785386,
+        "folding": 0.21714186386113435
+      },
+      "posterior_before": {
+        "aggressive": 0.05902679799597386,
+        "baseline": 0.42972981280577904,
+        "calling": 0.3553063361969899,
+        "folding": 0.15593705300125707
+      },
+      "replicate": 7,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 1,
+      "seed": 3797659701847423554
+    },
+    {
+      "hand": 9,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.0618815650728604,
+        "baseline": 0.47686128438330916,
+        "calling": 0.25802541445392135,
+        "folding": 0.20323173608990916
+      },
+      "posterior_before": {
+        "aggressive": 0.0459576121983876,
+        "baseline": 0.46121464684262414,
+        "calling": 0.27568587709785386,
+        "folding": 0.21714186386113435
+      },
+      "replicate": 7,
+      "rewards": {
+        "cfr": -9.0,
+        "frozen_prior": -7.0,
+        "learning": -7.0
+      },
+      "seat": 1,
+      "seed": 8221471749808250777
+    },
+    {
+      "hand": 10,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.082655947497637,
+        "baseline": 0.48909139746555647,
+        "calling": 0.23956283100778522,
+        "folding": 0.18868982402902132
+      },
+      "posterior_before": {
+        "aggressive": 0.0618815650728604,
+        "baseline": 0.47686128438330916,
+        "calling": 0.25802541445392135,
+        "folding": 0.20323173608990916
+      },
+      "replicate": 7,
+      "rewards": {
+        "cfr": -5.0,
+        "frozen_prior": -7.0,
+        "learning": -7.0
+      },
+      "seat": 1,
+      "seed": 4990256831936518336
+    },
+    {
+      "hand": 11,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.06200443448017185,
+        "baseline": 0.5057525039688493,
+        "calling": 0.17909003187194142,
+        "folding": 0.25315302967903747
+      },
+      "posterior_before": {
+        "aggressive": 0.082655947497637,
+        "baseline": 0.48909139746555647,
+        "calling": 0.23956283100778522,
+        "folding": 0.18868982402902132
+      },
+      "replicate": 7,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 1,
+      "seed": 681595230593313019
+    },
+    {
+      "hand": 0,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.3535580520697593,
+        "baseline": 0.2606128441672888,
+        "calling": 0.1599696510922325,
+        "folding": 0.22585945267071933
+      },
+      "posterior_before": {
+        "aggressive": 0.25,
+        "baseline": 0.25,
+        "calling": 0.25,
+        "folding": 0.25
+      },
+      "replicate": 8,
+      "rewards": {
+        "cfr": -1.0,
+        "frozen_prior": -13.0,
+        "learning": -13.0
+      },
+      "seat": 0,
+      "seed": 340045398547478816
+    },
+    {
+      "hand": 1,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.21004119388286963,
+        "baseline": 0.31431681752750923,
+        "calling": 0.24057660456319763,
+        "folding": 0.23506538402642355
+      },
+      "posterior_before": {
+        "aggressive": 0.3535580520697593,
+        "baseline": 0.2606128441672888,
+        "calling": 0.1599696510922325,
+        "folding": 0.22585945267071933
+      },
+      "replicate": 8,
+      "rewards": {
+        "cfr": 5.0,
+        "frozen_prior": 3.0,
+        "learning": 3.0
+      },
+      "seat": 0,
+      "seed": 4531987207162554832
+    },
+    {
+      "hand": 2,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.20506641327676628,
+        "baseline": 0.33297991339948374,
+        "calling": 0.3446594072128044,
+        "folding": 0.11729426611094566
+      },
+      "posterior_before": {
+        "aggressive": 0.21004119388286963,
+        "baseline": 0.31431681752750923,
+        "calling": 0.24057660456319763,
+        "folding": 0.23506538402642355
+      },
+      "replicate": 8,
+      "rewards": {
+        "cfr": 7.0,
+        "frozen_prior": 11.0,
+        "learning": 9.0
+      },
+      "seat": 0,
+      "seed": 8246719412883996885
+    },
+    {
+      "hand": 3,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.29960035506385635,
+        "baseline": 0.35859225699150177,
+        "calling": 0.22320563529607435,
+        "folding": 0.11860175264856755
+      },
+      "posterior_before": {
+        "aggressive": 0.20506641327676628,
+        "baseline": 0.33297991339948374,
+        "calling": 0.3446594072128044,
+        "folding": 0.11729426611094566
+      },
+      "replicate": 8,
+      "rewards": {
+        "cfr": -9.0,
+        "frozen_prior": -7.0,
+        "learning": -9.0
+      },
+      "seat": 0,
+      "seed": 5677595069796199349
+    },
+    {
+      "hand": 4,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.2530798611800653,
+        "baseline": 0.4105853197053673,
+        "calling": 0.1225107371320956,
+        "folding": 0.21382408198247174
+      },
+      "posterior_before": {
+        "aggressive": 0.29960035506385635,
+        "baseline": 0.35859225699150177,
+        "calling": 0.22320563529607435,
+        "folding": 0.11860175264856755
+      },
+      "replicate": 8,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 0,
+      "seed": 3969391005342357435
+    },
+    {
+      "hand": 5,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.3833435681480211,
+        "baseline": 0.3765730379161725,
+        "calling": 0.04660824139643032,
+        "folding": 0.19347515253937608
+      },
+      "posterior_before": {
+        "aggressive": 0.2530798611800653,
+        "baseline": 0.4105853197053673,
+        "calling": 0.1225107371320956,
+        "folding": 0.21382408198247174
+      },
+      "replicate": 8,
+      "rewards": {
+        "cfr": 5.0,
+        "frozen_prior": 5.0,
+        "learning": 5.0
+      },
+      "seat": 0,
+      "seed": 4234749908814477601
+    },
+    {
+      "hand": 6,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.26295567424230326,
+        "baseline": 0.3703179055125769,
+        "calling": 0.02105937708296683,
+        "folding": 0.34566704316215296
+      },
+      "posterior_before": {
+        "aggressive": 0.3833435681480211,
+        "baseline": 0.3765730379161725,
+        "calling": 0.04660824139643032,
+        "folding": 0.19347515253937608
+      },
+      "replicate": 8,
+      "rewards": {
+        "cfr": 0.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 0,
+      "seed": 3663974947433971095
+    },
+    {
+      "hand": 7,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.285370150235439,
+        "baseline": 0.410758471392225,
+        "calling": 0.016419800073077806,
+        "folding": 0.2874515782992582
+      },
+      "posterior_before": {
+        "aggressive": 0.26295567424230326,
+        "baseline": 0.3703179055125769,
+        "calling": 0.02105937708296683,
+        "folding": 0.34566704316215296
+      },
+      "replicate": 8,
+      "rewards": {
+        "cfr": -1.0,
+        "frozen_prior": 9.0,
+        "learning": 9.0
+      },
+      "seat": 0,
+      "seed": 2577357160632509114
+    },
+    {
+      "hand": 8,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.257058157031982,
+        "baseline": 0.42438048371752024,
+        "calling": 0.017213578514432688,
+        "folding": 0.3013477807360651
+      },
+      "posterior_before": {
+        "aggressive": 0.285370150235439,
+        "baseline": 0.410758471392225,
+        "calling": 0.016419800073077806,
+        "folding": 0.2874515782992582
+      },
+      "replicate": 8,
+      "rewards": {
+        "cfr": -5.0,
+        "frozen_prior": -3.0,
+        "learning": -3.0
+      },
+      "seat": 0,
+      "seed": 262960739054766719
+    },
+    {
+      "hand": 9,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.35742069370260193,
+        "baseline": 0.39943437895207534,
+        "calling": 0.014675385180576017,
+        "folding": 0.22846954216474677
+      },
+      "posterior_before": {
+        "aggressive": 0.257058157031982,
+        "baseline": 0.42438048371752024,
+        "calling": 0.017213578514432688,
+        "folding": 0.3013477807360651
+      },
+      "replicate": 8,
+      "rewards": {
+        "cfr": -5.0,
+        "frozen_prior": -3.0,
+        "learning": -5.0
+      },
+      "seat": 0,
+      "seed": 7945763668488001968
+    },
+    {
+      "hand": 10,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.3319937081363852,
+        "baseline": 0.36077868519115036,
+        "calling": 0.003796758758143785,
+        "folding": 0.3034308479143207
+      },
+      "posterior_before": {
+        "aggressive": 0.35742069370260193,
+        "baseline": 0.39943437895207534,
+        "calling": 0.014675385180576017,
+        "folding": 0.22846954216474677
+      },
+      "replicate": 8,
+      "rewards": {
+        "cfr": -1.0,
+        "frozen_prior": 5.0,
+        "learning": 5.0
+      },
+      "seat": 0,
+      "seed": 1021969713389536813
+    },
+    {
+      "hand": 11,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.49982708686959954,
+        "baseline": 0.2940495270339257,
+        "calling": 0.0025472996385197066,
+        "folding": 0.20357608645795502
+      },
+      "posterior_before": {
+        "aggressive": 0.3319937081363852,
+        "baseline": 0.36077868519115036,
+        "calling": 0.003796758758143785,
+        "folding": 0.3034308479143207
+      },
+      "replicate": 8,
+      "rewards": {
+        "cfr": 0.0,
+        "frozen_prior": 0.0,
+        "learning": 0.0
+      },
+      "seat": 0,
+      "seed": 7026028834388273001
+    },
+    {
+      "hand": 0,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.20085395912919068,
+        "baseline": 0.26904305258573424,
+        "calling": 0.19956336188477714,
+        "folding": 0.33053962640029794
+      },
+      "posterior_before": {
+        "aggressive": 0.25,
+        "baseline": 0.25,
+        "calling": 0.25,
+        "folding": 0.25
+      },
+      "replicate": 8,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 1,
+      "seed": 834484495872025006
+    },
+    {
+      "hand": 1,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.14749516158036088,
+        "baseline": 0.2723444531513384,
+        "calling": 0.1460432616518541,
+        "folding": 0.4341171236164466
+      },
+      "posterior_before": {
+        "aggressive": 0.20085395912919068,
+        "baseline": 0.26904305258573424,
+        "calling": 0.19956336188477714,
+        "folding": 0.33053962640029794
+      },
+      "replicate": 8,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 1,
+      "seed": 3419141436738549081
+    },
+    {
+      "hand": 2,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.08593123003980369,
+        "baseline": 0.28553106722294175,
+        "calling": 0.12267147531349178,
+        "folding": 0.5058662274237629
+      },
+      "posterior_before": {
+        "aggressive": 0.14749516158036088,
+        "baseline": 0.2723444531513384,
+        "calling": 0.1460432616518541,
+        "folding": 0.4341171236164466
+      },
+      "replicate": 8,
+      "rewards": {
+        "cfr": -9.0,
+        "frozen_prior": -5.0,
+        "learning": -5.0
+      },
+      "seat": 1,
+      "seed": 4962851337023001636
+    },
+    {
+      "hand": 3,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.060397058524191444,
+        "baseline": 0.26881872275564256,
+        "calling": 0.08566605401924049,
+        "folding": 0.5851181647009255
+      },
+      "posterior_before": {
+        "aggressive": 0.08593123003980369,
+        "baseline": 0.28553106722294175,
+        "calling": 0.12267147531349178,
+        "folding": 0.5058662274237629
+      },
+      "replicate": 8,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 1,
+      "seed": 66827227729334236
+    },
+    {
+      "hand": 4,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.06232505634756389,
+        "baseline": 0.34365562478722383,
+        "calling": 0.06586306022576648,
+        "folding": 0.5281562586394458
+      },
+      "posterior_before": {
+        "aggressive": 0.060397058524191444,
+        "baseline": 0.26881872275564256,
+        "calling": 0.08566605401924049,
+        "folding": 0.5851181647009255
+      },
+      "replicate": 8,
+      "rewards": {
+        "cfr": 0.0,
+        "frozen_prior": 0.0,
+        "learning": 0.0
+      },
+      "seat": 1,
+      "seed": 6717222225216529881
+    },
+    {
+      "hand": 5,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.04276860395098169,
+        "baseline": 0.3158837144680565,
+        "calling": 0.04490603545744928,
+        "folding": 0.5964416461235126
+      },
+      "posterior_before": {
+        "aggressive": 0.06232505634756389,
+        "baseline": 0.34365562478722383,
+        "calling": 0.06586306022576648,
+        "folding": 0.5281562586394458
+      },
+      "replicate": 8,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 1,
+      "seed": 6067616808472913000
+    },
+    {
+      "hand": 6,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.0051268972030630465,
+        "baseline": 0.288356162552028,
+        "calling": 0.102448623893812,
+        "folding": 0.6040683163510969
+      },
+      "posterior_before": {
+        "aggressive": 0.04276860395098169,
+        "baseline": 0.3158837144680565,
+        "calling": 0.04490603545744928,
+        "folding": 0.5964416461235126
+      },
+      "replicate": 8,
+      "rewards": {
+        "cfr": 0.0,
+        "frozen_prior": 0.0,
+        "learning": 0.0
+      },
+      "seat": 1,
+      "seed": 5968147034858651699
+    },
+    {
+      "hand": 7,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.007184251084676831,
+        "baseline": 0.3205933536933913,
+        "calling": 0.10647792417851694,
+        "folding": 0.565744471043415
+      },
+      "posterior_before": {
+        "aggressive": 0.0051268972030630465,
+        "baseline": 0.288356162552028,
+        "calling": 0.102448623893812,
+        "folding": 0.6040683163510969
+      },
+      "replicate": 8,
+      "rewards": {
+        "cfr": 0.0,
+        "frozen_prior": 0.0,
+        "learning": 0.0
+      },
+      "seat": 1,
+      "seed": 635429833988639668
+    },
+    {
+      "hand": 8,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.0048758322080457595,
+        "baseline": 0.2914493891293242,
+        "calling": 0.07180046225349426,
+        "folding": 0.6318743164091358
+      },
+      "posterior_before": {
+        "aggressive": 0.007184251084676831,
+        "baseline": 0.3205933536933913,
+        "calling": 0.10647792417851694,
+        "folding": 0.565744471043415
+      },
+      "replicate": 8,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 1,
+      "seed": 4018915764802062430
+    },
+    {
+      "hand": 9,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.00626102988559044,
+        "baseline": 0.31650400582814336,
+        "calling": 0.06719599794601833,
+        "folding": 0.6100389663402478
+      },
+      "posterior_before": {
+        "aggressive": 0.0048758322080457595,
+        "baseline": 0.2914493891293242,
+        "calling": 0.07180046225349426,
+        "folding": 0.6318743164091358
+      },
+      "replicate": 8,
+      "rewards": {
+        "cfr": 5.0,
+        "frozen_prior": 5.0,
+        "learning": 5.0
+      },
+      "seat": 1,
+      "seed": 3374977404283458913
+    },
+    {
+      "hand": 10,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.003168171268668525,
+        "baseline": 0.340265439785555,
+        "calling": 0.0888873891080068,
+        "folding": 0.5676789998377696
+      },
+      "posterior_before": {
+        "aggressive": 0.00626102988559044,
+        "baseline": 0.31650400582814336,
+        "calling": 0.06719599794601833,
+        "folding": 0.6100389663402478
+      },
+      "replicate": 8,
+      "rewards": {
+        "cfr": -1.0,
+        "frozen_prior": 9.0,
+        "learning": 9.0
+      },
+      "seat": 1,
+      "seed": 6185798047881366889
+    },
+    {
+      "hand": 11,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.0015821682319530621,
+        "baseline": 0.36102527303766974,
+        "calling": 0.11604275372927442,
+        "folding": 0.5213498050011027
+      },
+      "posterior_before": {
+        "aggressive": 0.003168171268668525,
+        "baseline": 0.340265439785555,
+        "calling": 0.0888873891080068,
+        "folding": 0.5676789998377696
+      },
+      "replicate": 8,
+      "rewards": {
+        "cfr": -1.0,
+        "frozen_prior": 9.0,
+        "learning": 9.0
+      },
+      "seat": 1,
+      "seed": 1547507685102077964
+    },
+    {
+      "hand": 0,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.27168366928120774,
+        "baseline": 0.2641853947340937,
+        "calling": 0.07567228861407496,
+        "folding": 0.3884586473706235
+      },
+      "posterior_before": {
+        "aggressive": 0.25,
+        "baseline": 0.25,
+        "calling": 0.25,
+        "folding": 0.25
+      },
+      "replicate": 9,
+      "rewards": {
+        "cfr": -1.0,
+        "frozen_prior": 5.0,
+        "learning": 5.0
+      },
+      "seat": 0,
+      "seed": 5145329565190733490
+    },
+    {
+      "hand": 1,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.3628197754046383,
+        "baseline": 0.2600586500525812,
+        "calling": 0.045723677197997144,
+        "folding": 0.3313978973447833
+      },
+      "posterior_before": {
+        "aggressive": 0.27168366928120774,
+        "baseline": 0.2641853947340937,
+        "calling": 0.07567228861407496,
+        "folding": 0.3884586473706235
+      },
+      "replicate": 9,
+      "rewards": {
+        "cfr": -1.0,
+        "frozen_prior": -13.0,
+        "learning": -13.0
+      },
+      "seat": 0,
+      "seed": 4578101818872262092
+    },
+    {
+      "hand": 2,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.46107250803613253,
+        "baseline": 0.24360414000040867,
+        "calling": 0.026290345449083725,
+        "folding": 0.2690330065143752
+      },
+      "posterior_before": {
+        "aggressive": 0.3628197754046383,
+        "baseline": 0.2600586500525812,
+        "calling": 0.045723677197997144,
+        "folding": 0.3313978973447833
+      },
+      "replicate": 9,
+      "rewards": {
+        "cfr": -1.0,
+        "frozen_prior": -13.0,
+        "learning": -13.0
+      },
+      "seat": 0,
+      "seed": 1675918040174456875
+    },
+    {
+      "hand": 3,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.333496377917962,
+        "baseline": 0.23883270874866774,
+        "calling": 0.012355829889119551,
+        "folding": 0.4153150834442508
+      },
+      "posterior_before": {
+        "aggressive": 0.46107250803613253,
+        "baseline": 0.24360414000040867,
+        "calling": 0.026290345449083725,
+        "folding": 0.2690330065143752
+      },
+      "replicate": 9,
+      "rewards": {
+        "cfr": -1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 0,
+      "seed": 2653843507851695137
+    },
+    {
+      "hand": 4,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.1582689096949776,
+        "baseline": 0.26628726588670665,
+        "calling": 0.016625133446273824,
+        "folding": 0.558818690972042
+      },
+      "posterior_before": {
+        "aggressive": 0.333496377917962,
+        "baseline": 0.23883270874866774,
+        "calling": 0.012355829889119551,
+        "folding": 0.4153150834442508
+      },
+      "replicate": 9,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 0,
+      "seed": 7267623232435040129
+    },
+    {
+      "hand": 5,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.4165413184866806,
+        "baseline": 0.2559080708831051,
+        "calling": 0.006988589043337988,
+        "folding": 0.32056202158687636
+      },
+      "posterior_before": {
+        "aggressive": 0.1582689096949776,
+        "baseline": 0.26628726588670665,
+        "calling": 0.016625133446273824,
+        "folding": 0.558818690972042
+      },
+      "replicate": 9,
+      "rewards": {
+        "cfr": -1.0,
+        "frozen_prior": -9.0,
+        "learning": -9.0
+      },
+      "seat": 0,
+      "seed": 5527494159813979455
+    },
+    {
+      "hand": 6,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.509978858914056,
+        "baseline": 0.1969737316004543,
+        "calling": 0.0012778991702549003,
+        "folding": 0.2917695103152348
+      },
+      "posterior_before": {
+        "aggressive": 0.4165413184866806,
+        "baseline": 0.2559080708831051,
+        "calling": 0.006988589043337988,
+        "folding": 0.32056202158687636
+      },
+      "replicate": 9,
+      "rewards": {
+        "cfr": 5.0,
+        "frozen_prior": 5.0,
+        "learning": 5.0
+      },
+      "seat": 0,
+      "seed": 1558430937347876976
+    },
+    {
+      "hand": 7,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.4005423484237633,
+        "baseline": 0.2243442210837476,
+        "calling": 0.001394222746924569,
+        "folding": 0.3737192077455646
+      },
+      "posterior_before": {
+        "aggressive": 0.509978858914056,
+        "baseline": 0.1969737316004543,
+        "calling": 0.0012778991702549003,
+        "folding": 0.2917695103152348
+      },
+      "replicate": 9,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 0,
+      "seed": 2863896501277650505
+    },
+    {
+      "hand": 8,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.34726067469385397,
+        "baseline": 0.1891330047053905,
+        "calling": 0.00033667639147649884,
+        "folding": 0.4632696442092791
+      },
+      "posterior_before": {
+        "aggressive": 0.4005423484237633,
+        "baseline": 0.2243442210837476,
+        "calling": 0.001394222746924569,
+        "folding": 0.3737192077455646
+      },
+      "replicate": 9,
+      "rewards": {
+        "cfr": -1.0,
+        "frozen_prior": 5.0,
+        "learning": 5.0
+      },
+      "seat": 0,
+      "seed": 9116210356486091928
+    },
+    {
+      "hand": 9,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.5238742540199575,
+        "baseline": 0.28505904476654864,
+        "calling": 0.0011595160559990563,
+        "folding": 0.1899071851574948
+      },
+      "posterior_before": {
+        "aggressive": 0.34726067469385397,
+        "baseline": 0.1891330047053905,
+        "calling": 0.00033667639147649884,
+        "folding": 0.4632696442092791
+      },
+      "replicate": 9,
+      "rewards": {
+        "cfr": 0.0,
+        "frozen_prior": 0.0,
+        "learning": 0.0
+      },
+      "seat": 0,
+      "seed": 5242132581843154840
+    },
+    {
+      "hand": 10,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.39111184364310114,
+        "baseline": 0.34670894834453514,
+        "calling": 0.0013331301540737308,
+        "folding": 0.26084607785828995
+      },
+      "posterior_before": {
+        "aggressive": 0.5238742540199575,
+        "baseline": 0.28505904476654864,
+        "calling": 0.0011595160559990563,
+        "folding": 0.1899071851574948
+      },
+      "replicate": 9,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 0,
+      "seed": 2670207095108405172
+    },
+    {
+      "hand": 11,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.3575400083331423,
+        "baseline": 0.3635253974730694,
+        "calling": 0.0014183280259070846,
+        "folding": 0.2775162661678812
+      },
+      "posterior_before": {
+        "aggressive": 0.39111184364310114,
+        "baseline": 0.34670894834453514,
+        "calling": 0.0013331301540737308,
+        "folding": 0.26084607785828995
+      },
+      "replicate": 9,
+      "rewards": {
+        "cfr": -5.0,
+        "frozen_prior": -3.0,
+        "learning": -3.0
+      },
+      "seat": 0,
+      "seed": 7918167208127682193
+    },
+    {
+      "hand": 0,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.263627818418626,
+        "baseline": 0.25272743681504956,
+        "calling": 0.09274856687708423,
+        "folding": 0.3908961778892402
+      },
+      "posterior_before": {
+        "aggressive": 0.25,
+        "baseline": 0.25,
+        "calling": 0.25,
+        "folding": 0.25
+      },
+      "replicate": 9,
+      "rewards": {
+        "cfr": 3.0,
+        "frozen_prior": 3.0,
+        "learning": 3.0
+      },
+      "seat": 1,
+      "seed": 296619189471238684
+    },
+    {
+      "hand": 1,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.18782940599997205,
+        "baseline": 0.24821276776592874,
+        "calling": 0.06585411109093667,
+        "folding": 0.4981037151431625
+      },
+      "posterior_before": {
+        "aggressive": 0.263627818418626,
+        "baseline": 0.25272743681504956,
+        "calling": 0.09274856687708423,
+        "folding": 0.3908961778892402
+      },
+      "replicate": 9,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 1,
+      "seed": 1569664995528893735
+    },
+    {
+      "hand": 2,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.17033909530908697,
+        "baseline": 0.26743427067428344,
+        "calling": 0.07188031407317881,
+        "folding": 0.4903463199434509
+      },
+      "posterior_before": {
+        "aggressive": 0.18782940599997205,
+        "baseline": 0.24821276776592874,
+        "calling": 0.06585411109093667,
+        "folding": 0.4981037151431625
+      },
+      "replicate": 9,
+      "rewards": {
+        "cfr": -5.0,
+        "frozen_prior": -3.0,
+        "learning": -5.0
+      },
+      "seat": 1,
+      "seed": 772219486273676023
+    },
+    {
+      "hand": 3,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.11450579110154477,
+        "baseline": 0.24781611836766718,
+        "calling": 0.04815334002763895,
+        "folding": 0.5895247505031491
+      },
+      "posterior_before": {
+        "aggressive": 0.17033909530908697,
+        "baseline": 0.26743427067428344,
+        "calling": 0.07188031407317881,
+        "folding": 0.4903463199434509
+      },
+      "replicate": 9,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 1,
+      "seed": 6947380678591499869
+    },
+    {
+      "hand": 4,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.12380985775838195,
+        "baseline": 0.34062953853615974,
+        "calling": 0.18504049227418742,
+        "folding": 0.35052011143127093
+      },
+      "posterior_before": {
+        "aggressive": 0.11450579110154477,
+        "baseline": 0.24781611836766718,
+        "calling": 0.04815334002763895,
+        "folding": 0.5895247505031491
+      },
+      "replicate": 9,
+      "rewards": {
+        "cfr": -3.0,
+        "frozen_prior": -3.0,
+        "learning": -3.0
+      },
+      "seat": 1,
+      "seed": 8326605370373464259
+    },
+    {
+      "hand": 5,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.23358423811269424,
+        "baseline": 0.34567361140186686,
+        "calling": 0.1004095207183523,
+        "folding": 0.3203326297670866
+      },
+      "posterior_before": {
+        "aggressive": 0.12380985775838195,
+        "baseline": 0.34062953853615974,
+        "calling": 0.18504049227418742,
+        "folding": 0.35052011143127093
+      },
+      "replicate": 9,
+      "rewards": {
+        "cfr": -1.0,
+        "frozen_prior": 9.0,
+        "learning": 9.0
+      },
+      "seat": 1,
+      "seed": 936731493483127874
+    },
+    {
+      "hand": 6,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.2355272783751179,
+        "baseline": 0.4223378698375305,
+        "calling": 0.21086378155126137,
+        "folding": 0.13127107023609016
+      },
+      "posterior_before": {
+        "aggressive": 0.23358423811269424,
+        "baseline": 0.34567361140186686,
+        "calling": 0.1004095207183523,
+        "folding": 0.3203326297670866
+      },
+      "replicate": 9,
+      "rewards": {
+        "cfr": 0.0,
+        "frozen_prior": 0.0,
+        "learning": 0.0
+      },
+      "seat": 1,
+      "seed": 347549069821171812
+    },
+    {
+      "hand": 7,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.19198740710733084,
+        "baseline": 0.4611401536046945,
+        "calling": 0.17077879117416286,
+        "folding": 0.1760936481138118
+      },
+      "posterior_before": {
+        "aggressive": 0.2355272783751179,
+        "baseline": 0.4223378698375305,
+        "calling": 0.21086378155126137,
+        "folding": 0.13127107023609016
+      },
+      "replicate": 9,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 1,
+      "seed": 4511329811217514979
+    },
+    {
+      "hand": 8,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.15127165965680064,
+        "baseline": 0.4866975426552721,
+        "calling": 0.13369623533443695,
+        "folding": 0.22833456235349037
+      },
+      "posterior_before": {
+        "aggressive": 0.19198740710733084,
+        "baseline": 0.4611401536046945,
+        "calling": 0.17077879117416286,
+        "folding": 0.1760936481138118
+      },
+      "replicate": 9,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 1,
+      "seed": 4866120136547001455
+    },
+    {
+      "hand": 9,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.21264051584124838,
+        "baseline": 0.49042236702211395,
+        "calling": 0.12408223330556852,
+        "folding": 0.17285488383106912
+      },
+      "posterior_before": {
+        "aggressive": 0.15127165965680064,
+        "baseline": 0.4866975426552721,
+        "calling": 0.13369623533443695,
+        "folding": 0.22833456235349037
+      },
+      "replicate": 9,
+      "rewards": {
+        "cfr": -1.0,
+        "frozen_prior": -13.0,
+        "learning": -13.0
+      },
+      "seat": 1,
+      "seed": 8429212457621861684
+    },
+    {
+      "hand": 10,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.28403067250490227,
+        "baseline": 0.47642521292316947,
+        "calling": 0.11218165116973608,
+        "folding": 0.1273624634021922
+      },
+      "posterior_before": {
+        "aggressive": 0.21264051584124838,
+        "baseline": 0.49042236702211395,
+        "calling": 0.12408223330556852,
+        "folding": 0.17285488383106912
+      },
+      "replicate": 9,
+      "rewards": {
+        "cfr": -13.0,
+        "frozen_prior": -13.0,
+        "learning": -13.0
+      },
+      "seat": 1,
+      "seed": 1293329473612408884
+    },
+    {
+      "hand": 11,
+      "phase": "stationary",
+      "posterior": {
+        "aggressive": 0.2074367000855027,
+        "baseline": 0.5105673737928645,
+        "calling": 0.0826704850459715,
+        "folding": 0.19932544107566133
+      },
+      "posterior_before": {
+        "aggressive": 0.28403067250490227,
+        "baseline": 0.47642521292316947,
+        "calling": 0.11218165116973608,
+        "folding": 0.1273624634021922
+      },
+      "replicate": 9,
+      "rewards": {
+        "cfr": 1.0,
+        "frozen_prior": 1.0,
+        "learning": 1.0
+      },
+      "seat": 1,
+      "seed": 1696029256880151292
+    }
+  ],
+  "mean_reward": {
+    "cfr": 0.024999999999999988,
+    "frozen_prior": 0.0333333333333334,
+    "learning": 0.25
+  },
+  "paired_contrasts": {
+    "learning_minus_cfr": {
+      "bootstrap_95_percent": [
+        -0.37916666666666665,
+        0.9125
+      ],
+      "mean": 0.225
+    },
+    "learning_minus_frozen_prior": {
+      "bootstrap_95_percent": [
+        -0.025000000000000043,
+        0.5166666666666666
+      ],
+      "mean": 0.21666666666666662
+    }
+  },
+  "phases": {
+    "stationary": {
+      "hands_per_seat": 12,
+      "mean_reward": {
+        "cfr": 0.024999999999999988,
+        "frozen_prior": 0.0333333333333334,
+        "learning": 0.25
+      },
+      "paired_contrasts": {
+        "learning_minus_cfr": {
+          "bootstrap_95_percent": [
+            -0.37916666666666665,
+            0.9125
+          ],
+          "mean": 0.225
+        },
+        "learning_minus_frozen_prior": {
+          "bootstrap_95_percent": [
+            -0.025000000000000043,
+            0.5166666666666666
+          ],
+          "mean": 0.21666666666666662
+        }
+      },
+      "replicate_means": [
+        {
+          "cfr": -0.16666666666666669,
+          "frozen_prior": 2.166666666666667,
+          "learning": 2.375
+        },
+        {
+          "cfr": 0.4583333333333333,
+          "frozen_prior": 0.5,
+          "learning": 0.24999999999999997
+        },
+        {
+          "cfr": 0.5416666666666666,
+          "frozen_prior": 0.29166666666666663,
+          "learning": 0.20833333333333331
+        },
+        {
+          "cfr": -0.5833333333333334,
+          "frozen_prior": -1.0416666666666665,
+          "learning": -0.75
+        },
+        {
+          "cfr": 0.5416666666666666,
+          "frozen_prior": 0.75,
+          "learning": 0.9166666666666666
+        },
+        {
+          "cfr": 0.16666666666666666,
+          "frozen_prior": 0.25,
+          "learning": 0.875
+        },
+        {
+          "cfr": 1.375,
+          "frozen_prior": -1.125,
+          "learning": 0.20833333333333326
+        },
+        {
+          "cfr": -1.125,
+          "frozen_prior": -1.375,
+          "learning": -1.1666666666666665
+        },
+        {
+          "cfr": -0.20833333333333331,
+          "frozen_prior": 1.3333333333333335,
+          "learning": 1.0833333333333335
+        },
+        {
+          "cfr": -0.75,
+          "frozen_prior": -1.4166666666666665,
+          "learning": -1.5
+        }
+      ]
+    }
+  },
+  "replicate_means": [
+    {
+      "cfr": -0.16666666666666669,
+      "frozen_prior": 2.166666666666667,
+      "learning": 2.375
+    },
+    {
+      "cfr": 0.4583333333333333,
+      "frozen_prior": 0.5,
+      "learning": 0.24999999999999997
+    },
+    {
+      "cfr": 0.5416666666666666,
+      "frozen_prior": 0.29166666666666663,
+      "learning": 0.20833333333333331
+    },
+    {
+      "cfr": -0.5833333333333334,
+      "frozen_prior": -1.0416666666666665,
+      "learning": -0.75
+    },
+    {
+      "cfr": 0.5416666666666666,
+      "frozen_prior": 0.75,
+      "learning": 0.9166666666666666
+    },
+    {
+      "cfr": 0.16666666666666666,
+      "frozen_prior": 0.25,
+      "learning": 0.875
+    },
+    {
+      "cfr": 1.375,
+      "frozen_prior": -1.125,
+      "learning": 0.20833333333333326
+    },
+    {
+      "cfr": -1.125,
+      "frozen_prior": -1.375,
+      "learning": -1.1666666666666665
+    },
+    {
+      "cfr": -0.20833333333333331,
+      "frozen_prior": 1.3333333333333335,
+      "learning": 1.0833333333333335
+    },
+    {
+      "cfr": -0.75,
+      "frozen_prior": -1.4166666666666665,
+      "learning": -1.5
+    }
+  ]
+}
