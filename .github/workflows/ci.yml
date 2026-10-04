@@ -21,9 +21,9 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - name: Install
-        run: python -m pip install -e .
+        run: python3 -m pip install -e .
       - name: Unit tests
-        run: python -m unittest discover -s tests -v
+        run: python3 -m unittest discover -s tests -v
 
   artifact-integrity:
     runs-on: ubuntu-latest
@@ -33,18 +33,18 @@ jobs:
         with:
           python-version: "3.12"
       - name: Install
-        run: python -m pip install -e .
+        run: python3 -m pip install -e .
       - name: Rebuild CFR reference
         run: |
-          python -m pokerlab.cfr --iterations 300 --output /tmp/strategy.json
+          python3 -m pokerlab.cfr --iterations 300 --output /tmp/strategy.json
           cmp strategy.json /tmp/strategy.json
       - name: Revalidate follow-up report
         run: |
-          python -m pokerlab.followup --output /tmp/FOLLOWUP.md
+          python3 -m pokerlab.followup --output /tmp/FOLLOWUP.md
           cmp FOLLOWUP.md /tmp/FOLLOWUP.md
       - name: Regenerate result figure
         run: |
-          python scripts/make_result_figure.py --output /tmp/adaptive-vs-frozen.svg
+          python3 scripts/make_result_figure.py --output /tmp/adaptive-vs-frozen.svg
           cmp results/adaptive-vs-frozen.svg /tmp/adaptive-vs-frozen.svg
       - name: Exact-vs-rollout evaluator check
-        run: python -m pokerlab.validate --player0 baseline --player1 calling --hands 20000 --seed 7
+        run: python3 -m pokerlab.validate --player0 baseline --player1 calling --hands 20000 --seed 7
