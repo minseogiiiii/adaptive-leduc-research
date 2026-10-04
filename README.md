@@ -1,10 +1,12 @@
-# Adaptive Leduc Poker Research
+# Adaptive Decision-Making Under Partial Information
+
+### Bayesian Opponent Modeling in Leduc Poker
 
 **Research question:** When does learning an opponent from limited observable behavior improve decisions under partial information, and when does that advantage break down?
 
-This project uses two-player fixed-limit Leduc poker as a small, fully inspectable test bed for adaptive decision-making. A Bayesian learner updates beliefs over opponent policies from legally observable actions, then recomputes an information-set best response. Controlled experiments compare that learner with a **frozen-prior response** that starts from the same initial model but never updates, allowing the value of between-hand learning to be separated from the value of the initial policy itself.
+Leduc poker is the controlled test bed, not the end product. The project implements a fixed-limit simulator, tabular CFR reference, finite Bayesian opponent model, and exact information-set responses to study **sequential decision-making, probabilistic inference, model misspecification, regime change, and evaluation under uncertainty**.
 
-Although poker is the test environment, the methodological focus is **model risk under changing behavior**: misspecification, regime change, controlled baselines, uncertainty reporting, failure diagnosis, and reproducibility.
+The primary comparison is an adaptive learner versus a **frozen-prior response** that starts from the same initial model but never updates. This isolates the incremental value of updating from observed behavior rather than crediting learning for an advantage already present before the first hand.
 
 ## Key results
 
@@ -167,8 +169,8 @@ Current safeguards include:
 - identical exogenous hand seeds across experimental arms within each paired comparison;
 - seat swapping within every replicate;
 - raw per-hand records saved for every reported experiment;
-- SHA-256 hashes tying saved results to `strategy.json`, `rules.md`, protocol files, and relevant source modules;
-- report builders that reject missing rows, duplicate seeds, incorrect phase labels, posterior resets at the switch, inconsistent summaries, and source-hash mismatches;
+- raw result records store SHA-256 hashes of `strategy.json` and `rules.md`; the generated follow-up report also records hashes for the protocol, relevant source modules, and raw result files;
+- report builders that reject missing rows, duplicate seeds, incorrect phase labels, posterior resets at the switch, inconsistent summaries, and strategy/rules hash mismatches;
 - exact regeneration of the committed 300-iteration CFR strategy in CI;
 - regeneration of `FOLLOWUP.md` from committed raw records in CI;
 - a 20,000-hand Monte Carlo path check against the exact profile evaluator.
@@ -192,35 +194,35 @@ The negative and mixed results are part of the project rather than hidden edge c
 Core code has no third-party runtime dependency.
 
 ```bash
-python -m pip install -e .
-python -m unittest discover -s tests -v
+python3 -m pip install -e .
+python3 -m unittest discover -s tests -v
 ```
 
 Rebuild the deterministic CFR reference:
 
 ```bash
-python -m pokerlab.cfr --iterations 300 --output /tmp/strategy.json
+python3 -m pokerlab.cfr --iterations 300 --output /tmp/strategy.json
 cmp strategy.json /tmp/strategy.json
 ```
 
 Revalidate the committed follow-up records and regenerate the report:
 
 ```bash
-python -m pokerlab.followup --output /tmp/FOLLOWUP.md
+python3 -m pokerlab.followup --output /tmp/FOLLOWUP.md
 cmp FOLLOWUP.md /tmp/FOLLOWUP.md
 ```
 
 Regenerate the recruiter-facing figure from the same validated records:
 
 ```bash
-python scripts/make_result_figure.py --output /tmp/adaptive-vs-frozen.svg
+python3 scripts/make_result_figure.py --output /tmp/adaptive-vs-frozen.svg
 cmp results/adaptive-vs-frozen.svg /tmp/adaptive-vs-frozen.svg
 ```
 
 Run the exact-vs-rollout evaluator check:
 
 ```bash
-python -m pokerlab.validate --player0 baseline --player1 calling --hands 20000 --seed 7
+python3 -m pokerlab.validate --player0 baseline --player1 calling --hands 20000 --seed 7
 ```
 
 For the full prespecified experiment reproduction, run the **Full experiment reproduction** GitHub Actions workflow or execute the four commands in `FOLLOWUP.md`. Each regenerated raw JSON is compared against its committed record by the workflow.
@@ -249,9 +251,9 @@ REPORT.md           earlier pilot analysis
 strategy.json       committed 300-iteration CFR reference
 ```
 
-## Current status
+## Demonstrated vs. not demonstrated
 
-**Implemented and internally validated**
+**Demonstrated within the tested boundaries**
 
 - Leduc simulator and observation boundary;
 - tabular CFR reference and exact evaluator;
@@ -270,4 +272,4 @@ strategy.json       committed 300-iteration CFR reference
 - scalability to Texas Hold'em;
 - independent external-engine validation of all game and inference logic.
 
-This is ongoing independent research. The current contribution is the controlled experimental and validation framework, together with a documented result showing both where adaptation can appear valuable and where the same model can break under misspecification or regime change.
+This repository documents a bounded independent research study. Its contribution is the controlled experimental and validation framework, together with a documented result showing both where adaptation can appear valuable and where the same model can break under misspecification or regime change.

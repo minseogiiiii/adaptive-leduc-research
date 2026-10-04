@@ -1,54 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="450" viewBox="0 0 1040 450" role="img" aria-labelledby="title desc">
-<title id="title">Adaptive policy versus frozen-prior payoff difference</title>
-<desc id="desc">Learning minus frozen-prior net chips per hand with descriptive 95 percent bootstrap intervals for three held-out stationary opponents and one switching-opponent stress condition.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="570" viewBox="0 0 1120 570" role="img" aria-labelledby="title desc">
+<title id="title">Adaptive learning versus frozen-prior payoff</title>
+<desc id="desc">Learning minus frozen-prior net chips per hand. The primary held-out family result is near zero, while the switching-opponent stress test moves from positive before the switch to negative after the switch.</desc>
 <rect width="100%" height="100%" fill="#ffffff"/>
 <style>text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;fill:#17202a}.title{font-size:22px;font-weight:700}.subtitle{font-size:14px;fill:#4b5563}.label{font-size:14px;font-weight:600}.tick{font-size:12px;fill:#6b7280}.value{font-size:12px;fill:#374151}.foot{font-size:12px;fill:#6b7280}</style>
-<text id="chart-title" class="title" x="32" y="36">Adaptive learning vs frozen-prior baseline</text>
-<text class="subtitle" x="32" y="60">Learning − frozen prior, net chips per hand; bars show descriptive 95% bootstrap intervals</text>
-<line x1="250.00" y1="74" x2="250.00" y2="336" stroke="#e5e7eb" stroke-width="1"/>
-<text class="tick" x="250.00" y="358" text-anchor="middle">-0.4</text>
-<line x1="318.12" y1="74" x2="318.12" y2="336" stroke="#e5e7eb" stroke-width="1"/>
-<text class="tick" x="318.12" y="358" text-anchor="middle">-0.3</text>
-<line x1="386.25" y1="74" x2="386.25" y2="336" stroke="#e5e7eb" stroke-width="1"/>
-<text class="tick" x="386.25" y="358" text-anchor="middle">-0.2</text>
-<line x1="454.38" y1="74" x2="454.38" y2="336" stroke="#e5e7eb" stroke-width="1"/>
-<text class="tick" x="454.38" y="358" text-anchor="middle">-0.1</text>
-<line x1="522.50" y1="74" x2="522.50" y2="336" stroke="#9ca3af" stroke-width="2"/>
-<text class="tick" x="522.50" y="358" text-anchor="middle">0.0</text>
-<line x1="590.62" y1="74" x2="590.62" y2="336" stroke="#e5e7eb" stroke-width="1"/>
-<text class="tick" x="590.62" y="358" text-anchor="middle">+0.1</text>
-<line x1="658.75" y1="74" x2="658.75" y2="336" stroke="#e5e7eb" stroke-width="1"/>
-<text class="tick" x="658.75" y="358" text-anchor="middle">+0.2</text>
-<line x1="726.88" y1="74" x2="726.88" y2="336" stroke="#e5e7eb" stroke-width="1"/>
-<text class="tick" x="726.88" y="358" text-anchor="middle">+0.3</text>
-<line x1="795.00" y1="74" x2="795.00" y2="336" stroke="#e5e7eb" stroke-width="1"/>
-<text class="tick" x="795.00" y="358" text-anchor="middle">+0.4</text>
-<text class="label" x="32" y="97">Rank selective</text>
-<line x1="351.03" y1="92.00" x2="610.04" y2="92.00" stroke="#0f766e" stroke-width="4" stroke-linecap="round"/>
-<line x1="351.03" y1="85.00" x2="351.03" y2="99.00" stroke="#0f766e" stroke-width="2"/>
-<line x1="610.04" y1="85.00" x2="610.04" y2="99.00" stroke="#0f766e" stroke-width="2"/>
-<circle cx="483.46" cy="92.00" r="6" fill="#0f766e" stroke="#ffffff" stroke-width="2"/>
-<text class="value" x="823" y="96">-0.057 [-0.252, +0.129]</text>
-<text class="label" x="32" y="155">Round polarized</text>
-<line x1="288.29" y1="150.00" x2="677.42" y2="150.00" stroke="#0f766e" stroke-width="4" stroke-linecap="round"/>
-<line x1="288.29" y1="143.00" x2="288.29" y2="157.00" stroke="#0f766e" stroke-width="2"/>
-<line x1="677.42" y1="143.00" x2="677.42" y2="157.00" stroke="#0f766e" stroke-width="2"/>
-<circle cx="485.85" cy="150.00" r="6" fill="#0f766e" stroke="#ffffff" stroke-width="2"/>
-<text class="value" x="823" y="154">-0.054 [-0.344, +0.227]</text>
-<text class="label" x="32" y="213">Pressure reactive</text>
-<line x1="429.03" y1="208.00" x2="754.33" y2="208.00" stroke="#0f766e" stroke-width="4" stroke-linecap="round"/>
-<line x1="429.03" y1="201.00" x2="429.03" y2="215.00" stroke="#0f766e" stroke-width="2"/>
-<line x1="754.33" y1="201.00" x2="754.33" y2="215.00" stroke="#0f766e" stroke-width="2"/>
-<circle cx="600.57" cy="208.00" r="6" fill="#0f766e" stroke="#ffffff" stroke-width="2"/>
-<text class="value" x="823" y="212">+0.115 [-0.137, +0.340]</text>
-<text class="label" x="32" y="271">Calling → aggressive</text>
-<text class="tick" x="32" y="289">switch stress</text>
-<line x1="295.44" y1="266.00" x2="607.66" y2="266.00" stroke="#b45309" stroke-width="4" stroke-linecap="round"/>
-<line x1="295.44" y1="259.00" x2="295.44" y2="273.00" stroke="#b45309" stroke-width="2"/>
-<line x1="607.66" y1="259.00" x2="607.66" y2="273.00" stroke="#b45309" stroke-width="2"/>
-<circle cx="455.06" cy="266.00" r="6" fill="#b45309" stroke="#ffffff" stroke-width="2"/>
-<text class="value" x="823" y="270">-0.099 [-0.333, +0.125]</text>
-<text class="tick" x="522.50" y="407" text-anchor="middle">Adaptive payoff advantage →</text>
-<text class="foot" x="32" y="434">First three rows are prespecified held-out stationary policies. The switch row is secondary and excluded from the family-level primary contrast.</text>
+<text class="title" x="32" y="36">Adaptive learning vs frozen-prior baseline</text>
+<text class="subtitle" x="32" y="60">Point = mean payoff difference; line = descriptive 95% bootstrap interval</text>
+<text class="subtitle" x="32" y="80">Positive values favor updating from observations; negative values favor the frozen-prior control.</text>
+<line x1="265.00" y1="87" x2="265.00" y2="465" stroke="#e5e7eb" stroke-width="1"/>
+<text class="tick" x="265.00" y="487" text-anchor="middle">-0.8</text>
+<line x1="346.43" y1="87" x2="346.43" y2="465" stroke="#e5e7eb" stroke-width="1"/>
+<text class="tick" x="346.43" y="487" text-anchor="middle">-0.6</text>
+<line x1="427.86" y1="87" x2="427.86" y2="465" stroke="#e5e7eb" stroke-width="1"/>
+<text class="tick" x="427.86" y="487" text-anchor="middle">-0.4</text>
+<line x1="509.29" y1="87" x2="509.29" y2="465" stroke="#e5e7eb" stroke-width="1"/>
+<text class="tick" x="509.29" y="487" text-anchor="middle">-0.2</text>
+<line x1="590.71" y1="87" x2="590.71" y2="465" stroke="#9ca3af" stroke-width="2"/>
+<text class="tick" x="590.71" y="487" text-anchor="middle">0.0</text>
+<line x1="672.14" y1="87" x2="672.14" y2="465" stroke="#e5e7eb" stroke-width="1"/>
+<text class="tick" x="672.14" y="487" text-anchor="middle">+0.2</text>
+<line x1="753.57" y1="87" x2="753.57" y2="465" stroke="#e5e7eb" stroke-width="1"/>
+<text class="tick" x="753.57" y="487" text-anchor="middle">+0.4</text>
+<line x1="835.00" y1="87" x2="835.00" y2="465" stroke="#e5e7eb" stroke-width="1"/>
+<text class="tick" x="835.00" y="487" text-anchor="middle">+0.6</text>
+<text class="label" x="32" y="110">Held-out family (primary)</text>
+<line x1="537.22" y1="105.00" x2="641.36" y2="105.00" stroke="#111827" stroke-width="4" stroke-linecap="round"/>
+<line x1="537.22" y1="98.00" x2="537.22" y2="112.00" stroke="#111827" stroke-width="2"/>
+<line x1="641.36" y1="98.00" x2="641.36" y2="112.00" stroke="#111827" stroke-width="2"/>
+<circle cx="591.20" cy="105.00" r="7" fill="#111827" stroke="#ffffff" stroke-width="2"/>
+<text class="value" x="860" y="109">+0.001 [-0.131, +0.124]</text>
+<text class="label" x="32" y="168">Rank selective</text>
+<line x1="488.24" y1="163.00" x2="643.03" y2="163.00" stroke="#0f766e" stroke-width="4" stroke-linecap="round"/>
+<line x1="488.24" y1="156.00" x2="488.24" y2="170.00" stroke="#0f766e" stroke-width="2"/>
+<line x1="643.03" y1="156.00" x2="643.03" y2="170.00" stroke="#0f766e" stroke-width="2"/>
+<circle cx="567.38" cy="163.00" r="6" fill="#0f766e" stroke="#ffffff" stroke-width="2"/>
+<text class="value" x="860" y="167">-0.057 [-0.252, +0.129]</text>
+<text class="label" x="32" y="226">Round polarized</text>
+<line x1="450.74" y1="221.00" x2="683.30" y2="221.00" stroke="#0f766e" stroke-width="4" stroke-linecap="round"/>
+<line x1="450.74" y1="214.00" x2="450.74" y2="228.00" stroke="#0f766e" stroke-width="2"/>
+<line x1="683.30" y1="214.00" x2="683.30" y2="228.00" stroke="#0f766e" stroke-width="2"/>
+<circle cx="568.81" cy="221.00" r="6" fill="#0f766e" stroke="#ffffff" stroke-width="2"/>
+<text class="value" x="860" y="225">-0.054 [-0.344, +0.227]</text>
+<text class="label" x="32" y="284">Pressure reactive</text>
+<line x1="534.85" y1="279.00" x2="729.27" y2="279.00" stroke="#0f766e" stroke-width="4" stroke-linecap="round"/>
+<line x1="534.85" y1="272.00" x2="534.85" y2="286.00" stroke="#0f766e" stroke-width="2"/>
+<line x1="729.27" y1="272.00" x2="729.27" y2="286.00" stroke="#0f766e" stroke-width="2"/>
+<circle cx="637.37" cy="279.00" r="6" fill="#0f766e" stroke="#ffffff" stroke-width="2"/>
+<text class="value" x="860" y="283">+0.115 [-0.137, +0.340]</text>
+<line x1="32" y1="308.00" x2="1088" y2="308.00" stroke="#d1d5db" stroke-width="1"/>
+<text class="label" x="32" y="342">Switch: pre</text>
+<line x1="569.50" y1="337.00" x2="806.99" y2="337.00" stroke="#b45309" stroke-width="4" stroke-linecap="round"/>
+<line x1="569.50" y1="330.00" x2="569.50" y2="344.00" stroke="#b45309" stroke-width="2"/>
+<line x1="806.99" y1="330.00" x2="806.99" y2="344.00" stroke="#b45309" stroke-width="2"/>
+<circle cx="684.03" cy="337.00" r="6" fill="#b45309" stroke="#ffffff" stroke-width="2"/>
+<text class="value" x="860" y="341">+0.229 [-0.052, +0.531]</text>
+<text class="label" x="32" y="400">Switch: post</text>
+<line x1="279.70" y1="395.00" x2="552.52" y2="395.00" stroke="#b45309" stroke-width="4" stroke-linecap="round"/>
+<line x1="279.70" y1="388.00" x2="279.70" y2="402.00" stroke="#b45309" stroke-width="2"/>
+<line x1="552.52" y1="388.00" x2="552.52" y2="402.00" stroke="#b45309" stroke-width="2"/>
+<circle cx="416.82" cy="395.00" r="6" fill="#b45309" stroke="#ffffff" stroke-width="2"/>
+<text class="value" x="860" y="399">-0.427 [-0.764, -0.094]</text>
+<text class="tick" x="550.00" y="517" text-anchor="middle">← frozen-prior higher payoff     learning higher payoff →</text>
+<text class="foot" x="32" y="552">Primary = equally weighted mean across 3 held-out stationary policies. Switch post − pre change: -0.656 [-1.073, -0.208] chips/hand.</text>
 </svg>
