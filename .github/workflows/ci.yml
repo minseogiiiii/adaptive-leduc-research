@@ -4,6 +4,10 @@ on:
   push:
   pull_request:
 
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   tests:
     strategy:
@@ -42,3 +46,5 @@ jobs:
         run: |
           python scripts/make_result_figure.py --output /tmp/adaptive-vs-frozen.svg
           cmp results/adaptive-vs-frozen.svg /tmp/adaptive-vs-frozen.svg
+      - name: Exact-vs-rollout evaluator check
+        run: python -m pokerlab.validate --player0 baseline --player1 calling --hands 20000 --seed 7
