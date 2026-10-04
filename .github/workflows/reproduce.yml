@@ -1,0 +1,57 @@
+name: Full experiment reproduction
+
+on:
+  push:
+    branches:
+      - vlab-audit-2026-10-03
+  workflow_dispatch:
+
+jobs:
+  scenario:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: rank_selective
+            args: --opponent rank_selective --hands 12 --replicates 24 --seed 20261001
+            file: followup-rank_selective.json
+          - name: round_polarized
+            args: --opponent round_polarized --hands 12 --replicates 24 --seed 20261001
+            file: followup-round_polarized.json
+          - name: pressure_reactive
+            args: --opponent pressure_reactive --hands 12 --replicates 24 --seed 20261001
+            file: followup-pressure_reactive.json
+          - name: calling_to_aggressive
+            args: --opponent calling --switch-to aggressive --switch-after 6 --hands 12 --replicates 24 --seed 20261001
+            file: followup-switch.json
+    name: reproduce-${{ matrix.name }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: python -m pip install -e .
+      - name: Reproduce scenario
+        run: |
+          python -m pokerlab.experiment ${{ matrix.args }} --output /tmp/${{ matrix.file }}
+          cmp results/${{ matrix.file }} /tmp/${{ matrix.file }}
+
+  family-report:
+    needs: scenario
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: python -m pip install -e .
+      - name: Revalidate family report and figure
+        run: |
+          python -m pokerlab.followup --output /tmp/FOLLOWUP.md
+          cmp FOLLOWUP.md /tmp/FOLLOWUP.md
+          python scripts/make_result_figure.py --output /tmp/adaptive-vs-frozen.svg
+          cmp results/adaptive-vs-frozen.svg /tmp/adaptive-vs-frozen.svg
