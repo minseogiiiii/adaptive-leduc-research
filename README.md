@@ -1,315 +1,273 @@
-# Adaptive decision-making in Leduc poker
+# Adaptive Leduc Poker Research
 
-Week 1 game engine, Week 2 CFR baseline, and Weeks 3-4 Bayesian opponent
-model for a research project on learning from legally observable actions. The
-repository has a complete two-player fixed-limit Leduc hand engine, full-tree
-CFR, exact strategy evaluation, and an exact information-set response to a
-mixture of opponent types.
+**Research question:** When does learning an opponent from limited observable behavior improve decisions under partial information, and when does that advantage break down?
 
-## Try one hand
+This project uses two-player fixed-limit Leduc poker as a small, fully inspectable test bed for adaptive decision-making. A Bayesian learner updates beliefs over opponent policies from legally observable actions, then recomputes an information-set best response. Controlled experiments compare that learner with a **frozen-prior response** that starts from the same initial model but never updates, allowing the value of between-hand learning to be separated from the value of the initial policy itself.
 
-From this directory, with Python 3.10 or newer:
+Although poker is the test environment, the methodological focus is **model risk under changing behavior**: misspecification, regime change, controlled baselines, uncertainty reporting, failure diagnosis, and reproducibility.
 
-```bash
-python3 -m pokerlab --seed 7
-python3 -m unittest discover -s tests -v
-python3 -m pokerlab.cfr --iterations 100 --output strategy.json
-python3 -m pokerlab.bayes --hands 12 --opponent calling --seed 7
-python3 -m pokerlab.experiment --opponent calling --hands 12 --replicates 20 --seed 7 --output results/calling.json
-python3 -m pokerlab.experiment --opponent calling --switch-to aggressive --switch-after 6 --hands 12 --replicates 20 --seed 7 --output results/switch.json
-python3 -m pokerlab.profile --opponent calling --switch-to aggressive --switch-after 2 --hands 4 --replicates 2 --seed 13 --output results/profile-switch-example.json
-python3 -m pokerlab.report --output REPORT.md
-python3 -m pokerlab.followup --output FOLLOWUP.md
-python3 -m pokerlab.validate --player0 baseline --player1 calling --hands 20000 --seed 7
+## Key results
+
+- **Primary held-out family result:** across three prespecified opponent policies outside the learner's four-type model, the equally weighted learning-minus-frozen-prior contrast was **+0.0012 net chips/hand**, with a descriptive 95% joint-replicate bootstrap interval of **[-0.1314, +0.1244]**. With this design and sample size, there is **no clear general learning advantage**.
+- **Regime-change failure mode:** in the calling-to-aggressive switch stress test, the learning-minus-frozen contrast changed by **-0.6562 chips/hand** from pre-switch to post-switch, with descriptive interval **[-1.0729, -0.2083]**. The learner assumes a fixed opponent type, so an abrupt policy change can make accumulated beliefs harmful.
+- **Validation:** the repository passes **38 automated tests** on clean Python **3.10, 3.12, and 3.13** environments. CI also rebuilds the committed 300-iteration CFR strategy and the follow-up report from source data and checks them against the committed artifacts.
+- **Full experiment reproduction:** all four prespecified follow-up scenarios were rerun from source and their regenerated raw JSON records matched the committed records byte-for-byte.
+
+![Learning minus frozen-prior payoff with bootstrap intervals](results/adaptive-vs-frozen.svg)
+
+The intervals above are descriptive bootstrap intervals, not multiplicity-adjusted hypothesis tests. The three stationary opponents are constructed stress cases, not a representative sample of human players.
+
+## Why the baseline matters
+
+A central evaluation choice is the comparison against the frozen-prior response.
+
+For the held-out **pressure-reactive** opponent, learning outperformed the fixed CFR policy by **+1.1944 chips/hand** with interval **[+0.6302, +1.7535]**. That number alone could make adaptation look very strong. But the learning-minus-frozen-prior contrast was only **+0.1146 [-0.1372, +0.3403]**.
+
+The difference is important: both the learner and the frozen-prior control begin with the same exact response to the initial opponent mixture. Comparing them isolates the effect of **updating from new observations**, rather than crediting learning for an advantage already present before the first hand.
+
+## System overview
+
+```text
+Leduc simulator
+    ↓
+CFR reference policy
+    ↓
+legally observable trajectories
+    ↓
+Bayesian opponent model
+    ↓
+exact information-set response
+    ↓
+adaptive vs frozen-prior vs CFR experiment
+    ↓
+paired evaluation + bootstrap uncertainty
+    ↓
+failure-mode and provenance checks
 ```
 
-The included `strategy.json` was trained for 300 iterations with the same
-deterministic full-tree algorithm. To regenerate it exactly, use
-`python3 -m pokerlab.cfr --iterations 300 --output strategy.json`.
+## Method
 
-The trace is a *post-hand evaluator view*: it prints both private cards so that
-you can inspect the outcome. Agents only receive `PlayerObservation` objects,
-which exclude the opponent's card until showdown.
+### 1. Leduc environment
 
-## What to read first
+`pokerlab/game.py` implements the frozen two-player Leduc variant documented in `rules.md`:
 
-1. `rules.md` gives the exact variant, two complete sample hands, and the
-   observation contract.
-2. `pokerlab/game.py` implements the state transitions. `GameState` is an
-   immutable full simulator state; `observe(player)` is the agent interface.
-3. `pokerlab/simulate.py` runs random agents with independent action and chance
-   random-number streams.
-4. `tests/test_game.py` checks terminal payoffs, legal actions, chance cards,
-   information leakage, and complete reachable game paths.
-5. `pokerlab/cfr.py` learns an average CFR strategy and evaluates exact game
-   value, best responses, and exploitability. `tests/test_cfr.py` checks the
-   information partition, payoff evaluator, convergence, and saved policy.
-6. `pokerlab/bayes.py` specifies four example opponent types, updates a
-   posterior from terminal observations, and computes an adaptive response.
-   `tests/test_bayes.py` checks hidden-card marginalization, showdown reveal,
-   repeated updates, and mixture decision value against independent profile
-   evaluation.
-7. `pokerlab/experiment.py` compares the updating agent with a frozen-prior
-   mixture response and CFR, using identical hand seeds for the three arms.
-   It supports one prespecified opponent-policy switch within a match.
-8. `pokerlab/validate.py` compares the exact profile evaluator with independent
-   seeded hand rollouts. Its tests include a known one-chip fold payoff and an
-   asymmetric stochastic profile.
-9. `pokerlab/profile.py` measures where the paired experiment spends CPU time
-   and hashes its deterministic output. `tests/test_profile.py` compares that
-   hash with a separately run, unprofiled switch experiment.
-10. `REPORT.md` is a descriptive pilot with three prespecified opponent
-    conditions. `pokerlab/report.py` reconstructs its means, paired contrasts
-    and bootstrap intervals from saved hand rows and checks input hashes.
-11. `FOLLOWUP_PROTOCOL.md` fixes the held-out family analysis before its
-    outcomes. `FOLLOWUP.md` records the larger run; `pokerlab/followup.py`
-    validates and reproduces its joint-replicate bootstrap summary.
-12. `pokerlab/open_spiel_check.py` exhaustively compares the hand engine with
-    OpenSpiel 2.0.2. `results/open-spiel-crosscheck.json` records the audit.
+- six physical cards: two copies each of J, Q, K;
+- one private card per player and one public card after round one;
+- fixed bet sizes of 2 and 4 chips;
+- two bet/raise actions maximum per round;
+- net zero-sum payoffs.
 
-## Evaluator cross-check
+`GameState` contains simulator truth, but policies receive only `PlayerObservation`. The opponent's private card is hidden unless it is legally revealed at showdown.
 
-`python3 -m pokerlab.validate --player0 baseline --player1 calling --hands
-20000 --seed 7` calculates the exact expected net chips for player 0 and
-estimates the same quantity by running 20,000 complete hands through the hand
-simulator. It reports the Monte Carlo standard error and exits with an error if
-the means differ by more than four estimated standard errors. A larger sample
-can resolve an occasional noisy failure; a passing check does not establish
-mathematical correctness. The two paths use different chance/action evaluation
-methods but share `pokerlab/game.py`.
+### 2. CFR reference
 
-## External Leduc rules audit
+`pokerlab/cfr.py` implements full-tree tabular counterfactual regret minimization and exact evaluation for this game. The committed `strategy.json` is the average policy after 300 iterations.
 
-With OpenSpiel 2.0.2 installed in a compatible Python environment (verified
-here using Python 3.12), run:
+The CFR policy is a **reference policy**, not a claim of exact equilibrium play. Its role is to provide a fixed game-theoretic comparison and the base probabilities used to construct the finite opponent model family.
 
-```bash
-python3 -m pip install open-spiel==2.0.2
-python3 -m pokerlab.open_spiel_check --output results/open-spiel-crosscheck.json
-python3 -m unittest discover -s tests -v
+### 3. Bayesian opponent model
+
+The learner's candidate set contains four prespecified policies:
+
+```text
+baseline
+folding
+calling
+aggressive
 ```
 
-This optional audit loads
-`leduc_poker(players=2,action_mapping=false,suit_isomorphism=false,starting_player=0)`.
-OpenSpiel's ante is 1, the round increments are 2 and 4, and its two raises
-per round count the opening bet. Its `call` action means check when no bet is
-outstanding, and `raise` means the opening bet in that case. The audit checks
-every ordered pair of physical private cards and every legal continuation,
-including public chance probabilities, legal actions, actor, betting history,
-pot, contributions and net terminal returns. It traversed 30 private deals,
-3,780 decision nodes, 150 public chance nodes and 5,520 terminal nodes with
-no mismatch. The inspected upstream source is
-[`leduc_poker.cc`](https://github.com/google-deepmind/open_spiel/blob/48401890ee9857e611678302371378175a8e4c6b/open_spiel/games/leduc_poker/leduc_poker.cc)
-and its [header](https://github.com/google-deepmind/open_spiel/blob/48401890ee9857e611678302371378175a8e4c6b/open_spiel/games/leduc_poker/leduc_poker.h);
-the executable comparison uses the pinned 2.0.2 distribution.
+These are modeling assumptions, not fitted behavioral estimates.
 
-This establishes agreement of the **hand transitions and payoffs** under
-those parameters. OpenSpiel with `suit_isomorphism=false` exposes the physical
-copy in its information-state string, whereas our CFR `info_key` merges the
-two copies of a rank. Thus OpenSpiel's unmodified CFR policy and exploitability
-numbers cannot be compared directly to ours. The project also still needs an
-independent check of its Bayesian likelihood and information-set response.
-The earlier `REPORT.md` and `FOLLOWUP.md` are historical snapshots written
-before this external audit and retain their original provenance text.
+After each completed hand, `BayesianOpponentModel` evaluates the likelihood of the legally observed public trajectory under each candidate policy. Hidden opponent cards are marginalized when they are not revealed, and posterior weights are updated in log space.
 
-## Stationary-opponent experiment
+### 4. Adaptive decision rule
 
-`python3 -m pokerlab.experiment --opponent calling --hands 12 --replicates 20
---seed 7 --output results/calling.json` writes a deterministic JSON record.
-For a prespecified opponent outside the candidate set, replace `calling` with
-`rank_selective`: its betting, calling and folding biases depend on its private
-rank and whether it has paired the public card. Its factors are illustrative
-assumptions; no hand used for evaluation is used to tune them.
-Each independent replicate contains one match in each seat. Within each match,
-the opponent policy is fixed and the learning agent starts from a fresh uniform
-prior. All three arms share the same dealt cards and per-seat action random
-streams for a given hand; their public histories may diverge as they choose
-different actions. The frozen-prior arm computes the same initial exact
-mixture response as the learner, but never changes it across hands. The CFR
-arm plays the loaded average policy.
+Before the next hand, the adaptive agent computes an exact information-set best response to the posterior mixture of opponent types.
 
-The output records each hand's seed, seat, reward, and learner posterior,
-seat-averaged reward per replicate, and paired learning-minus-control
-differences with 95% percentile bootstrap intervals over entire two-seat
-replicates. It also records hashes of `strategy.json` and `rules.md` to tie
-the run to its inputs. Bootstrap intervals with few replicates are unstable;
-20 replicates and 12 hands above illustrate the workflow, not a definitive
-power calculation or a claim that learning helps. The first four opponent
-choices are also the model's own candidates; `rank_selective` is a single
-held-out behavioral rule. A broader set of held-out types and larger runs
-remain to be evaluated before drawing general conclusions.
+The main control is a **frozen-prior** agent that computes the same response to the same initial uniform prior but never updates it. Therefore:
 
-## Opponent-policy switch experiment
+```text
+adaptive − frozen prior
+```
 
-`python3 -m pokerlab.experiment --opponent calling --switch-to aggressive
---switch-after 6 --hands 12 --replicates 20 --seed 7 --output
-results/switch.json` uses `calling` for hands 0–5 and `aggressive` for hands
-6–11, for both seats and every replicate. The policy changes **before** the
-hand at zero-based index 6. Both phases must contain at least one hand.
-`rank_selective` is also available on either side of the switch. The same
-predeclared schedule applies to all three arms; each arm shares a hand seed.
-The learner is not told the schedule and does not reset its posterior at the
-switch. Thus this tests the existing stationary-type Bayesian learner under
-a violated assumption; it does not implement a change-point detector.
+is the primary contrast for the incremental value of between-hand opponent learning.
 
-The JSON includes the opponent names and switch point, per-hand phase and
-posteriors before and after each hand, and separate phase reward summaries.
-`change_in_paired_contrasts` subtracts the pre-switch learning-minus-control
-contrast from the post-switch contrast **within each two-seat replicate**,
-then reports its mean and a 95% percentile bootstrap interval over replicates.
-Phase means and intervals use the same replicate unit. This change measures
-a shift in relative payoff under a changed opponent, not a causal estimate of
-learning speed. The sample command is illustrative; assess uncertainty with
-many independent replicates and prespecified phase lengths and opponents.
+A fixed CFR arm is included as a secondary reference.
 
-## CPU profiling
+## Evaluation design
 
-`python3 -m pokerlab.profile --opponent calling --switch-to aggressive
---switch-after 2 --hands 4 --replicates 2 --seed 13 --top 15 --output
-results/profile-switch-example.json` runs the full paired experiment under Python's
-`cProfile`. It records the workload and input SHA-256 hashes, Python/platform
-details, total calls, elapsed seconds, and the functions with the largest
-**cumulative** time. Nested cumulative times overlap and must not be added.
-Strategy loading and JSON serialization happen outside the timed region. The
-`result_sha256` hashes the entire deterministic `run_experiment` output (all
-hands and posteriors), before profile metadata is added. It can be compared
-with an unprofiled run using the same inputs; the test suite checks this for
-a switched opponent. Timing depends on hardware, Python and profiler overhead.
+The main follow-up was fixed in `FOLLOWUP_PROTOCOL.md` before its outcomes were generated.
 
-The small example diagnoses implementation cost, not the effectiveness of
-learning or a statistically stable speedup. For comparable measurements,
-hold the input hashes, opponent schedule, Python version, machine and system
-load fixed, run multiple independent timings, and inspect the same call sites.
-On the example workload the nested exact mixture best response dominates
-cumulative time. This identifies a candidate for future optimization, while
-the present profiler does not alter its information-set semantics. The
-committed `results/profile-switch-example.json` records one such diagnostic
-run, including its exact input hashes and the full experiment-result digest.
+### Stationary held-out family
 
-## Research pilot report
+Three constructed policies are absent from the learner's candidate model:
 
-`REPORT.md` compares a candidate calling type, one held-out rank-selective
-policy, and a calling-to-aggressive switch. Each condition has ten independent
-two-seat replicates with twelve hands per seat, using seed 7. Its tables are
-generated from the committed full records in `results/` using
-`python3 -m pokerlab.report --output REPORT.md`. The builder checks coverage of
-every replicate/seat/hand, input hashes, phase assignment, posterior validity,
-and point estimates and bootstrap intervals against raw hand rewards. It
-rejects a different workload instead of silently mixing protocols.
+- `rank_selective` — behavior depends on private rank and board pairing;
+- `round_polarized` — passive before the board, aggressive after it;
+- `pressure_reactive` — applies pressure first and backs off after opposing pressure.
 
-This is a **pilot**, not evidence of robust improvement: intervals from ten
-replicates are imprecise, the held-out behavior is only one constructed rule,
-and the switch violates the learner's stationary-type assumption. The
-report includes reproduction commands, JSON hashes and remaining external
-validation and power-analysis work.
+Each condition uses:
 
-The pilot report preserves hashes of the implementation used to generate its
-original outcomes. Later additions to `pokerlab/experiment.py` do not change
-its saved hand rows or statistics, but regenerating the pilot Markdown under
-the expanded code changes the provenance hash printed for that file. Use the
-original Git revision when reproducing the historical report byte for byte.
+- **24 independent replicate units**;
+- one match in each seat per replicate;
+- **12 hands per seat**;
+- paired hand seeds across experimental arms;
+- 2,000 percentile-bootstrap resamples over replicate units.
 
-## Held-out opponent follow-up
+The primary statistic averages the learning-minus-frozen contrast across the three held-out conditions before bootstrapping the shared replicate indices.
 
-`FOLLOWUP_PROTOCOL.md` fixes the three constructed held-out policies, the
-calling-to-aggressive switch stress condition, seed, sample size, primary
-family contrast, bootstrap unit and stopping rule. The first policy depends
-on private rank and public pair, `round_polarized` changes bias across betting
-rounds, and `pressure_reactive` backs off after public opposing pressure.
-They all receive only legal `PlayerObservation` information and assign
-positive probability to every legal action. The learner's four candidate
-types remain the same.
+### Regime-switch stress test
 
-`FOLLOWUP.md` is generated from four full raw JSON records with
-`python3 -m pokerlab.followup --output FOLLOWUP.md`. The generator checks the
-complete hand grid, provenance, phase labels, posteriors, reward summaries,
-intervals and shared seed schedule. The family interval jointly resamples
-two-seat replicate indices across the three held-out conditions. The separate
-switch condition probes the stationary-type assumption. These constructed
-opponents and the finite number of replicates limit generalization.
+A separate secondary condition changes the opponent from `calling` to `aggressive` before hand 6.
 
-## Bayesian opponent learning and adaptive decisions
+The learner:
 
-The *example* candidate types are a smoothed CFR baseline and three fixed
-action-bias variants: folding, calling, and aggressive. Their multipliers and
-5% action smoothing are **modeling assumptions**, not fitted poker statistics.
-Every type assigns positive probability to every legal action. The learner
-assumes a fixed type across observed hands, even in the policy-switch test.
+- is not told the change point;
+- does not reset its posterior;
+- still assumes one stationary type generated the observed hands.
 
-For a completed hand, `BayesianOpponentModel` receives only
-`terminal_state.observe(learner_seat)`. For each candidate type it enumerates
-opponent private cards compatible with our card and any public card, replays
-the observed public actions, and multiplies the type's probabilities of the
-**opponent's** actions. Our own action probabilities cancel between types.
-At showdown the revealed opponent card restricts the sum to that card;
-after a fold all compatible opponent cards remain in the sum. Chance weights
-are `1/5` for the opponent card and, if revealed, `1/4` for the public card
-conditional on both private cards. The posterior is updated in log space
-to avoid underflow across many hands. An impossible observation raises an
-error instead of silently inventing a posterior.
+This intentionally violates the model assumption and tests how the system behaves under regime change.
 
-Before each hand, `AdaptiveAgent` computes an exact information-set best
-response to a **whole-hand mixture**: an opponent type is sampled at the start
-of a hand and remains fixed during that hand. This automatically accounts
-for information from opponent actions within the hand. At each decision,
-one action must be chosen for all hidden cards and types consistent with the
-learner's observation. `choose()` receives only a `PlayerObservation`;
-`finish_hand()` receives the learner's terminal observation and updates the
-posterior before the next hand. Exact tree search is practical in this small
-game, but should not be treated as a scalable Hold'em implementation.
+## Results
 
-The demo prints each hand's net payoff and type posterior. Its sample mean
-over 12 hands is **not** a controlled comparison or evidence that learning
-beats CFR. In particular, optimizing against the **initial** mixture can
-change actions even before any learning occurs. To isolate the effect of
-learning, the experiment compares the updating agent with the same mixture
-response whose prior remains frozen, as well as with fixed CFR. It includes
-a prespecified held-out opponent, seat swaps, repeated independent matches,
-and uncertainty estimates.
+| Condition | Learning | Frozen prior | CFR | Learning − frozen, 95% descriptive interval |
+| --- | ---: | ---: | ---: | ---: |
+| Rank selective | -0.6181 | -0.5608 | -0.3472 | -0.0573 [-0.2517, +0.1285] |
+| Round polarized | -0.2396 | -0.1858 | -0.2795 | -0.0538 [-0.3438, +0.2274] |
+| Pressure reactive | +0.9288 | +0.8142 | -0.2656 | +0.1146 [-0.1372, +0.3403] |
+| Calling → aggressive | -0.4583 | -0.3594 | -0.4323 | -0.0990 [-0.3333, +0.1250] |
 
-## What the CFR numbers mean
+The family-level primary contrast over the first three rows is:
 
-The command prints the expected **net chips per hand for player 0** when both
-players use the learned average strategy. Player 0 always acts first in this
-variant, so even a symmetric strategy need not have zero value. For each player,
-the best response is a strategy that conditions on **that player's card and
-public history**, never the other player's hidden card. `NashConv` is the sum
-of each player's improvement by unilaterally switching to a best response;
-the printed `exploitability` is `NashConv / 2` in chips per hand. It approaches
-zero for a Nash equilibrium. It is **not** the strategy's payoff against an
-arbitrary biased opponent.
+```text
+learning − frozen prior = +0.0012 [-0.1314, +0.1244] chips/hand
+```
 
-The evaluator enumerates all `6 × 5 × 4 = 120` ordered draws of two private
-and one eventual public physical card, each with probability `1/120`. A future
-public card is predetermined by the evaluator, but hidden from CFR and the
-policy until the round ends. If the hand ends by fold, all four possible future
-public draws are still averaged; this reproduces the correct marginal chance
-of the private cards. CFR uses chance-weighted counterfactual opponent reach
-for regrets and chance-weighted own reach for the average policy. It freezes
-the current strategy throughout each iteration before applying regret updates.
+This result does **not** establish that adaptive learning generally improves play. It shows that under this finite candidate model, these three held-out policies, and this data budget, any average advantage is small relative to the measured uncertainty.
 
-Use `TabularPolicy.load("strategy.json")` to load the baseline. To play seeded
-hands, pass `PolicyAgent(loaded)` to `run_hand`; the agent interface receives
-only `PlayerObservation`. Keep the saved policy and this exact `rules.md`
-version together: another Leduc betting convention changes the game.
+For the switch stress condition:
 
-For the included 300-iteration policy, exact evaluation prints 288 information
-sets, value for player 0 `-0.088324`, and exploitability `0.081756` chips per
-hand (six decimal places). These are baseline diagnostics, **not** evidence
-that opponent adaptation improves payoff. CFR convergence is asymptotic; 300
-iterations do not make the policy an exact equilibrium.
+| Phase | Learning − frozen prior |
+| --- | ---: |
+| Pre-switch | +0.2292 [-0.0521, +0.5312] |
+| Post-switch | -0.4271 [-0.7639, -0.0938] |
+| Post minus pre | **-0.6562 [-1.0729, -0.2083]** |
 
-## Roadmap and current status
+This is evidence of a concrete failure mode of the current stationary-type learner; it is not a claim about all non-stationary environments.
 
-| Stage | Intended output | Status |
-| --- | --- | --- |
-| Week 1 | Rules, game engine, observations, seeded traces, correctness checks | Implemented; exhaustive OpenSpiel 2.0.2 hand-rule audit passed |
-| Week 2 | CFR, exact values and legal best response | Implemented; rollout check and external hand-rule audit passed; information-set response remains independently unverified |
-| Weeks 3-4 | Hidden-card likelihood and Bayesian decision agent | Implemented for a finite stationary model set |
-| Weeks 5-6 | Stationary opponent experiments | Paired, seat-balanced runner and a prespecified three-type held-out follow-up implemented; broader generalization study pending |
-| Weeks 7-8 | Policy switches, profiling and research report | Switch experiment, reproducible CPU profiler, pilot and follow-up reports implemented; external hand-rule audit passed |
+## Validation and trustworthiness
 
-The reference convention in the accompanying PDF must be matched explicitly
-before any numeric comparison with that PDF; the OpenSpiel audit above checks
-the specified OpenSpiel variant. The small controlled pilot does not establish
-a general adaptation benefit or strong poker play.
+The project is designed so that a positive result cannot be trusted solely because a simulation ran without errors.
+
+Current safeguards include:
+
+- **38 automated tests** covering legal actions, round transitions, payoffs, ties, chance-card consistency, hidden-card boundaries, CFR information sets, Bayesian marginalization, posterior updates, opponent switches, seed uniqueness, phase assignment, report provenance, and bootstrap-summary consistency;
+- clean-package installation tested on Python **3.10, 3.12, and 3.13**;
+- separate random streams for cards and player actions;
+- identical exogenous hand seeds across experimental arms within each paired comparison;
+- seat swapping within every replicate;
+- raw per-hand records saved for every reported experiment;
+- SHA-256 hashes tying saved results to `strategy.json`, `rules.md`, protocol files, and relevant source modules;
+- report builders that reject missing rows, duplicate seeds, incorrect phase labels, posterior resets at the switch, inconsistent summaries, and source-hash mismatches;
+- exact regeneration of the committed 300-iteration CFR strategy in CI;
+- regeneration of `FOLLOWUP.md` from committed raw records in CI;
+- a 20,000-hand Monte Carlo path check against the exact profile evaluator.
+
+The Monte Carlo evaluator and exact evaluator use different evaluation paths but still share the project's game implementation. **An independently implemented external game-engine cross-check is not currently committed and should not be claimed as completed validation.**
+
+## Failure modes and limitations
+
+The negative and mixed results are part of the project rather than hidden edge cases.
+
+1. **Model misspecification:** the learner chooses among four fixed candidate types, while the primary evaluation opponents are deliberately outside that set.
+2. **Regime change:** the posterior assumes one type persists across hands; an abrupt switch can leave the learner confidently adapted to stale behavior.
+3. **Prediction is not payoff:** a posterior can become more concentrated without necessarily improving downstream decisions or reward.
+4. **Baseline sensitivity:** comparison with CFR alone can attribute value to "learning" that was already present in the initial mixture response.
+5. **Finite statistical power:** 24 replicate units still produce broad intervals for several opponent-specific contrasts.
+6. **Constructed opponents:** the held-out policies are controlled behavioral rules, not empirical models of human poker players or financial-market participants.
+7. **Shared implementation:** simulator and exact evaluator share game logic, so internal agreement is not equivalent to external correctness.
+
+## Reproducing the project
+
+Core code has no third-party runtime dependency.
+
+```bash
+python -m pip install -e .
+python -m unittest discover -s tests -v
+```
+
+Rebuild the deterministic CFR reference:
+
+```bash
+python -m pokerlab.cfr --iterations 300 --output /tmp/strategy.json
+cmp strategy.json /tmp/strategy.json
+```
+
+Revalidate the committed follow-up records and regenerate the report:
+
+```bash
+python -m pokerlab.followup --output /tmp/FOLLOWUP.md
+cmp FOLLOWUP.md /tmp/FOLLOWUP.md
+```
+
+Regenerate the recruiter-facing figure from the same validated records:
+
+```bash
+python scripts/make_result_figure.py --output /tmp/adaptive-vs-frozen.svg
+cmp results/adaptive-vs-frozen.svg /tmp/adaptive-vs-frozen.svg
+```
+
+Run the exact-vs-rollout evaluator check:
+
+```bash
+python -m pokerlab.validate --player0 baseline --player1 calling --hands 20000 --seed 7
+```
+
+For the full prespecified experiment reproduction, run the **Full experiment reproduction** GitHub Actions workflow or execute the four commands in `FOLLOWUP.md`. Each regenerated raw JSON is compared against its committed record by the workflow.
+
+## Repository structure
+
+```text
+pokerlab/
+  game.py          Leduc state transitions and observation boundary
+  cfr.py           CFR training, exact profile values, best responses
+  bayes.py         finite opponent model and Bayesian updates
+  experiment.py    paired stationary and switching experiments
+  followup.py      prespecified held-out-family validation/reporting
+  report.py        historical pilot validation/reporting
+  validate.py      exact-vs-simulation evaluator check
+  profile.py       deterministic performance profiling
+
+tests/             correctness and experiment-integrity tests
+results/           committed raw experiment records and result figure
+scripts/           reproducible presentation artifacts
+rules.md           frozen game rules
+FOLLOWUP_PROTOCOL.md
+                   prespecified primary experiment
+FOLLOWUP.md         validated current follow-up analysis
+REPORT.md           earlier pilot analysis
+strategy.json       committed 300-iteration CFR reference
+```
+
+## Current status
+
+**Implemented and internally validated**
+
+- Leduc simulator and observation boundary;
+- tabular CFR reference and exact evaluator;
+- finite Bayesian opponent model;
+- exact adaptive mixture response;
+- stationary held-out and policy-switch experiments;
+- paired bootstrap evaluation;
+- provenance and report-integrity checks;
+- clean-install CI and reproducible result artifacts.
+
+**Not established**
+
+- a general advantage from opponent learning;
+- robustness to arbitrary unseen or changing opponents;
+- empirical validity on human poker behavior;
+- scalability to Texas Hold'em;
+- independent external-engine validation of all game and inference logic.
+
+This is ongoing independent research. The current contribution is the controlled experimental and validation framework, together with a documented result showing both where adaptation can appear valuable and where the same model can break under misspecification or regime change.
