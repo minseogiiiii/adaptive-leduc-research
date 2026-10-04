@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "adaptive-leduc-research"
+version = "0.1.0"
+description = "Controlled Leduc poker experiments for Bayesian opponent learning under partial information."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.setuptools.packages.find]
+include = ["pokerlab*"]
