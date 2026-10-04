@@ -1,9 +1,6 @@
 name: V-Lab audit
 
 on:
-  push:
-    branches:
-      - vlab-audit-2026-10-03
   workflow_dispatch:
 
 jobs:
