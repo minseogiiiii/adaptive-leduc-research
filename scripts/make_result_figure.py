@@ -36,9 +36,11 @@ def _load_rows() -> list[dict[str, object]]:
         rows.append({
             "label": label,
             "kind": kind,
-            "mean": float(contrast["mean"]),
-            "low": float(low),
-            "high": float(high),
+            # Plot the same four-decimal values published in FOLLOWUP.md so
+            # the figure is a deterministic presentation of the reported result.
+            "mean": round(float(contrast["mean"]), 4),
+            "low": round(float(low), 4),
+            "high": round(float(high), 4),
         })
     return rows
 
@@ -91,7 +93,10 @@ def build_svg(rows: list[dict[str, object]]) -> str:
         sw = "2" if abs(tick) < 1e-12 else "1"
         out.append(f'<line x1="{tx:.2f}" y1="{top-18}" x2="{tx:.2f}" y2="{axis_y}" stroke="{stroke}" stroke-width="{sw}"/>')
         tick_label = "0.0" if abs(tick) < 1e-12 else f"{tick:+.1f}"
-        out.append(f"<text class='tick' x='{tx:.2f}' y='{axis_y+22}' text-anchor='middle'>{tick_label}</text>")
+        out.append(
+            f'<text class="tick" x="{tx:.2f}" y="{axis_y+22}" '
+            f'text-anchor="middle">{tick_label}</text>'
+        )
 
     for index, row in enumerate(rows):
         y = top + index * row_gap
