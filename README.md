@@ -272,4 +272,4 @@ strategy.json       committed 300-iteration CFR reference
 - scalability to Texas Hold'em;
 - independent external-engine validation of all game and inference logic.
 
-This is ongoing independent research. The current contribution is the controlled experimental and validation framework, together with a documented result showing both where adaptation can appear valuable and where the same model can break under misspecification or regime change.
+This repository documents a bounded independent research study. Its contribution is the controlled experimental and validation framework, together with a documented result showing both where adaptation can appear valuable and where the same model can break under misspecification or regime change.
