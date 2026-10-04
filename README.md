@@ -4,11 +4,13 @@
 
 This project uses two-player fixed-limit Leduc poker as a small, fully inspectable test bed for adaptive decision-making. A Bayesian learner updates beliefs over opponent policies from legally observable actions, then recomputes an information-set best response. Controlled experiments compare that learner with a **frozen-prior response** that starts from the same initial model but never updates, allowing the value of between-hand learning to be separated from the value of the initial policy itself.
 
+Although poker is the test environment, the methodological focus is **model risk under changing behavior**: misspecification, regime change, controlled baselines, uncertainty reporting, failure diagnosis, and reproducibility.
+
 ## Key results
 
 - **Primary held-out family result:** across three prespecified opponent policies outside the learner's four-type model, the equally weighted learning-minus-frozen-prior contrast was **+0.0012 net chips/hand**, with a descriptive 95% joint-replicate bootstrap interval of **[-0.1314, +0.1244]**. With this design and sample size, there is **no clear general learning advantage**.
 - **Regime-change failure mode:** in the calling-to-aggressive switch stress test, the learning-minus-frozen contrast changed by **-0.6562 chips/hand** from pre-switch to post-switch, with descriptive interval **[-1.0729, -0.2083]**. The learner assumes a fixed opponent type, so an abrupt policy change can make accumulated beliefs harmful.
-- **Validation:** the current branch passes **38 automated tests** on clean Python **3.10, 3.12, and 3.13** environments. CI also rebuilds the committed 300-iteration CFR strategy and the follow-up report from source data and checks them against the committed artifacts.
+- **Validation:** the repository passes **38 automated tests** on clean Python **3.10, 3.12, and 3.13** environments. CI also rebuilds the committed 300-iteration CFR strategy and the follow-up report from source data and checks them against the committed artifacts.
 
 ![Learning minus frozen-prior payoff with bootstrap intervals](results/adaptive-vs-frozen.svg)
 
