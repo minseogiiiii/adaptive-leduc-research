@@ -169,8 +169,8 @@ Current safeguards include:
 - identical exogenous hand seeds across experimental arms within each paired comparison;
 - seat swapping within every replicate;
 - raw per-hand records saved for every reported experiment;
-- SHA-256 hashes tying saved results to `strategy.json`, `rules.md`, protocol files, and relevant source modules;
-- report builders that reject missing rows, duplicate seeds, incorrect phase labels, posterior resets at the switch, inconsistent summaries, and source-hash mismatches;
+- raw result records store SHA-256 hashes of `strategy.json` and `rules.md`; the generated follow-up report also records hashes for the protocol, relevant source modules, and raw result files;
+- report builders that reject missing rows, duplicate seeds, incorrect phase labels, posterior resets at the switch, inconsistent summaries, and strategy/rules hash mismatches;
 - exact regeneration of the committed 300-iteration CFR strategy in CI;
 - regeneration of `FOLLOWUP.md` from committed raw records in CI;
 - a 20,000-hand Monte Carlo path check against the exact profile evaluator.
