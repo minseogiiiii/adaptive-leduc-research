@@ -1,5 +1,7 @@
 # Adaptive Decision-Making Under Partial Information
 
+[![CI](https://github.com/minseogiiiii/adaptive-leduc-research/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/minseogiiiii/adaptive-leduc-research/actions/workflows/ci.yml)
+
 ### Bayesian Opponent Modeling in Leduc Poker
 
 **Research question:** When does learning an opponent from limited observable behavior improve decisions under partial information, and when does that advantage break down?
