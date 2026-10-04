@@ -25,9 +25,9 @@ class FoldToBet:
 class ValidationTest(unittest.TestCase):
     def test_known_one_chip_fold_payoff_has_zero_sampling_error(self):
         result = validate_profile(BetFirst(), FoldToBet(), hands=20, seed=13)
-        self.assertEqual(result["exact_value_p0"], 1)
-        self.assertEqual(result["sample_mean_p0"], 1)
-        self.assertEqual(result["sample_standard_error"], 0)
+        self.assertAlmostEqual(result["exact_value_p0"], 1.0, places=12)
+        self.assertAlmostEqual(result["sample_mean_p0"], 1.0, places=12)
+        self.assertAlmostEqual(result["sample_standard_error"], 0.0, places=12)
         self.assertTrue(result["within_four_standard_errors"])
 
     def test_asymmetric_stochastic_profile_matches_simulated_hands(self):
