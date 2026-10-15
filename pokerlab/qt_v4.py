@@ -179,7 +179,7 @@ class DecisionAgent:
         def v(p):
             # Cache fixed-policy oracle values only, never adaptive policies.
             key = id(opponent)
-            if p is self.baseline and key in self._ev_cache:
+            if (p is self.baseline or self.mode == "frozen") and key in self._ev_cache:
                 return self._ev_cache[key]
             value = (profile_value(p, opponent) if self.seat == 0
                      else -profile_value(opponent, p))
@@ -226,7 +226,7 @@ def run_benchmark(*, scenario, hands=12, replicates=6, seed=20261014,
     opponent_a = models["calling"] if scenario != "heldout" else HELD_OUT_POLICIES["rank_selective"](baseline)
     opponent_b = models["aggressive"] if scenario == "switch" else opponent_a
     switch_at = hands // 2 if scenario == "switch" else None
-    arms = ("cfr", "frozen", "adaptive", "switching", "safe")
+    arms = ("cfr", "frozen", "adaptive", "switching", "safe", "safe_exact")
     rows = []
     blocks = {arm: [] for arm in arms}
     oracle_blocks = {arm: [] for arm in arms}
@@ -296,7 +296,9 @@ def run_benchmark(*, scenario, hands=12, replicates=6, seed=20261014,
     oracle_paired = ({f"{arm}_minus_{control}": _paired_ci(
         oracle_blocks[arm], oracle_blocks[control], seed + 29)
         for arm, control in (("switching", "adaptive"), ("safe", "adaptive"),
-                             ("safe", "switching"), ("safe", "cfr"))}
+                             ("safe", "switching"), ("safe", "cfr"),
+                             ("safe_exact", "safe"), ("safe_exact", "adaptive"),
+                             ("safe_exact", "cfr"))}
                      if include_oracle else {})
     phase_means = {p: {arm: _mean(values)
                        for arm, values in group.items() if values}
