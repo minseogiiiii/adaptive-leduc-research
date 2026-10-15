@@ -64,7 +64,7 @@ and reference strategy are unchanged; this report belongs to a research branch.
 
 Exploratory evidence is **mixed**:
 - Switching improves the switch scenario vs original Bayesian (+0.0219)
-  but worsens stationary (+/-0.0247).
+  but worsens stationary (-0.0247).
 - Against an out-of-model opponent, both unrestricted learning policies have
   negative conditional EV, while safe policies stay near the CFR baseline.
 - Exact Safe gains about +0.0102 (stationary) and +0.0106 (switch)
@@ -104,13 +104,61 @@ https://github.com/minseogiiiii/adaptive-leduc-research/actions/runs/38663680320
 
 CI: https://github.com/minseogiiiii/adaptive-leduc-research/actions/runs/38663995486
 
-## Independent-seed replication
+## Independent-seed replication — COMPLETED
 
 Workflow: https://github.com/minseogiiiii/adaptive-leduc-research/actions/runs/38663995402
 
-Results are reported separately from exploratory results. A new seed and
-longer horizon do not automatically create real-world out-of-sample market
-validation; all opponent policies are still synthetic.
+Seed **20261015**, 8 independent replicates, 12 hands per seat per replicate,
+**192 sampled hands per arm per scenario**. Hazard and risk budget remained
+fixed at 0.1; this was not a hyperparameter search. All three jobs succeeded.
+
+### Independent-seed exact conditional EV (chips/hand)
+
+| Policy | Stationary | Held-out | Switch |
+|---|---:|---:|---:|
+| CFR | +0.06277 | +0.00379 | +0.08013 |
+| Frozen prior | -0.09292 | -0.02371 | +0.28797 |
+| Original Bayesian | **+0.17364** | -0.01057 | +0.28024 |
+| Switching Bayesian | +0.12057 | -0.01247 | **+0.32121** |
+| Conservative Safe | +0.07244 | +0.00298 | +0.09958 |
+| Exact Safe | +0.08337 | +0.00342 | +0.10881 |
+
+Paired differences (replicate-block percentile bootstrap 95% intervals,
+**n=8**, not strong population-level inference):
+- Switching minus Original Bayesian:
+  stationary **-0.05307** [-0.08674, -0.01840];
+  held-out **-0.00190** [-0.00726, +0.00459];
+  switch **+0.04097** [+0.02021, +0.06520].
+- Exact Safe minus Conservative Safe:
+  stationary **+0.01093** [+0.00801, +0.01401];
+  held-out **+0.00044** [+0.000085, +0.000879];
+  switch **+0.00922** [+0.00552, +0.01322].
+- Under the switch scenario, exact conditional EV **after the change**
+  was +0.54960 (Switching) versus +0.45235 (Original Bayesian),
+  but **before the change** +0.09282 versus +0.10813.
+- Under the held-out opponent, CFR still beats Exact Safe
+  (+0.00379 vs +0.00342). The robust policy does **not** dominate CFR.
+
+This confirms a **trade-off**, not a universally superior agent:
+the fixed hazard aids adaptation after a true switch but discards useful
+evidence against stationary opponents. The exact risk optimizer improves
+expected reward relative to the conservative risk optimizer on both seeds,
+while its absolute EV often remains below unconstrained Bayesian exploitation.
+
+### Realized PnL and execution cost of the algorithm
+
+Independent-seed realized sampled chips/hand for Exact Safe:
+stationary **-0.08854**, held-out **-0.03125**, switch **-0.06771**.
+These can be negative even when exact conditional EV is positive.
+Do not substitute sampled win rate for expected policy value.
+
+Whole-workflow compute time on hosted GitHub runners was approximately
+457 seconds (stationary), 797 seconds (held-out), 726 seconds (switch).
+This implementation is an **offline exact game oracle**, NOT suitable for
+live low-latency trading. Optimizing inference/decision latency is future work.
+
+A new seed and longer horizon do not create real-world out-of-sample market
+validation: every opponent policy is still synthetic.
 
 ## Reproduction
 
