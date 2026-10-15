@@ -46,7 +46,7 @@ def single_frontier(*,seat,belief_case="uniform",strategy="strategy.json",
     prior=tuple(
         (0.85 if name=="calling" else 0.15/(len(names)-1))
         if belief_case=="calling_concentrated"
-        else (1/len(names) for _ in names))
+        else 1/len(names) for name in names)
     if belief_case not in ("uniform","calling_concentrated"):
         raise ValueError("Unknown belief case")
     exploit_ev,exploit=best_response_mixture(tuple(models.values()),prior,seat)
