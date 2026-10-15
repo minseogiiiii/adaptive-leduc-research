@@ -1,0 +1,25 @@
+name: QT V6 A3 independent safe probing validation
+
+on:
+  push:
+    branches: [research/qt-v6-changepoint-riskfrontier-2026-10-14]
+    paths: [.github/workflows/qt_v6_a3_safe_probe.yml]
+  workflow_dispatch:
+
+jobs:
+  safe-probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: python3 -m pip install -e .
+      - name: Independent seed exact risk constrained active observation
+        run: |
+          python3 -m pokerlab.qt_v6_safe_probe --seed 20261024 --replicates 24 --hands 48 --output qt-v6-a3-safe-probe.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: qt-v6-a3-safe-probe
+          path: qt-v6-a3-safe-probe.json
+          retention-days: 45
