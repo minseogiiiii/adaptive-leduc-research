@@ -1,0 +1,29 @@
+name: QT V5 prespecified common-path inference pilot
+
+on:
+  push:
+    branches: [research/qt-v5-evidence-gated-2026-10-14]
+    paths: [.github/workflows/qt_v5_pilot.yml]
+  workflow_dispatch:
+
+jobs:
+  forecast:
+    strategy:
+      fail-fast: false
+      matrix:
+        scenario: [stationary_calling, stationary_aggressive, switch_calling_aggressive, switch_aggressive_calling, heldout_rank_selective, heldout_pressure_reactive]
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: python3 -m pip install -e .
+      - name: Prespecified common-evidence pilot
+        run: |
+          python3 -m pokerlab.qt_v5_forecast --scenario ${{ matrix.scenario }} --hands 24 --replicates 12 --seed 20261014 --output qt-v5-pilot-${{ matrix.scenario }}.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: qt-v5-pilot-${{ matrix.scenario }}
+          path: qt-v5-pilot-${{ matrix.scenario }}.json
+          retention-days: 30
