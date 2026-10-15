@@ -1,4 +1,5 @@
 name: QT V6 exact risk reward frontier
+# Rerun after fixing concentrated prior enumeration (no change to study design).
 
 on:
   push:
