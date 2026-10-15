@@ -201,9 +201,14 @@ conservative **+0.04713 chips/hand**, with verified worst payoff
 Marginal price of extra risk is nonlinear:
 - ε=.05→.10: EV +.01697 for +.05 budget (~.34 gain/budget).
 - ε=.40→.80: EV +.07709 for +.40 budget (~.19 gain/budget).
-- ε=.80→2.0: EV +.00628 for +1.20 budget (~.005 gain/budget).
-The last interval spans saturation, so the ratio is not a smooth shadow
-price everywhere.
+- ε=.80→2.0: EV +.00628 for +1.20 of EXTRA ALLOWED budget,
+  but the full-BR policy saturates at worst payoff -0.83333; actual
+  worst-case loss rises only ~0.03261, giving ~0.1925 EV per unit of
+  **actual** additional worst-case exposure.
+Do not mistake the finite difference per *unused allowance* for the
+marginal cost of *risk actually taken*. The high-risk frontier is
+nearly linear between ε=.4 and the full-BR saturation point; the
+lower-budget portion is more curved.
 
 **Model risk still matters**: under uniform belief, Seat0's heldout
 Rank-Selective EV moves ~ -0.08687 at ε=0 to **-0.10561** at ε=.8
