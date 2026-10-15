@@ -1,0 +1,29 @@
+name: QT V6 B2 richer exact frontier
+
+on:
+  push:
+    branches: [research/qt-v6-changepoint-riskfrontier-2026-10-14]
+    paths: [.github/workflows/qt_v6_b2_richer.yml]
+  workflow_dispatch:
+
+jobs:
+  multi-br-frontier:
+    strategy:
+      fail-fast: false
+      matrix:
+        seat: [0,1]
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: python3 -m pip install -e .
+      - name: Exact adversarial payoff constrained 3-policy mixing
+        run: |
+          python3 -m pokerlab.qt_v6_frontier_richer --seat ${{ matrix.seat }} --output qt-v6-b2-seat${{ matrix.seat }}.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: qt-v6-b2-seat${{ matrix.seat }}
+          path: qt-v6-b2-seat${{ matrix.seat }}.json
+          retention-days: 45
