@@ -1,0 +1,33 @@
+name: QT V4 independent-seed replication
+
+on:
+  push:
+    branches:
+      - research/qt-v4-validated-adaptive-2026-10-14
+    paths:
+      - .github/workflows/qt_oos.yml
+  workflow_dispatch:
+
+jobs:
+  oos:
+    strategy:
+      fail-fast: false
+      matrix:
+        scenario: [stationary, heldout, switch]
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: python3 -m pip install -e .
+      - name: Independent seed, longer horizon, 8 paired replicates
+        run: |
+          python3 -m pokerlab.qt_v4 --scenario ${{ matrix.scenario }} --hands 12 --replicates 8 --seed 20261015 --hazard 0.1 --budget 0.1 --output qt-v4-oos-${{ matrix.scenario }}.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: qt-v4-oos-${{ matrix.scenario }}
+          path: qt-v4-oos-${{ matrix.scenario }}.json
+          retention-days: 30
