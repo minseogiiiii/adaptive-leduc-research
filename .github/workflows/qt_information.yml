@@ -1,0 +1,27 @@
+name: QT Information Value exact Leduc audit
+
+on:
+  push:
+    branches:
+      - research/qt-v4-validated-adaptive-2026-10-14
+    paths:
+      - pokerlab/qt_information.py
+      - tests/test_qt_information.py
+      - .github/workflows/qt_information.yml
+  workflow_dispatch:
+
+jobs:
+  information-value:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: python3 -m pip install -e .
+      - name: Exact information-value tests
+        run: python3 -m unittest discover -s tests -p test_qt_information.py -v
+      - name: 80 percent accurate pre-hand opponent signal
+        run: python3 -m pokerlab.qt_information --accuracy 0.8
