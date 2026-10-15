@@ -1,0 +1,29 @@
+name: QT V7 independent long-horizon value-of-information confirmation
+
+on:
+  push:
+    branches: [research/qt-v7-long-horizon-information-2026-10-14]
+    paths: [.github/workflows/qt_v7_confirm.yml]
+  workflow_dispatch:
+
+jobs:
+  confirm:
+    strategy:
+      fail-fast: false
+      matrix:
+        scenario: [stationary_calling, switch_calling_aggressive, heldout_rank_selective]
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: python3 -m pip install -e .
+      - name: Independent paired long-horizon Leduc confirmation
+        run: |
+          python3 -m pokerlab.qt_v7_longhorizon --scenario ${{ matrix.scenario }} --hands 48 --replicates 12 --seed 20261028 --output qt-v7-confirm-${{ matrix.scenario }}.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: qt-v7-confirm-${{ matrix.scenario }}
+          path: qt-v7-confirm-${{ matrix.scenario }}.json
+          retention-days: 60
