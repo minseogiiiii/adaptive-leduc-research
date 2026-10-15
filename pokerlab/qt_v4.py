@@ -108,11 +108,11 @@ def safe_weight(baseline, exploit, seat: int, budget: float,
 class DecisionAgent:
     """One strategy per whole hand. Never observes opponent hidden cards.
 
-    mode: cfr, frozen, adaptive, switching, safe.
+    mode: cfr, frozen, adaptive, switching, safe, safe_exact.
     safe samples the entire baseline or BR policy before the first action.
     """
     def __init__(self, mode, seat, baseline, models, *, hazard=0.1, budget=0.1):
-        if mode not in ("cfr", "frozen", "adaptive", "switching", "safe"):
+        if mode not in ("cfr", "frozen", "adaptive", "switching", "safe", "safe_exact"):
             raise ValueError("Unknown mode")
         if seat not in (0, 1):
             raise ValueError("Invalid seat")
@@ -120,17 +120,18 @@ class DecisionAgent:
         self.models = models
         self.budget = budget
         self.beliefs = (BayesianOpponentModel(models) if mode == "adaptive"
-                        else SwitchingBeliefs(models, hazard) if mode in ("switching", "safe")
+                        else SwitchingBeliefs(models, hazard) if mode in ("switching", "safe", "safe_exact")
                         else None)
         self.frozen_policy = (best_response_mixture(tuple(models.values()),
                               tuple(1 / len(models) for _ in models), seat)[1]
                               if mode == "frozen" else None)
         self.base_worst = (-best_response(baseline, 1 - seat)[0]
-                           if mode == "safe" else None)
+                           if mode in ("safe", "safe_exact") else None)
         self.policy = None
         self._selected = None
         self.weight = None
         self.certificate = None
+        self._ev_cache = {}
 
     def prepare(self):
         """Call at hand boundary, before observing current hand."""
@@ -143,10 +144,16 @@ class DecisionAgent:
         else:
             self.policy = best_response_mixture(
                 self.beliefs.policies, self.beliefs.posterior, self.seat)[1]
-            if self.mode == "safe":
-                self.certificate = safe_weight(
-                    self.baseline, self.policy, self.seat, self.budget,
-                    baseline_worst=self.base_worst)
+            if self.mode in ("safe", "safe_exact"):
+                if self.mode == "safe_exact":
+                    from .qt_safe_exact import exact_safe_weight
+                    self.certificate = exact_safe_weight(
+                        self.baseline, self.policy, self.seat, self.budget,
+                        baseline_worst=self.base_worst)
+                else:
+                    self.certificate = safe_weight(
+                        self.baseline, self.policy, self.seat, self.budget,
+                        baseline_worst=self.base_worst)
                 self.weight = self.certificate.weight
             else:
                 self.weight = 1.0
@@ -155,7 +162,7 @@ class DecisionAgent:
         if self.policy is None:
             raise RuntimeError("Call prepare before the hand")
         if self._selected is None:
-            self._selected = (self.baseline if self.mode == "safe"
+            self._selected = (self.baseline if self.mode in ("safe", "safe_exact")
                               and rng.random() >= self.weight else self.policy)
         return PolicyAgent(self._selected).choose(observation, rng)
 
@@ -170,9 +177,16 @@ class DecisionAgent:
         if self.policy is None:
             raise RuntimeError("Call prepare before evaluation")
         def v(p):
-            return (profile_value(p, opponent) if self.seat == 0
-                    else -profile_value(opponent, p))
-        if self.mode == "safe":
+            # Cache fixed-policy oracle values only, never adaptive policies.
+            key = id(opponent)
+            if p is self.baseline and key in self._ev_cache:
+                return self._ev_cache[key]
+            value = (profile_value(p, opponent) if self.seat == 0
+                     else -profile_value(opponent, p))
+            if p is self.baseline or self.mode == "frozen":
+                self._ev_cache[key] = value
+            return value
+        if self.mode in ("safe", "safe_exact"):
             return ((1 - self.weight) * v(self.baseline)
                     + self.weight * v(self.policy))
         return v(self.policy)
@@ -217,6 +231,7 @@ def run_benchmark(*, scenario, hands=12, replicates=6, seed=20261014,
     blocks = {arm: [] for arm in arms}
     oracle_blocks = {arm: [] for arm in arms}
     phase_blocks = {phase: {arm: [] for arm in arms} for phase in ("pre", "post")}
+    phase_oracle_blocks = {phase: {arm: [] for arm in arms} for phase in ("pre", "post")}
     safe_certificates = []
     rng = random.Random(seed)
     start = time.monotonic()
@@ -225,6 +240,7 @@ def run_benchmark(*, scenario, hands=12, replicates=6, seed=20261014,
         by_arm = {arm: [] for arm in arms}
         by_arm_oracle = {arm: [] for arm in arms}
         by_phase = {p: {arm: [] for arm in arms} for p in phase_blocks}
+        by_phase_oracle = {p: {arm: [] for arm in arms} for p in phase_blocks}
         for seat in (0, 1):
             agents = {arm: DecisionAgent(arm, seat, baseline, models,
                                         hazard=hazard, budget=budget) for arm in arms}
@@ -242,7 +258,7 @@ def run_benchmark(*, scenario, hands=12, replicates=6, seed=20261014,
                     if agent.certificate is not None:
                         safe_certificates.append({
                             "replicate": replicate, "seat": seat, "hand": hand,
-                            "weight": weight,
+                            "mode": arm, "weight": weight,
                             "certified_lower_bound": agent.certificate.certified_lower_bound,
                             "allowed_floor": agent.certificate.allowed_floor})
                     players = ((agent, PolicyAgent(opponent)) if seat == 0
@@ -254,6 +270,7 @@ def run_benchmark(*, scenario, hands=12, replicates=6, seed=20261014,
                     by_phase[phase][arm].append(reward)
                     if oracle is not None:
                         by_arm_oracle[arm].append(oracle)
+                        by_phase_oracle[phase][arm].append(oracle)
                     rows.append({"replicate": replicate, "seat": seat,
                                  "hand": hand, "phase": phase, "arm": arm,
                                  "reward": reward, "oracle_ev": oracle,
@@ -266,11 +283,16 @@ def run_benchmark(*, scenario, hands=12, replicates=6, seed=20261014,
             if by_phase[phase]["cfr"]:
                 for arm in arms:
                     phase_blocks[phase][arm].append(_mean(by_phase[phase][arm]))
+                    if include_oracle:
+                        phase_oracle_blocks[phase][arm].append(
+                            _mean(by_phase_oracle[phase][arm]))
 
     paired = {f"{arm}_minus_{control}": _paired_ci(
         blocks[arm], blocks[control], seed + 19)
         for arm, control in (("switching", "adaptive"), ("safe", "adaptive"),
-                             ("safe", "switching"), ("safe", "cfr"))}
+                             ("safe", "switching"), ("safe", "cfr"),
+                             ("safe_exact", "safe"), ("safe_exact", "adaptive"),
+                             ("safe_exact", "cfr"))}
     oracle_paired = ({f"{arm}_minus_{control}": _paired_ci(
         oracle_blocks[arm], oracle_blocks[control], seed + 29)
         for arm, control in (("switching", "adaptive"), ("safe", "adaptive"),
@@ -293,12 +315,22 @@ def run_benchmark(*, scenario, hands=12, replicates=6, seed=20261014,
                                       if include_oracle else None),
         "paired_exact_conditional_ev": oracle_paired,
         "phase_mean_realized": phase_means,
+        "phase_mean_exact_ev": ({p: {arm: _mean(vals) for arm, vals in group.items() if vals}
+                                  for p, group in phase_oracle_blocks.items()}
+                                 if include_oracle else None),
         "safe_certificate": {
             "n": len(safe_certificates),
             "min_margin": min((x["certified_lower_bound"] - x["allowed_floor"]
                                for x in safe_certificates), default=None),
             "mean_weight": (_mean([x["weight"] for x in safe_certificates])
-                            if safe_certificates else None)},
+                            if safe_certificates else None),
+            "by_mode": {arm: {
+                "n": len([x for x in safe_certificates if x["mode"] == arm]),
+                "mean_weight": _mean([x["weight"] for x in safe_certificates
+                                      if x["mode"] == arm]),
+                "min_margin": min(x["certified_lower_bound"] - x["allowed_floor"]
+                                  for x in safe_certificates if x["mode"] == arm)
+            } for arm in ("safe", "safe_exact")}},
         "runtime_seconds": round(time.monotonic() - start, 3),
         "rows": rows,
     }
