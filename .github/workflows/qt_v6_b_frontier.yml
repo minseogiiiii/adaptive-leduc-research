@@ -1,0 +1,31 @@
+name: QT V6 exact risk reward frontier
+# Rerun after fixing concentrated prior enumeration (no change to study design).
+
+on:
+  push:
+    branches: [research/qt-v6-changepoint-riskfrontier-2026-10-14]
+    paths: [.github/workflows/qt_v6_b_frontier.yml]
+  workflow_dispatch:
+
+jobs:
+  frontier:
+    strategy:
+      fail-fast: false
+      matrix:
+        seat: [0,1]
+        belief_case: [uniform,calling_concentrated]
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: python3 -m pip install -e .
+      - name: Exact one-hand frontier and safety certification
+        run: |
+          python3 -m pokerlab.qt_v6_frontier --seat ${{ matrix.seat }} --belief-case ${{ matrix.belief_case }} --steps 10 --output qt-v6-b-seat${{ matrix.seat }}-${{ matrix.belief_case }}.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: qt-v6-b-seat${{ matrix.seat }}-${{ matrix.belief_case }}
+          path: qt-v6-b-seat${{ matrix.seat }}-${{ matrix.belief_case }}.json
+          retention-days: 45
