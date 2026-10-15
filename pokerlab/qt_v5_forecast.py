@@ -55,13 +55,14 @@ def _scenario_opponent(scenario, hand, hands, models, baseline):
     raise ValueError("Unknown scenario")
 
 
-def _boot_ci(values, *, seed, draws=2000):
+def _boot_ci(values, *, seed, draws=2000, coverage=.95):
     if len(values) < 2:
         raise ValueError("Need at least 2 independent replicates")
     rng = random.Random(seed)
     sims = sorted(statistics.fmean(rng.choices(values,k=len(values)))
                   for _ in range(draws))
-    return [sims[int(draws*.025)], sims[int(draws*.975)]]
+    tail=(1-coverage)/2
+    return [sims[int(draws*tail)], sims[int(draws*(1-tail))]]
 
 
 def run_forecasting(*, scenario, hands=24, replicates=24,
@@ -125,7 +126,9 @@ def run_forecasting(*, scenario, hands=24, replicates=24,
             diff = [a-b for a,b in zip(data["evidence"],data[control])]
             contrast[f"{phase}_evidence_minus_{control}"] = {
                 "mean": statistics.fmean(diff),
-                "bootstrap_95_percent": _boot_ci(diff,seed=seed+20)}
+                "bootstrap_95_percent": _boot_ci(diff,seed=seed+20),
+                "bootstrap_97_5_percent": _boot_ci(
+                    diff,seed=seed+20,coverage=.975)}
     return {
         "protocol":{"scenario":scenario,"hands_per_seat":hands,
                     "replicates":replicates,"seed":seed,
@@ -142,6 +145,8 @@ def run_forecasting(*, scenario, hands=24, replicates=24,
         "mean_switch_process_probability":statistics.fmean(modelprob),
         "mean_suggested_risk_budget":statistics.fmean(budgets),
         "runtime_seconds":round(time.monotonic()-start,3),
+        "replicate_scores":scores,
+        "replicate_second_half_scores":post_scores,
         "rows":rows if store_rows else None}
 
 
