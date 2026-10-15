@@ -1,0 +1,37 @@
+name: QT V4 empirical Leduc validation
+
+on:
+  push:
+    branches:
+      - research/qt-v4-validated-adaptive-2026-10-14
+    paths:
+      - pokerlab/qt_v4.py
+      - tests/test_qt_v4.py
+      - .github/workflows/qt_v4.yml
+  workflow_dispatch:
+
+jobs:
+  qt-validation:
+    strategy:
+      fail-fast: false
+      matrix:
+        scenario: [stationary, heldout, switch]
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: python3 -m pip install -e .
+      - name: Original and QT V4 unit tests
+        run: python3 -m unittest discover -s tests -v
+      - name: Paired real-Leduc benchmark
+        run: |
+          python3 -m pokerlab.qt_v4 --scenario ${{ matrix.scenario }} --hands 8 --replicates 4 --seed 20261014 --hazard 0.1 --budget 0.1 --output results-qt-v4-${{ matrix.scenario }}.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: qt-v4-${{ matrix.scenario }}
+          path: results-qt-v4-${{ matrix.scenario }}.json
+          retention-days: 30
