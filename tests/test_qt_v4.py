@@ -12,6 +12,7 @@ from pokerlab.cfr import (PolicyAgent, TabularPolicy, best_response,
                           best_response_mixture, profile_value)
 from pokerlab.qt_v4 import (DecisionAgent, SwitchingBeliefs, run_benchmark,
                             safe_weight)
+from pokerlab.qt_safe_exact import exact_safe_weight
 from pokerlab.simulate import run_hand
 
 
@@ -69,6 +70,17 @@ class QTResearchTests(unittest.TestCase):
         self.assertGreaterEqual(exact_worst, cert.allowed_floor - 1e-8)
         self.assertGreaterEqual(exact_worst, cert.certified_lower_bound - 1e-8)
 
+    def test_exact_safe_optimizer_improves_feasible_weight(self):
+        exploit = best_response_mixture(
+            tuple(self.models.values()), (0.25,) * 4, 0)[1]
+        conservative = safe_weight(self.baseline, exploit, 0, 0.1)
+        optimized = exact_safe_weight(
+            self.baseline, exploit, 0, 0.1, bisection_steps=3)
+        self.assertGreaterEqual(optimized.weight + 1e-12,
+                                conservative.weight)
+        self.assertGreaterEqual(optimized.certified_lower_bound,
+                                optimized.allowed_floor - 1e-9)
+
     def test_agent_never_updates_before_hand_finishes(self):
         agent = DecisionAgent("switching", 0, self.baseline, self.models,
                               hazard=0.1)
@@ -90,7 +102,8 @@ class QTResearchTests(unittest.TestCase):
                          b["mean_realized_chips_per_hand"])
         self.assertEqual(a["paired_realized"], b["paired_realized"])
         self.assertGreaterEqual(a["safe_certificate"]["min_margin"], -1e-9)
-        self.assertEqual(len(a["rows"]), 2 * 2 * 2 * 5)
+        self.assertEqual(len(a["rows"]), 2 * 2 * 2 * 6)
+        self.assertGreaterEqual(a["safe_certificate"]["by_mode"]["safe_exact"]["min_margin"], -1e-9)
 
 
 if __name__ == "__main__":
