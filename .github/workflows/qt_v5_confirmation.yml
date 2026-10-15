@@ -1,0 +1,29 @@
+name: QT V5 preregistered independent confirmation
+
+on:
+  push:
+    branches: [research/qt-v5-evidence-gated-2026-10-14]
+    paths: [.github/workflows/qt_v5_confirmation.yml]
+  workflow_dispatch:
+
+jobs:
+  confirmation:
+    strategy:
+      fail-fast: false
+      matrix:
+        scenario: [stationary_calling, stationary_aggressive, switch_calling_aggressive, switch_aggressive_calling, heldout_rank_selective, heldout_pressure_reactive]
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: python3 -m pip install -e .
+      - name: Locked independent-seed confirmation
+        run: |
+          python3 -m pokerlab.qt_v5_forecast --scenario ${{ matrix.scenario }} --hands 24 --replicates 36 --seed 20261017 --output qt-v5-confirm-${{ matrix.scenario }}.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: qt-v5-confirm-${{ matrix.scenario }}
+          path: qt-v5-confirm-${{ matrix.scenario }}.json
+          retention-days: 60
