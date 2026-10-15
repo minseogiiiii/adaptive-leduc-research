@@ -69,19 +69,84 @@ These are statistically defensible statements only for the exact synthetic
 protocol. Bootstrap interval exclusion of zero is not a guarantee of
 distributional generalization.
 
-## Stage B: On-policy economic value
+## Stage B: On-policy economic value — COMPLETED
 
-See the `qt_v5_decision.py` workflow. This tests actual game play and
-exact conditional EV as a separate metric. It compares V5 against original
-Bayesian, fixed-switching, and fixed-exact-safe policies, with paired seeds
-and two-seat match replicate bootstrap. **Do not confuse an improvement in
-prediction log score with an improvement in expected trading utility.**
+[GitHub Actions raw outputs and logs](https://github.com/minseogiiiii/adaptive-leduc-research/actions/runs/38666177869).
+All three scenario jobs passed. Each scenario used **8 independent paired
+match replicates x both seats x 12 hands = 192 sampled hands per policy**
+(5 arms, seed 20261018). Paired bootstrap uses the 8 replicate means, not
+individual hands. Exact conditional EV is an offline oracle metric that knows
+the true synthetic opponent policy, **not given to the agents**.
+
+### Exact conditional EV (chips/hand)
+
+| Policy | Stationary calling | Calling→aggressive | Held-out rank selective |
+|---|---:|---:|---:|
+| Original Bayesian | +0.15973 | +0.30940 | -0.01828 |
+| V4 fixed switching | +0.14327 | **+0.32779** | -0.01925 |
+| V5 evidence | +0.15753 | +0.31844 | -0.01835 |
+| V4 exact-safe budget 0.1 | +0.07809 | +0.10186 | +0.00389 |
+| V5 gated exact-safe | +0.07389 | +0.09030 | +0.00405 |
+
+**V5 evidence minus V4 fixed switching**:
+- Stationary **+0.01426** (95% paired CI **[-0.00256, +0.03280]**)
+- Switch **-0.00935** (95% paired CI **[-0.01752, -0.00014]**;
+  97.5% interval contains zero)
+- Held-out **+0.00090** (95% paired CI **[-0.00193, +0.00373]**)
+- Post-switch half only **-0.02857** (95% CI **[-0.04616, -0.01242]**).
+- Practical threshold for policy improvement was +0.02 chips/hand:
+  NONE of the V5 positive overall contrasts clear this threshold, and the
+  most critical switching case is negative.
+
+**V5 gated-safe minus V4 fixed exact-safe**:
+- Stationary **-0.00420** (95% CI [-0.00595, -0.00254])
+- Switch **-0.01156** (95% CI [-0.01404, -0.00921])
+- Held-out **+0.00016** (95% CI [-0.00027, +0.00056]).
+- Gated budget averaged **0.03117** stationary, **0.02822** switch,
+  **0.02717** held-out, compared with V4 constant epsilon **0.1**.
+  This is a STRICTER worst-case one-hand expected-payoff floor; it does not
+  prove superior risk-adjusted utility because no agreed common risk
+  preference or wealth-utility objective is optimized here.
+- The safety certificate was not violated in the sampled prehand decisions.
+
+**Realized sampled chips/hand are much noisier**:
+- V5 evidence: -0.1250 stationary, +0.2031 switch, +0.0677 held-out.
+- V5 gated-safe: -0.3177 stationary, -0.0885 switch, -0.2188 held-out.
+- These empirical rewards can diverge widely from conditional EV in just 8
+  replicate blocks; DO NOT advertise them as stable performance or alpha.
+
+**Compute burden**:
+- Each scenario's complete 5-arm offline evaluation took ~1161-1218 sec
+  on a GitHub-hosted runner.
+- Reported per-hand `prepare_and_exact_eval` times averaged roughly
+  **0.74-0.75 sec** for evidence, and **1.90-2.03 sec** for safe agents.
+  These timings INCLUDE the *offline exact opponent oracle*, so they are
+  **not pure live decision latencies**, but demonstrate high research
+  evaluation cost. The exact-safe optimization also invokes multiple
+  full game-tree best responses. No production latency claim is justified.
+
+**Decision-stage conclusion**: no robust or practically material expected
+reward improvement was demonstrated by V5 over V4. In the main changing
+regime V5 did worse. The risk gate achieved a mathematically stricter
+one-hand worst-case expected-payoff floor but paid a substantial foregone
+expected-reward cost compared with unrestricted exploitation. 8 replicate
+blocks are inadequate for broad external inference; the stronger 36-replicate
+prequential prediction experiment already failed the preregistered gate.
+
+**Do not confuse predictive log score, realized chips and oracle conditional
+expected payoff.** These estimate different quantities.
 
 ## Current research decision
 
-The V5 *inference* mechanism should NOT replace V4 based on the
-precommitted evidence gate. Do not cherry-pick its positive stationary
-or heldout result to claim success; those come with negative switch results.
+**NO GO: retain V4 as the candidate and V5 as documented negative research.**
+Both the precommitted inference gate and the practical on-policy decision
+gate failed. Do not cherry-pick positive stationary or held-out cases.
+V5 was preserved in a draft PR rather than merged into main.
+
+The Bayesian probability of the H1 *changing-process hypothesis* is
+NOT the posterior probability of an actual change point on this hand.
+Future research should model run length/change points explicitly
+and evaluate with new locked opponent families and distinct test seeds.
 
 Avoid post-hoc tuning the switch hazard or model prior on these
 confirmation scenarios and reporting the new value on the same seeds.
