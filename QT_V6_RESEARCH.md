@@ -38,9 +38,9 @@ type_prior_next[j] = (1-h)*type_posterior_after_hand[j]
 
 This is exactly the V4 SwitchingBeliefs recursion. Keeping a run-length
 posterior adds a diagnostic but *no new predictive information* under
-the same fixed hazard generative model. Test suite checks seven? multiple
-hazard choices including 0, .03, .1, .5, 1; empirical run had identity
-errors <=~1e-15. Avoid selling BOCPD name alone as a new alpha feature.
+the same fixed hazard generative model. Test suite checks five hazard choices (0, .03, .1, .5, 1); the
+empirical identity discrepancies are at floating-point rounding scale
+(<=~1e-15). Avoid selling BOCPD name alone as a new alpha feature.
 
 Theory: Adams and MacKay (2007), Bayesian Online Changepoint Detection:
 https://arxiv.org/abs/0710.3742
